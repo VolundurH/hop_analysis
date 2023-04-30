@@ -1,0 +1,319 @@
+hop_name	hop_purpose	country	Citrus	Tropical_Fruit	Stone_Fruit	Berry	Floral	Grassy	Herbal	Spice	Pine
+Astra	Dual	Australia	3	3	3	2	0	1	0	2	1
+Eclipse	Dual	Australia	3	3	2	2	2	1	1	0	2
+Ella	Dual	Australia	3	4	3	3	3	1	1	2	2
+Enigma	Aroma	Australia	3	3	1	0	2	1	0	1	0
+Feux-Coeur Francais	Bittering	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Galaxy	Dual	Australia	4	3	1	0	2	1	0	0	1
+Helga	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+HPA-016	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Melba	Aroma	Australia	3	4	4	2	0	0	0	1	0
+Pride of Ringwood	Bittering	Australia	3	3	3	3	0	0	3	3	2
+Summer	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Super Pride	Dual	Australia	1	0	0	0	2	0	2	4	2
+Sylva	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Topaz	Dual	Australia	2	2	2	2	0	0	0	0	2
+Vic Secret	Dual	Australia	3	2	0	0	0	0	0	0	0
+Vienna Gold	Dual	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Canadian Redvine	Aroma	Canada	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Lumberjack	Dual	Canada	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Sasquatch	Dual	Canada	3	2	3	1	2	1	3	3	3
+Wild Loyalist	Aroma	Canada	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Marco Polo	Dual	China	2	1	2	2	1	1	3	2	1
+Tsingdao Flower	Dual	China	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Agnus	Bittering	Czech Replublic	1	2	1	0	0	0	1	2	3
+Amethyst	Aroma	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bohemie	Aroma	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Boomerang	Dual	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bor	Dual	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Gaia	Bittering	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Harmonie	Aroma	Czech Replublic	2	3	2	2	2	1	1	3	3
+Kazbek	Aroma	Czech Replublic	3	2	0	0	1	0	1	0	0
+Mimosa	Aroma	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Premiant	Bittering	Czech Replublic	2	4	4	4	3	0	1	3	0
+Saaz (CZ)	Aroma	Czech Replublic	3	0	0	0	2	0	0	4	4
+Saaz Late	Aroma	Czech Replublic	2	3	1	1	2	1	1	2	2
+Sládek	Aroma	Czech Replublic	2	3	2	2	3	0	2	1	0
+Vital	Dual	Czech Replublic	2	3	1	1	1	1	1	3	3
+Aramis	Aroma	France	1	0	0	0	0	0	3	3	0
+Barbe Rouge	Aroma	France	0	2	2	4	4	0	2	0	0
+Bouclier	Aroma	France	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Elixir	Aroma	France	3	3	3	0	3	1	1	1	1
+Mistral	Dual	France	4	3	1	2	3	1	1	1	0
+Petit Blanc	Aroma	France	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Strisselspalt	Aroma	France	1	1	0	0	3	2	3	1	2
+Tardif de Bourgogne	Aroma	France	0	0	0	1	4	0	2	2	1
+Triskel	Aroma	France	2	1	1	0	2	1	2	1	2
+Akoya	Aroma	Germany	3	1	1	1	2	0	2	3	0
+Ariana	Aroma	Germany	3	4	2	2	1	1	2	2	1
+Aurum	Aroma	Germany	1	0	0	0	1	1	2	1	0
+Brewer's Gold (GR)	Bittering	Germany	2	3	3	0	1	0	1	2	2
+Callista	Aroma	Germany	3	3	2	2	2	1	1	1	1
+Diamant	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Hallertau Blanc	Aroma	Germany	2	0	0	3	0	0	2	3	2
+Hallertau Gold	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Hallertau Mittelfrüh	Aroma	Germany	2	1	0	0	0	0	3	4	2
+Hallertau Tradition	Aroma	Germany	2	0	0	0	3	0	0	2	2
+Herkules	Bittering	Germany	2	2	2	1	1	1	2	1	1
+Hersbrucker	Aroma	Germany	2	1	1	1	1	1	2	2	2
+Huell Melon	Aroma	Germany	2	4	0	0	2	0	0	2	1
+Hüller Bitterer	Bittering	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Magnum (GR)	Bittering	Germany	2	3	0	0	1	0	2	4	1
+Mandarina Bavaria	Dual	Germany	4	3	3	3	1	0	1	2	2
+Merkur	Dual	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Monroe	Aroma	Germany	3	3	1	3	2	1	1	1	2
+Northern Brewer (GR)	Bittering	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Opal	Dual	Germany	2	2	2	2	0	0	2	4	2
+Orion	Dual	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Perle (GR)	Aroma	Germany	1	1	1	0	2	0	2	3	1
+Polaris	Dual	Germany	3	4	4	4	1	0	2	3	1
+Relax	Aroma	Germany	2	2	1	1	2	1	1	1	2
+Saphir	Aroma	Germany	1	1	1	0	2	1	2	2	2
+Smaragd	Bittering	Germany	1	1	1	1	0	0	4	3	3
+Solero	Aroma	Germany	3	5	5	2	0	0	2	3	0
+Spalt	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Spalter Select	Aroma	Germany	2	1	1	1	2	0	3	3	2
+Tango	Dual	Germany	5	4	2	3	2	0	0	0	1
+Tettnanger	Dual	Germany	1	1	1	1	2	0	3	3	3
+Wurttemberg	Aroma	Germany	1	0	0	0	3	0	3	3	2
+Yellow Sub	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Golden Star	Aroma	Japan	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Sorachi Ace	Dual	Japan	3	4	0	0	1	0	2	0	0
+Toyomidori	Bittering	Japan	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Brooklyn	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Dr. Rudi	Dual	New Zealand	2	0	0	0	0	1	1	1	3
+Green Bullet	Dual	New Zealand	0	0	0	2	2	0	0	1	1
+HORT9909	Dual	New Zealand	5	0	0	0	2	3	5	3	4
+Kohatu	Dual	New Zealand	1	3	2	0	0	0	0	0	0
+Motueka	Dual	New Zealand	3	2	0	1	0	0	0	0	0
+Moutere	Dual	New Zealand	3	4	0	0	0	0	0	1	2
+Nectaron	Aroma	New Zealand	4	4	3	0	0	0	2	0	0
+Nelson Sauvin	Aroma	New Zealand	0	2	0	4	0	0	1	0	0
+NZH-107	Dual	New Zealand	5	5	1	0	1	0	1	0	0
+Pacific Gem	Bittering	New Zealand	2	0	0	4	1	0	0	1	1
+Pacific Jade	Dual	New Zealand	2	0	0	0	0	0	1	1	0
+Pacific Sunrise	Bittering	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Pacifica	Aroma	New Zealand	3	0	0	0	3	0	0	2	0
+Rakau	Dual	New Zealand	1	3	4	1	2	0	0	0	0
+Riwaka	Aroma	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Smooth Cone	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Southern Cross	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Sticklebract	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Taiheke	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Wai-iti	Aroma	New Zealand	3	0	3	0	0	0	0	0	0
+Waimea	Dual	New Zealand	4	1	0	0	1	0	0	0	3
+Wakatu	Dual	New Zealand	2	1	0	0	0	0	3	4	2
+Junga	Bittering	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Limbus	Aroma	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Lubelska	Aroma	Poland	1	0	1	0	1	1	2	1	2
+Magnat	Dual	Poland	3	1	1	1	0	1	2	1	3
+Marynka	Dual	Poland	2	2	1	1	2	1	2	2	3
+Pulawski	Dual	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Sybilla	Aroma	Poland	3	2	1	0	1	1	1	2	3
+Zula	Dual	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Apolon	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Atlas	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Aurora	Dual	Slovenia	2	0	0	0	3	0	3	4	3
+Bobek	Bittering	Slovenia	2	1	1	1	3	1	2	1	2
+Cekin	Aroma	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Celeia	Aroma	Slovenia	1	0	0	0	2	1	1	1	1
+Dana	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Styrian Cardinal	Aroma	Slovenia	3	4	4	1	2	0	0	0	1
+Styrian Dragon	Aroma	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Styrian Eagle	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Styrian Fox	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Styrian Golding	Aroma	Slovenia	3	0	0	0	2	0	2	2	1
+Styrian Kolibri	Aroma	Slovenia	2	3	3	1	3	1	4	2	0
+Styrian Wolf	Dual	Slovenia	2	5	3	0	2	0	1	2	0
+African Queen	Dual	South Africa	3	2	3	4	1	0	1	1	0
+Southern Aroma	Aroma	South Africa	1	0	0	0	4	3	2	2	3
+Southern Brewer	Bittering	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Southern Dawn	Dual	South Africa	2	1	1	1	1	0	1	1	0
+Southern Passion	Aroma	South Africa	2	4	4	3	3	0	0	0	0
+Southern Promise	Dual	South Africa	3	1	0	3	2	0	2	2	2
+Southern Star	Dual	South Africa	3	2	2	3	2	0	1	2	1
+Southern Sublime	Aroma	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Southern Tropic	Bittering	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
+XJA2/436	Bittering	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Zagrava	Dual	Ukraine	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Admiral	Bittering	United Kingdom	1	3	2	3	0	2	3	0	1
+Archer	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Beata	Bittering	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Boadicea	Dual	United Kingdom	0	0	0	2	2	0	2	4	0
+Bramling Cross	Dual	United Kingdom	3	1	0	0	0	0	4	2	3
+Challenger	Dual	United Kingdom	1	0	0	0	0	0	3	3	2
+Defender	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+East Kent Goldings	Bittering	United Kingdom	2	0	0	0	1	0	2	3	2
+Endeavour	Dual	United Kingdom	1	1	1	1	1	1	2	2	2
+Epic	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Ernest	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+First Gold	Dual	United Kingdom	2	2	2	2	2	0	3	1	2
+Flyer	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Fuggle	Aroma	United Kingdom	2	0	0	0	0	0	2	3	4
+Godiva	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Hallertau Taurus	Dual	United Kingdom	0	1	0	0	0	0	0	3	3
+Harlequin	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Herald	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Jester	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Minstrel	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Mystic	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Olicana	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Omega	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Phoenix	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Pilgrim	Dual	United Kingdom	1	2	2	1	2	2	3	3	2
+Pilot	Bittering	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Pioneer	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Progress	Aroma	United Kingdom	0	2	2	2	0	0	3	4	4
+Sovereign	Aroma	United Kingdom	1	4	4	4	0	0	2	2	1
+Sussex	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Target	Bittering	United Kingdom	2	0	0	0	3	0	3	2	4
+Whitbread Golding Variety (WGV)	Dual	United Kingdom	0	0	0	0	3	0	1	2	2
+Yeoman	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Adeena	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Ahhhroma	Dual	United States of America	2	5	5	3	2	0	1	3	0
+Ahtanum	Aroma	United States of America	2	0	1	2	4	1	2	3	1
+Aloha Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Altus	Aroma	United States of America	2	0	0	0	0	0	1	4	3
+Amarillo	Aroma	United States of America	4	1	1	0	1	0	0	0	0
+Apollo	Bittering	United States of America	3	0	0	0	0	4	0	4	3
+Aquila	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Arcadian	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Azacca	Dual	United States of America	3	3	2	0	0	0	0	0	2
+Banner	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Belma	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bergamot	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bianca	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bitter Gold	Dual	United States of America	2	4	4	1	2	2	1	1	0
+Bravo	Bittering	United States of America	3	1	1	1	2	0	3	2	0
+Brewer's Gold (US)	Bittering	United States of America	2	3	3	0	1	0	1	2	2
+BRU-1	Aroma	United States of America	2	4	2	1	1	3	1	1	1
+Bullion	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Buzz Bullets	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Caliente	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Calypso	Dual	United States of America	2	3	3	3	0	0	2	0	2
+Cascade	Dual	United States of America	3	1	0	0	2	0	2	2	0
+Cashmere	Dual	United States of America	1	3	3	3	0	0	0	2	0
+Centennial	Dual	United States of America	4	0	0	0	2	0	0	0	2
+Chelan	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Chinook	Dual	United States of America	3	0	0	0	1	0	1	0	4
+Citra	Dual	United States of America	5	4	1	0	1	0	0	2	2
+Cluster	Dual	United States of America	3	2	0	0	1	0	2	0	1
+Cluster Fugget Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Columbia	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Columbus	Dual	United States of America	1	0	0	0	0	0	3	4	0
+Comet	Dual	United States of America	3	3	3	3	1	0	2	1	1
+Contessa	Bittering	United States of America	1	1	1	1	3	0	4	0	1
+Crystal	Aroma	United States of America	1	0	0	0	0	0	4	2	3
+CTZ	Dual	United States of America	1	0	0	0	0	0	3	4	0
+Delta	Aroma	United States of America	2	2	2	2	1	0	2	3	2
+Diamond Springs	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Ekuanot	Aroma	United States of America	3	0	0	2	1	0	3	1	0
+El Dorado	Dual	United States of America	3	4	0	0	0	0	1	0	0
+Emerald Spire	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Equinox	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Eroica	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Eureka	Dual	United States of America	1	2	2	2	0	0	4	3	3
+Evergreen Blend	Aroma	United States of America	3	1	4	1	2	1	2	0	1
+Falconer's Flight	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Falconer's Flight 7CS	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Fantasia Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Galena	Aroma	United States of America	2	0	0	0	0	0	1	2	3
+Gemini	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Glacier	Dual	United States of America	2	2	2	2	1	0	3	0	1
+Golding	Aroma	United States of America	2	1	1	1	1	1	2	3	2
+Grungeist	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Hallertau (US)	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Hartwick	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+HBC 472	Aroma	United States of America	2	3	3	2	3	2	2	1	3
+HBC 586	Dual	United States of America	4	5	2	3	2	1	2	1	0
+HBC 630	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+HBC 692	Aroma	United States of America	3	3	1	2	4	2	3	1	3
+Helios	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Horizon	Dual	United States of America	2	1	1	1	3	0	1	2	1
+Hydra	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Idaho 7	Aroma	United States of America	3	4	4	0	1	0	2	1	2
+Idaho Gem	Dual	United States of America	2	0	0	4	1	0	0	1	1
+Independence	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Jarrylo	Dual	United States of America	1	2	1	0	0	0	2	1	0
+Lambic	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Lawton	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Lemondrop	Aroma	United States of America	3	2	2	2	1	0	3	1	1
+Liberty	Bittering	United States of America	1	0	0	0	2	0	3	2	2
+Loral	Aroma	United States of America	2	0	0	0	4	3	2	2	0
+Lotus	Aroma	United States of America	2	4	3	4	1	0	2	2	1
+Mackinac	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Magnum (US)	Bittering	United States of America	2	3	0	0	1	0	2	4	1
+McKenzie	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Medusa	Aroma	United States of America	4	3	3	1	0	1	0	0	0
+Meridian	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Michigan Copper	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Millennium	Bittering	United States of America	2	1	2	3	1	0	1	2	3
+Mosaic	Dual	United States of America	3	3	1	0	2	0	0	0	4
+Mount Hood	Aroma	United States of America	0	0	0	0	3	1	4	3	1
+Mount Rainier	Dual	United States of America	1	0	0	0	0	0	3	0	0
+Multihead	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Newport	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Nobility Blend	Dual	United States of America	4	1	1	0	3	2	4	2	2
+Northdown	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Northern Brewer (US)	Bittering	United States of America	2	2	2	2	2	0	3	1	2
+Nugget	Dual	United States of America	1	0	0	0	2	0	3	2	2
+Old Mission	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Olympic	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Pacific Crest	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Pahto	Bittering	United States of America	0	0	0	0	3	2	3	2	0
+Palisade	Dual	United States of America	3	3	0	3	2	0	1	0	0
+Paradigm	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Pekko	Dual	United States of America	3	3	1	2	4	0	4	3	2
+Perle (US)	Dual	United States of America	1	3	3	3	2	0	2	3	1
+Petoskey	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Prussian	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Saaz (US)	Aroma	United States of America	3	0	0	0	2	0	0	4	4
+Sabro	Aroma	United States of America	3	0	1	0	2	0	3	1	0
+Samba	Aroma	United States of America	4	5	3	0	1	0	1	1	0
+Santiam	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Satus	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Saugatuck	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Sequoia Blend	Aroma	United States of America	3	5	0	2	2	2	0	1	2
+Shaddock	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Simcoe	Dual	United States of America	4	4	1	5	1	0	2	2	2
+Sitiva Blend	Aroma	United States of America	4	4	3	1	4	1	1	2	1
+Sonnet	Aroma	United States of America	1	0	1	0	3	0	0	0	0
+Sterling	Aroma	United States of America	2	0	0	0	2	1	3	2	0
+Sticky Fingers Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Stirling	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Strata	Dual	United States of America	4	5	4	1	2	1	2	2	3
+Sultana (Denali)	Dual	United States of America	4	3	2	1	1	0	1	1	3
+Summit	Bittering	United States of America	2	0	0	0	0	0	4	4	0
+Sun	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Sunbeam	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Super Galena	Bittering	United States of America	1	1	1	1	0	0	2	4	1
+Tahoma	Aroma	United States of America	3	0	0	0	1	0	0	3	1
+Talisman	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Talus	Aroma	United States of America	3	3	1	1	3	1	2	0	1
+Teamaker	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Tettnang (US)	Aroma	United States of America	1	0	0	0	2	0	3	3	3
+Tillicum	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+TNT Blend	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Tomahawk	Dual	United States of America	1	0	0	0	0	0	3	4	0
+Trident	Dual	United States of America	4	4	4	2	2	0	1	1	1
+TriplePearl	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Triumph	Dual	United States of America	2	1	1	3	3	0	1	4	4
+Tropica	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Ultra	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+USDA 008	Dual	United States of America	1	2	2	1	1	1	2	0	0
+Vanguard	Aroma	United States of America	2	3	3	3	0	0	3	0	0
+Vista	Dual	United States of America	4	0	1	0	1	1	2	0	0
+Walhalla	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Warrior	Dual	United States of America	2	0	0	0	2	0	1	3	3
+Wild Wolf	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Willamette	Dual	United States of America	2	0	0	0	2	0	3	4	1
+X13459	Aroma	United States of America	4	3	3	3	4	0	1	0	0
+Yakima Cluster	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Yakima Gold	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+YQH-1380	Dual	United States of America	3	2	4	1	1	1	1	3	0
+Zamba Blend	Aroma	United States of America	4	5	3	0	1	0	1	1	0
+Zappa	Aroma	United States of America	1	4	3	1	1	0	0	2	1
+Zenia	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Zenith	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Zeus	Bittering	United States of America	1	0	0	0	0	0	3	4	0
+Zythos	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
