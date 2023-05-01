@@ -32,7 +32,7 @@ links <- hopmaverick %>%
 
 
 # query a single page first
-test <- rvest::read_html("https://beermaverick.com/hop/ariana/")
+test <- rvest::read_html("https://beermaverick.com/hop/astra/")
 test %>% 
   rvest::html_elements("script") %>% 
   rvest::html_text() %>% 
@@ -104,6 +104,7 @@ brew_values <- c("Alpha Acid %", "Beta Acid %", "Alpha-Beta Ratio", "Hop Storage
                  "Humulene","Caryophyllene","Farnesene","All Others"
 )
 
+
 test %>% 
   rvest::html_elements(".brewvalues") %>% 
   rvest::html_text2() %>% 
@@ -116,63 +117,34 @@ test %>%
   filter(!value %in% c("Total Oil Breakdown:", "")) %>% 
   mutate(title = str_extract(value, paste0(brew_values, collapse = "|")),
          description = str_remove(value, paste0(brew_values, collapse = "|"))) %>% 
-  select(-value)
-  View()
-
-
-test %>% 
-  rvest::html_elements(".brewvalues") %>% 
-  rvest::html_text2() %>% 
-  as_tibble() %>% 
-  mutate(value = str_split(value, "\n")) %>% 
-  unnest(value) %>%
-  filter(!str_detect(value, "Alpha Acid \\% \\(AA\\)|Total Oil Breakdown")) %>% 
-  mutate(grp = str_detect(value, "^\\d") %>% lag() %>% replace_na(F)) %>% 
-  mutate(grp = cumsum(grp)) %>% 
-  # separate(value, into = c("test", "test2"), sep = "\t")
-  summarise(value = paste0(value, collapse = "::"), .by = grp) %>%
-  separate(value, into = c("cat", "avg"), sep = "::") %>% 
-  separate(cat, into = c("cat", "value"), sep = "\t") %>% 
-  mutate(cat = ifelse(str_detect(cat, "Hop Storage Index"), str_extract(cat, "Hop Storage Index.*"), cat),
-         cat = str_remove(cat, "› "),
-         cat = ifelse(str_detect(cat, "Low cohumulone"), paste0("Co-Humulone as % of Alpha", str_extract(cat, "Low cohumulone.*")), cat),
-         cat = ifelse(str_detect(cat, "^Alpha acids"), paste0("Alpha Acid %",cat), cat)) %>% 
-  mutate(title = str_extract(cat, paste0(brew_values, collapse = "|")),
-         description = str_remove(cat, paste0(brew_values, collapse = "|"))) %>% 
-  select(-cat) %>% 
-  mutate(avg = str_remove(avg, " avg") %>% str_remove("\t")) %>% 
-  mutate(range = ifelse(str_detect(value, "-"), value, avg ), 
-         range_mean = ifelse(!str_detect(value, "-"), value, avg)) %>% 
-  select(-c(grp, value, avg))
+  select(-value) %>% 
+  mutate(range = str_extract(description, "\\d+\\.?\\:?\\d?\\ ?-\\ ?\\d+\\.?\\:?\\d?(%| mL)?")) %>% 
+  mutate(mean_val = str_extract(description, "\\d+\\.?\\:?\\d?[^\\d]?(mL)?$")) %>% 
+  select(-description)
 
 
 extract_brew_values <- function(x) {
+  
   brew_value_table <- x %>% 
     rvest::html_elements(".brewvalues") %>% 
     rvest::html_text2() %>% 
     as_tibble() %>% 
-    mutate(value = str_split(value, "\n")) %>% 
-    unnest() %>%
-    filter(!str_detect(value, "Alpha Acid \\% \\(AA\\)|Total Oil Breakdown")) %>% 
-    mutate(grp = str_detect(value, "^\\d") %>% lag() %>% replace_na(F)) %>% 
-    mutate(grp = cumsum(grp)) %>% 
-    # separate(value, into = c("test", "test2"), sep = "\t")
-    summarise(value = paste0(value, collapse = "::"), .by = grp) %>%
-    separate(value, into = c("cat", "avg"), sep = "::") %>% 
-    separate(cat, into = c("cat", "value"), sep = "\t") %>% 
-    mutate(cat = ifelse(str_detect(cat, "Hop Storage Index"), str_extract(cat, "Hop Storage Index.*"), cat),
-           cat = str_remove(cat, "› "),
-           cat = ifelse(str_detect(cat, "Low cohumulone"), paste0("Co-Humulone as % of Alpha", str_extract(cat, "Low cohumulone.*")), cat),
-           cat = ifelse(str_detect(cat, "^Alpha acids"), paste0("Alpha Acid %",cat), cat)) %>% 
-    mutate(title = str_extract(cat, paste0(brew_values, collapse = "|")),
-           description = str_remove(cat, paste0(brew_values, collapse = "|"))) %>%     select(-cat) %>% 
-    mutate(avg = str_remove(avg, " avg") %>% str_remove("\t")) %>% 
-    mutate(range = ifelse(str_detect(value, "-"), value, avg ), 
-           range_mean = ifelse(!str_detect(value, "-"), value, avg)) %>% 
-    select(-c(grp, value, avg))
+    mutate(value = str_split(value, "avg|\n› ")) %>% 
+    unnest(value) %>% 
+    mutate(value = str_replace_all(value, "\\s", " ")) %>% 
+    mutate(value = ifelse(str_detect(value, "Co-Humulone"), str_extract(value, "Co-Humulone.*"), value)) %>% 
+    mutate(value = str_remove(value, "^ ") %>% str_remove(" +$")) %>% 
+    filter(!value %in% c("Total Oil Breakdown:", "")) %>% 
+    mutate(title = str_extract(value, paste0(brew_values, collapse = "|")),
+           description = str_remove(value, paste0(brew_values, collapse = "|"))) %>% 
+    select(-value) %>% 
+    mutate(range = str_extract(description, "\\d+\\.?\\:?\\d?\\ ?-\\ ?\\d+\\.?\\:?\\d?(%| mL)?")) %>% 
+    mutate(mean_val = str_extract(description, "\\d+\\.?\\:?\\d?[^\\d]?(mL)?$")) %>% 
+    select(-description)
   
   return(brew_value_table)
 }
+
 
 hop_brew_values <- hop_table %>% 
   mutate(brew_values = map(html, ~extract_brew_values(.x)))
@@ -183,5 +155,75 @@ hop_brew_values <- hop_brew_values %>%
   unnest(brew_values) %>% 
   rename(value = title)
 
+# clean up a bit more
+hop_brew_values <- hop_brew_values %>% 
+  drop_na(value) %>% 
+  mutate(across(.cols = c(range, mean_val), ~str_remove_all(.x, ":\\d| |%|mL"))) %>%
+  separate(range, into = c("range_min", "range_max"), sep = "-") %>% 
+  rename(range_mean = mean_val) %>% 
+  mutate(across(.cols = c(range_min, range_max, range_mean), ~as.numeric(.x)))
+
+
 hop_brew_values %>% 
   write_tsv("hop_brew_values.txt")
+
+
+
+# first attempt at parsing out brew values --------------------------------
+
+
+# test %>% 
+#   rvest::html_elements(".brewvalues") %>% 
+#   rvest::html_text2() %>% 
+#   as_tibble() %>% 
+#   mutate(value = str_split(value, "\n")) %>% 
+#   unnest(value) %>%
+#   filter(!str_detect(value, "Alpha Acid \\% \\(AA\\)|Total Oil Breakdown")) %>% 
+#   mutate(grp = str_detect(value, "^\\d") %>% lag() %>% replace_na(F)) %>% 
+#   mutate(grp = cumsum(grp)) %>% 
+#   # separate(value, into = c("test", "test2"), sep = "\t")
+#   summarise(value = paste0(value, collapse = "::"), .by = grp) %>%
+#   separate(value, into = c("cat", "avg"), sep = "::") %>% 
+#   separate(cat, into = c("cat", "value"), sep = "\t") %>% 
+#   mutate(cat = ifelse(str_detect(cat, "Hop Storage Index"), str_extract(cat, "Hop Storage Index.*"), cat),
+#          cat = str_remove(cat, "› "),
+#          cat = ifelse(str_detect(cat, "Low cohumulone"), paste0("Co-Humulone as % of Alpha", str_extract(cat, "Low cohumulone.*")), cat),
+#          cat = ifelse(str_detect(cat, "^Alpha acids"), paste0("Alpha Acid %",cat), cat)) %>% 
+#   mutate(title = str_extract(cat, paste0(brew_values, collapse = "|")),
+#          description = str_remove(cat, paste0(brew_values, collapse = "|"))) %>% 
+#   select(-cat) %>% 
+#   mutate(avg = str_remove(avg, " avg") %>% str_remove("\t")) %>% 
+#   mutate(range = ifelse(str_detect(value, "-"), value, avg ), 
+#          range_mean = ifelse(!str_detect(value, "-"), value, avg)) %>% 
+#   select(-c(grp, value, avg))
+
+
+# extract_brew_values <- function(x) {
+#   brew_value_table <- x %>% 
+#     rvest::html_elements(".brewvalues") %>% 
+#     rvest::html_text2() %>% 
+#     as_tibble() %>% 
+#     mutate(value = str_split(value, "\n")) %>% 
+#     unnest() %>%
+#     filter(!str_detect(value, "Alpha Acid \\% \\(AA\\)|Total Oil Breakdown")) %>% 
+#     mutate(grp = str_detect(value, "^\\d") %>% lag() %>% replace_na(F)) %>% 
+#     mutate(grp = cumsum(grp)) %>% 
+#     # separate(value, into = c("test", "test2"), sep = "\t")
+#     summarise(value = paste0(value, collapse = "::"), .by = grp) %>%
+#     separate(value, into = c("cat", "avg"), sep = "::") %>% 
+#     separate(cat, into = c("cat", "value"), sep = "\t") %>% 
+#     mutate(cat = ifelse(str_detect(cat, "Hop Storage Index"), str_extract(cat, "Hop Storage Index.*"), cat),
+#            cat = str_remove(cat, "› "),
+#            cat = ifelse(str_detect(cat, "Low cohumulone"), paste0("Co-Humulone as % of Alpha", str_extract(cat, "Low cohumulone.*")), cat),
+#            cat = ifelse(str_detect(cat, "^Alpha acids"), paste0("Alpha Acid %",cat), cat)) %>% 
+#     mutate(title = str_extract(cat, paste0(brew_values, collapse = "|")),
+#            description = str_remove(cat, paste0(brew_values, collapse = "|"))) %>%     select(-cat) %>% 
+#     mutate(avg = str_remove(avg, " avg") %>% str_remove("\t")) %>% 
+#     mutate(range = ifelse(str_detect(value, "-"), value, avg ), 
+#            range_mean = ifelse(!str_detect(value, "-"), value, avg)) %>% 
+#     select(-c(grp, value, avg))
+#   
+#   return(brew_value_table)
+# }
+
+
