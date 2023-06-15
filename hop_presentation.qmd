@@ -1,25 +1,30 @@
 ---
 title: "Hop profile web scraping and analysis"
-author: "Deborah Oliveira & Völundur Hafstad"
-format: revealjs
+author: "Völundur Hafstad & Deborah Oliveira"
+format:
+  revealjs:
+    theme: moon
 editor: visual
 ---
 
-## Quarto
+## Project outline
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+-   Scrape a website
 
-## Bullets
+-   Clean the data
 
-When you click the **Render** button a document will be generated that includes:
+-   Play around with the data
 
--   Content authored with markdown
--   Output from executable code
+## The website
 
-## Code
+Contains hops information such as ...
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+Insert an image or the link to it.
+
+## Packages used
 
 ```{r}
-1 + 1
+library(tidyverse)
+library(rvest)
+library(gt)
 ```
