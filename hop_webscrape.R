@@ -247,3 +247,12 @@ hop_aromas <- hop_aromas |>
 
 hop_aromas |> 
   write_tsv("hop_aromas.txt")
+
+# fix brew values
+
+hop_brew_values <- hop_brew_values |> 
+  mutate(range_min = ifelse(hop_name == "Walhalla" & brew_value == "Alpha Acid %", 5.97, range_min)) |> 
+  mutate(range_min = ifelse(hop_name == "Walhalla" & brew_value == "Beta Acid %", 3.75, range_min)) 
+
+hop_brew_values |> 
+  write_tsv("hop_brew_values.txt")
