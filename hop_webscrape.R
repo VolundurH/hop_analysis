@@ -1,11 +1,13 @@
 library(tidyverse)
 
+# Read in the contents of the main website, which includes a table of all the hops we are interested in. 
 hopmaverick <- rvest::read_html("https://beermaverick.com/hops/")
 
 # start by fetching the flavor and aroma profiles from beermaverick.
 # These are the values that are plotted in a spider plot on each hop page, e.g. https://beermaverick.com/hop/astra/
 
-# hop table
+
+# The rvest package has a bunch of functions to parse through HTML contents. Here we used html_elements("table") to extract the hop table, and html_children() and html_text2() to parse it into a workable format. We then use the standard dplyr functions to tidy the data properly. 
 hop_table <- hopmaverick %>%
   rvest::html_elements("table") %>% 
   rvest::html_children() %>% 
@@ -21,12 +23,21 @@ hop_table <- hopmaverick %>%
   separate(value, into = c("hop_name", "hop_purpose"), sep = "\t") %>% 
   select(-c(country_id, drop_later)) 
 
+# Every hop strain in the table contains a link to that strain's page. These pages contain more information on the strain, such as what flavors and aromas are associated with that strain, how much oil the strain has, etc. These pages are all structured in the same way, so retrieving the data should not be too complicated. 
+
+# Here we use the same rvest functions as before, but now we retrieve the embedded links in the table.
 links <- hopmaverick %>%
   rvest::html_elements("table") %>% 
   rvest::html_children() %>% 
   rvest::html_elements("a") %>%
   rvest::html_attr("href") %>% 
   as_tibble()
+
+# We now have a table of hops with an associated link. For every hop we want to follow the link and retrieve information for that page, and parse that into a master table.
+
+
+# Hop aroma table ---------------------------------------------------------
+
 
 
 # query a single page first
@@ -69,6 +80,11 @@ extract_aroma_chart_from_link <- function(link){
   
 }
 
+
+# Timings: map() vs future_map() for scraping -----------------------------
+
+
+
 # How much faster is it to use furrr's future_map() vs purrr's map()?
 
 # map()
@@ -88,8 +104,12 @@ future::plan("default")
 tictoc::toc()
 
 
+# End of timings ----------------------------------------------------------
+
+
+
 # Create hop aroma table using our function we just created and future_map()
-tictoc::tic()
+
 future::plan("multisession")
 hop_aromas <- hop_table %>% 
   bind_cols(links) %>%
@@ -97,16 +117,11 @@ hop_aromas <- hop_table %>%
   rename(link = value) |> 
   mutate(html = furrr::future_map(link, ~extract_aroma_chart_from_link(.x)))
 future::plan("default")
-tictoc::toc()
+
 
 hop_aromas <- hop_aromas |> 
-  unnest_wider(html)
-
-# save
-setwd("Documents/hop_analysis/")
-
-hop_table %>% 
-  write_rds("hop_table_main.rds")
+  unnest_wider(html) |> 
+  mutate(country = str_replace(country, "Replublic", "Republic"))
 
 hop_aromas %>% 
   write_tsv("hop_aromas.txt")
@@ -116,21 +131,22 @@ hop_aromas %>%
 # brewing values ----------------------------------------------------------
 
 # beermaverick also has a list of brewing values on each hop page. 
-# These values include alpha and beta acid percentages, how well they can be stored and a breakdown of the oils found in each hop.  
+# These values include alpha and beta acid percentages, how well they can be stored, and a breakdown of the oils found in each hop.  
 
-hop_table <- read_rds("hop_table_main.rds")
-hop_aromas <- read_tsv("hop_aromas.txt")
+# This information is a little trickier to get, since not all hops have all the information fields on the page. Some hop do not even have any.
 
-brew_values <- c("Alpha Acid %", "Beta Acid %", "Alpha-Beta Ratio", "Hop Storage Index \\(HSI\\)", 
-                 "Co-Humulone as % of Alpha", "Total Oils \\(mL\\/100g\\)", "Myrcene", 
+
+
+brew_values <- c("Alpha Acid %", "Beta Acid %", "Alpha-Beta Ratio", "Hop Storage Index \\(HSI\\)",  "Co-Humulone as % of Alpha", "Total Oils \\(mL\\/100g\\)", "Myrcene", 
                  "Humulene","Caryophyllene","Farnesene","All Others"
 )
 
+test <-  rvest::read_html("https://beermaverick.com/hop/citra/")
 
 test %>% 
   rvest::html_elements(".brewvalues") %>% 
   rvest::html_text2() %>% 
-  as_tibble() %>% 
+  as_tibble() %>%
   mutate(value = str_split(value, "avg|\n› ")) %>% 
   unnest(value) %>% 
   mutate(value = str_replace_all(value, "\\s", " ")) %>% 
@@ -145,9 +161,9 @@ test %>%
   select(-description)
 
 
-extract_brew_values <- function(x) {
+extract_brew_values <- function(link) {
   
-  brew_value_table <- x %>% 
+  brew_value_table <- rvest::read_html(link) |> 
     rvest::html_elements(".brewvalues") %>% 
     rvest::html_text2() %>% 
     as_tibble() %>% 
@@ -168,84 +184,66 @@ extract_brew_values <- function(x) {
 }
 
 
+future::plan("multisession")
 hop_brew_values <- hop_table %>% 
-  mutate(brew_values = map(html, ~extract_brew_values(.x)))
+  bind_cols(links) %>%
+  mutate(value = paste0("https://beermaverick.com", value)) |> 
+  rename(link = value) |> 
+  mutate(brew_values = furrr::future_map(link, ~extract_brew_values(.x)))
+future::plan("default")
 
-
-hop_brew_values <- hop_brew_values %>% 
-  select(-c(html, value)) %>% 
-  unnest(brew_values) %>% 
-  rename(value = title)
+hop_brew_values <- hop_brew_values |> 
+  unnest(brew_values) |> 
+  rename(brew_value = title)
 
 # clean up a bit more
 hop_brew_values <- hop_brew_values %>% 
-  drop_na(value) %>% 
+  drop_na(brew_value) %>% 
   mutate(across(.cols = c(range, mean_val), ~str_remove_all(.x, ":\\d| |%|mL"))) %>%
   separate(range, into = c("range_min", "range_max"), sep = "-") %>% 
   rename(range_mean = mean_val) %>% 
   mutate(across(.cols = c(range_min, range_max, range_mean), ~as.numeric(.x)))
-
 
 hop_brew_values %>% 
   write_tsv("hop_brew_values.txt")
 
 
 
-# first attempt at parsing out brew values --------------------------------
+# Hop aroma tags ----------------------------------------------------------
 
+# Finally we want to extract aroma tags if they are present on the page. This is actually very easy:
 
-# test %>% 
-#   rvest::html_elements(".brewvalues") %>% 
-#   rvest::html_text2() %>% 
-#   as_tibble() %>% 
-#   mutate(value = str_split(value, "\n")) %>% 
-#   unnest(value) %>%
-#   filter(!str_detect(value, "Alpha Acid \\% \\(AA\\)|Total Oil Breakdown")) %>% 
-#   mutate(grp = str_detect(value, "^\\d") %>% lag() %>% replace_na(F)) %>% 
-#   mutate(grp = cumsum(grp)) %>% 
-#   # separate(value, into = c("test", "test2"), sep = "\t")
-#   summarise(value = paste0(value, collapse = "::"), .by = grp) %>%
-#   separate(value, into = c("cat", "avg"), sep = "::") %>% 
-#   separate(cat, into = c("cat", "value"), sep = "\t") %>% 
-#   mutate(cat = ifelse(str_detect(cat, "Hop Storage Index"), str_extract(cat, "Hop Storage Index.*"), cat),
-#          cat = str_remove(cat, "› "),
-#          cat = ifelse(str_detect(cat, "Low cohumulone"), paste0("Co-Humulone as % of Alpha", str_extract(cat, "Low cohumulone.*")), cat),
-#          cat = ifelse(str_detect(cat, "^Alpha acids"), paste0("Alpha Acid %",cat), cat)) %>% 
-#   mutate(title = str_extract(cat, paste0(brew_values, collapse = "|")),
-#          description = str_remove(cat, paste0(brew_values, collapse = "|"))) %>% 
-#   select(-cat) %>% 
-#   mutate(avg = str_remove(avg, " avg") %>% str_remove("\t")) %>% 
-#   mutate(range = ifelse(str_detect(value, "-"), value, avg ), 
-#          range_mean = ifelse(!str_detect(value, "-"), value, avg)) %>% 
-#   select(-c(grp, value, avg))
+test <-  rvest::read_html("https://beermaverick.com/hop/citra/")
 
+test |> 
+  rvest::html_elements("em") |> 
+  rvest::html_children() |> 
+  rvest::html_text2()
 
-# extract_brew_values <- function(x) {
-#   brew_value_table <- x %>% 
-#     rvest::html_elements(".brewvalues") %>% 
-#     rvest::html_text2() %>% 
-#     as_tibble() %>% 
-#     mutate(value = str_split(value, "\n")) %>% 
-#     unnest() %>%
-#     filter(!str_detect(value, "Alpha Acid \\% \\(AA\\)|Total Oil Breakdown")) %>% 
-#     mutate(grp = str_detect(value, "^\\d") %>% lag() %>% replace_na(F)) %>% 
-#     mutate(grp = cumsum(grp)) %>% 
-#     # separate(value, into = c("test", "test2"), sep = "\t")
-#     summarise(value = paste0(value, collapse = "::"), .by = grp) %>%
-#     separate(value, into = c("cat", "avg"), sep = "::") %>% 
-#     separate(cat, into = c("cat", "value"), sep = "\t") %>% 
-#     mutate(cat = ifelse(str_detect(cat, "Hop Storage Index"), str_extract(cat, "Hop Storage Index.*"), cat),
-#            cat = str_remove(cat, "› "),
-#            cat = ifelse(str_detect(cat, "Low cohumulone"), paste0("Co-Humulone as % of Alpha", str_extract(cat, "Low cohumulone.*")), cat),
-#            cat = ifelse(str_detect(cat, "^Alpha acids"), paste0("Alpha Acid %",cat), cat)) %>% 
-#     mutate(title = str_extract(cat, paste0(brew_values, collapse = "|")),
-#            description = str_remove(cat, paste0(brew_values, collapse = "|"))) %>%     select(-cat) %>% 
-#     mutate(avg = str_remove(avg, " avg") %>% str_remove("\t")) %>% 
-#     mutate(range = ifelse(str_detect(value, "-"), value, avg ), 
-#            range_mean = ifelse(!str_detect(value, "-"), value, avg)) %>% 
-#     select(-c(grp, value, avg))
-#   
-#   return(brew_value_table)
-# }
+extract_aroma_tags_from_link <- function(link){
+  rvest::read_html(link) |> 
+    rvest::html_elements("em") |> 
+    rvest::html_children() |> 
+    rvest::html_text2()
+}
+  
+future::plan("multisession")
+hop_aroma_tags <- hop_table |> 
+  bind_cols(links) |> 
+  mutate(value = paste0("https://beermaverick.com", value)) |> 
+  rename(link = value) |> 
+  mutate(brew_values = furrr::future_map(link, ~extract_aroma_tags_from_link(.x)))
+future::plan("default")
 
+hop_aroma_tags <- hop_aroma_tags |> 
+  rowwise() |> 
+  mutate(brew_values = str_flatten_comma(brew_values))
 
+# Since this is so similar to the hop_aroma data we will just add this info to that table. 
+
+hop_aromas <- hop_aromas |> 
+  left_join(hop_aroma_tags) |> 
+  rename(aroma_tags = brew_values)
+
+hop_aromas |> 
+  write_tsv("hop_aromas.txt")
