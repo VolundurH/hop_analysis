@@ -1,319 +1,319 @@
-hop_name	hop_purpose	country	Citrus	Tropical_Fruit	Stone_Fruit	Berry	Floral	Grassy	Herbal	Spice	Pine
-Astra	Dual	Australia	3	3	3	2	0	1	0	2	1
-Eclipse	Dual	Australia	3	3	2	2	2	1	1	0	2
-Ella	Dual	Australia	3	4	3	3	3	1	1	2	2
-Enigma	Aroma	Australia	3	3	1	0	2	1	0	1	0
-Feux-Coeur Francais	Bittering	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Galaxy	Dual	Australia	4	3	1	0	2	1	0	0	1
-Helga	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-HPA-016	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Melba	Aroma	Australia	3	4	4	2	0	0	0	1	0
-Pride of Ringwood	Bittering	Australia	3	3	3	3	0	0	3	3	2
-Summer	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Super Pride	Dual	Australia	1	0	0	0	2	0	2	4	2
-Sylva	Aroma	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Topaz	Dual	Australia	2	2	2	2	0	0	0	0	2
-Vic Secret	Dual	Australia	3	2	0	0	0	0	0	0	0
-Vienna Gold	Dual	Australia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Canadian Redvine	Aroma	Canada	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Lumberjack	Dual	Canada	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Sasquatch	Dual	Canada	3	2	3	1	2	1	3	3	3
-Wild Loyalist	Aroma	Canada	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Marco Polo	Dual	China	2	1	2	2	1	1	3	2	1
-Tsingdao Flower	Dual	China	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Agnus	Bittering	Czech Replublic	1	2	1	0	0	0	1	2	3
-Amethyst	Aroma	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Bohemie	Aroma	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Boomerang	Dual	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Bor	Dual	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Gaia	Bittering	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Harmonie	Aroma	Czech Replublic	2	3	2	2	2	1	1	3	3
-Kazbek	Aroma	Czech Replublic	3	2	0	0	1	0	1	0	0
-Mimosa	Aroma	Czech Replublic	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Premiant	Bittering	Czech Replublic	2	4	4	4	3	0	1	3	0
-Saaz (CZ)	Aroma	Czech Replublic	3	0	0	0	2	0	0	4	4
-Saaz Late	Aroma	Czech Replublic	2	3	1	1	2	1	1	2	2
-Sládek	Aroma	Czech Replublic	2	3	2	2	3	0	2	1	0
-Vital	Dual	Czech Replublic	2	3	1	1	1	1	1	3	3
-Aramis	Aroma	France	1	0	0	0	0	0	3	3	0
-Barbe Rouge	Aroma	France	0	2	2	4	4	0	2	0	0
-Bouclier	Aroma	France	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Elixir	Aroma	France	3	3	3	0	3	1	1	1	1
-Mistral	Dual	France	4	3	1	2	3	1	1	1	0
-Petit Blanc	Aroma	France	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Strisselspalt	Aroma	France	1	1	0	0	3	2	3	1	2
-Tardif de Bourgogne	Aroma	France	0	0	0	1	4	0	2	2	1
-Triskel	Aroma	France	2	1	1	0	2	1	2	1	2
-Akoya	Aroma	Germany	3	1	1	1	2	0	2	3	0
-Ariana	Aroma	Germany	3	4	2	2	1	1	2	2	1
-Aurum	Aroma	Germany	1	0	0	0	1	1	2	1	0
-Brewer's Gold (GR)	Bittering	Germany	2	3	3	0	1	0	1	2	2
-Callista	Aroma	Germany	3	3	2	2	2	1	1	1	1
-Diamant	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Hallertau Blanc	Aroma	Germany	2	0	0	3	0	0	2	3	2
-Hallertau Gold	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Hallertau Mittelfrüh	Aroma	Germany	2	1	0	0	0	0	3	4	2
-Hallertau Tradition	Aroma	Germany	2	0	0	0	3	0	0	2	2
-Herkules	Bittering	Germany	2	2	2	1	1	1	2	1	1
-Hersbrucker	Aroma	Germany	2	1	1	1	1	1	2	2	2
-Huell Melon	Aroma	Germany	2	4	0	0	2	0	0	2	1
-Hüller Bitterer	Bittering	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Magnum (GR)	Bittering	Germany	2	3	0	0	1	0	2	4	1
-Mandarina Bavaria	Dual	Germany	4	3	3	3	1	0	1	2	2
-Merkur	Dual	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Monroe	Aroma	Germany	3	3	1	3	2	1	1	1	2
-Northern Brewer (GR)	Bittering	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Opal	Dual	Germany	2	2	2	2	0	0	2	4	2
-Orion	Dual	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Perle (GR)	Aroma	Germany	1	1	1	0	2	0	2	3	1
-Polaris	Dual	Germany	3	4	4	4	1	0	2	3	1
-Relax	Aroma	Germany	2	2	1	1	2	1	1	1	2
-Saphir	Aroma	Germany	1	1	1	0	2	1	2	2	2
-Smaragd	Bittering	Germany	1	1	1	1	0	0	4	3	3
-Solero	Aroma	Germany	3	5	5	2	0	0	2	3	0
-Spalt	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Spalter Select	Aroma	Germany	2	1	1	1	2	0	3	3	2
-Tango	Dual	Germany	5	4	2	3	2	0	0	0	1
-Tettnanger	Dual	Germany	1	1	1	1	2	0	3	3	3
-Wurttemberg	Aroma	Germany	1	0	0	0	3	0	3	3	2
-Yellow Sub	Aroma	Germany	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Golden Star	Aroma	Japan	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Sorachi Ace	Dual	Japan	3	4	0	0	1	0	2	0	0
-Toyomidori	Bittering	Japan	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Brooklyn	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Dr. Rudi	Dual	New Zealand	2	0	0	0	0	1	1	1	3
-Green Bullet	Dual	New Zealand	0	0	0	2	2	0	0	1	1
-HORT9909	Dual	New Zealand	5	0	0	0	2	3	5	3	4
-Kohatu	Dual	New Zealand	1	3	2	0	0	0	0	0	0
-Motueka	Dual	New Zealand	3	2	0	1	0	0	0	0	0
-Moutere	Dual	New Zealand	3	4	0	0	0	0	0	1	2
-Nectaron	Aroma	New Zealand	4	4	3	0	0	0	2	0	0
-Nelson Sauvin	Aroma	New Zealand	0	2	0	4	0	0	1	0	0
-NZH-107	Dual	New Zealand	5	5	1	0	1	0	1	0	0
-Pacific Gem	Bittering	New Zealand	2	0	0	4	1	0	0	1	1
-Pacific Jade	Dual	New Zealand	2	0	0	0	0	0	1	1	0
-Pacific Sunrise	Bittering	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Pacifica	Aroma	New Zealand	3	0	0	0	3	0	0	2	0
-Rakau	Dual	New Zealand	1	3	4	1	2	0	0	0	0
-Riwaka	Aroma	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Smooth Cone	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Southern Cross	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Sticklebract	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Taiheke	Dual	New Zealand	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Wai-iti	Aroma	New Zealand	3	0	3	0	0	0	0	0	0
-Waimea	Dual	New Zealand	4	1	0	0	1	0	0	0	3
-Wakatu	Dual	New Zealand	2	1	0	0	0	0	3	4	2
-Junga	Bittering	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Limbus	Aroma	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Lubelska	Aroma	Poland	1	0	1	0	1	1	2	1	2
-Magnat	Dual	Poland	3	1	1	1	0	1	2	1	3
-Marynka	Dual	Poland	2	2	1	1	2	1	2	2	3
-Pulawski	Dual	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Sybilla	Aroma	Poland	3	2	1	0	1	1	1	2	3
-Zula	Dual	Poland	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Apolon	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Atlas	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Aurora	Dual	Slovenia	2	0	0	0	3	0	3	4	3
-Bobek	Bittering	Slovenia	2	1	1	1	3	1	2	1	2
-Cekin	Aroma	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Celeia	Aroma	Slovenia	1	0	0	0	2	1	1	1	1
-Dana	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Styrian Cardinal	Aroma	Slovenia	3	4	4	1	2	0	0	0	1
-Styrian Dragon	Aroma	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Styrian Eagle	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Styrian Fox	Dual	Slovenia	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Styrian Golding	Aroma	Slovenia	3	0	0	0	2	0	2	2	1
-Styrian Kolibri	Aroma	Slovenia	2	3	3	1	3	1	4	2	0
-Styrian Wolf	Dual	Slovenia	2	5	3	0	2	0	1	2	0
-African Queen	Dual	South Africa	3	2	3	4	1	0	1	1	0
-Southern Aroma	Aroma	South Africa	1	0	0	0	4	3	2	2	3
-Southern Brewer	Bittering	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Southern Dawn	Dual	South Africa	2	1	1	1	1	0	1	1	0
-Southern Passion	Aroma	South Africa	2	4	4	3	3	0	0	0	0
-Southern Promise	Dual	South Africa	3	1	0	3	2	0	2	2	2
-Southern Star	Dual	South Africa	3	2	2	3	2	0	1	2	1
-Southern Sublime	Aroma	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Southern Tropic	Bittering	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
-XJA2/436	Bittering	South Africa	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Zagrava	Dual	Ukraine	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Admiral	Bittering	United Kingdom	1	3	2	3	0	2	3	0	1
-Archer	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Beata	Bittering	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Boadicea	Dual	United Kingdom	0	0	0	2	2	0	2	4	0
-Bramling Cross	Dual	United Kingdom	3	1	0	0	0	0	4	2	3
-Challenger	Dual	United Kingdom	1	0	0	0	0	0	3	3	2
-Defender	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-East Kent Goldings	Bittering	United Kingdom	2	0	0	0	1	0	2	3	2
-Endeavour	Dual	United Kingdom	1	1	1	1	1	1	2	2	2
-Epic	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Ernest	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-First Gold	Dual	United Kingdom	2	2	2	2	2	0	3	1	2
-Flyer	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Fuggle	Aroma	United Kingdom	2	0	0	0	0	0	2	3	4
-Godiva	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Hallertau Taurus	Dual	United Kingdom	0	1	0	0	0	0	0	3	3
-Harlequin	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Herald	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Jester	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Minstrel	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Mystic	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Olicana	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Omega	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Phoenix	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Pilgrim	Dual	United Kingdom	1	2	2	1	2	2	3	3	2
-Pilot	Bittering	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Pioneer	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Progress	Aroma	United Kingdom	0	2	2	2	0	0	3	4	4
-Sovereign	Aroma	United Kingdom	1	4	4	4	0	0	2	2	1
-Sussex	Aroma	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Target	Bittering	United Kingdom	2	0	0	0	3	0	3	2	4
-Whitbread Golding Variety (WGV)	Dual	United Kingdom	0	0	0	0	3	0	1	2	2
-Yeoman	Dual	United Kingdom	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Adeena	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Ahhhroma	Dual	United States of America	2	5	5	3	2	0	1	3	0
-Ahtanum	Aroma	United States of America	2	0	1	2	4	1	2	3	1
-Aloha Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Altus	Aroma	United States of America	2	0	0	0	0	0	1	4	3
-Amarillo	Aroma	United States of America	4	1	1	0	1	0	0	0	0
-Apollo	Bittering	United States of America	3	0	0	0	0	4	0	4	3
-Aquila	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Arcadian	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Azacca	Dual	United States of America	3	3	2	0	0	0	0	0	2
-Banner	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Belma	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Bergamot	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Bianca	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Bitter Gold	Dual	United States of America	2	4	4	1	2	2	1	1	0
-Bravo	Bittering	United States of America	3	1	1	1	2	0	3	2	0
-Brewer's Gold (US)	Bittering	United States of America	2	3	3	0	1	0	1	2	2
-BRU-1	Aroma	United States of America	2	4	2	1	1	3	1	1	1
-Bullion	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Buzz Bullets	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Caliente	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Calypso	Dual	United States of America	2	3	3	3	0	0	2	0	2
-Cascade	Dual	United States of America	3	1	0	0	2	0	2	2	0
-Cashmere	Dual	United States of America	1	3	3	3	0	0	0	2	0
-Centennial	Dual	United States of America	4	0	0	0	2	0	0	0	2
-Chelan	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Chinook	Dual	United States of America	3	0	0	0	1	0	1	0	4
-Citra	Dual	United States of America	5	4	1	0	1	0	0	2	2
-Cluster	Dual	United States of America	3	2	0	0	1	0	2	0	1
-Cluster Fugget Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Columbia	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Columbus	Dual	United States of America	1	0	0	0	0	0	3	4	0
-Comet	Dual	United States of America	3	3	3	3	1	0	2	1	1
-Contessa	Bittering	United States of America	1	1	1	1	3	0	4	0	1
-Crystal	Aroma	United States of America	1	0	0	0	0	0	4	2	3
-CTZ	Dual	United States of America	1	0	0	0	0	0	3	4	0
-Delta	Aroma	United States of America	2	2	2	2	1	0	2	3	2
-Diamond Springs	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Ekuanot	Aroma	United States of America	3	0	0	2	1	0	3	1	0
-El Dorado	Dual	United States of America	3	4	0	0	0	0	1	0	0
-Emerald Spire	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Equinox	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Eroica	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Eureka	Dual	United States of America	1	2	2	2	0	0	4	3	3
-Evergreen Blend	Aroma	United States of America	3	1	4	1	2	1	2	0	1
-Falconer's Flight	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Falconer's Flight 7CS	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Fantasia Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Galena	Aroma	United States of America	2	0	0	0	0	0	1	2	3
-Gemini	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Glacier	Dual	United States of America	2	2	2	2	1	0	3	0	1
-Golding	Aroma	United States of America	2	1	1	1	1	1	2	3	2
-Grungeist	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Hallertau (US)	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Hartwick	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-HBC 472	Aroma	United States of America	2	3	3	2	3	2	2	1	3
-HBC 586	Dual	United States of America	4	5	2	3	2	1	2	1	0
-HBC 630	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-HBC 692	Aroma	United States of America	3	3	1	2	4	2	3	1	3
-Helios	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Horizon	Dual	United States of America	2	1	1	1	3	0	1	2	1
-Hydra	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Idaho 7	Aroma	United States of America	3	4	4	0	1	0	2	1	2
-Idaho Gem	Dual	United States of America	2	0	0	4	1	0	0	1	1
-Independence	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Jarrylo	Dual	United States of America	1	2	1	0	0	0	2	1	0
-Lambic	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Lawton	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Lemondrop	Aroma	United States of America	3	2	2	2	1	0	3	1	1
-Liberty	Bittering	United States of America	1	0	0	0	2	0	3	2	2
-Loral	Aroma	United States of America	2	0	0	0	4	3	2	2	0
-Lotus	Aroma	United States of America	2	4	3	4	1	0	2	2	1
-Mackinac	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Magnum (US)	Bittering	United States of America	2	3	0	0	1	0	2	4	1
-McKenzie	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Medusa	Aroma	United States of America	4	3	3	1	0	1	0	0	0
-Meridian	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Michigan Copper	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Millennium	Bittering	United States of America	2	1	2	3	1	0	1	2	3
-Mosaic	Dual	United States of America	3	3	1	0	2	0	0	0	4
-Mount Hood	Aroma	United States of America	0	0	0	0	3	1	4	3	1
-Mount Rainier	Dual	United States of America	1	0	0	0	0	0	3	0	0
-Multihead	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Newport	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Nobility Blend	Dual	United States of America	4	1	1	0	3	2	4	2	2
-Northdown	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Northern Brewer (US)	Bittering	United States of America	2	2	2	2	2	0	3	1	2
-Nugget	Dual	United States of America	1	0	0	0	2	0	3	2	2
-Old Mission	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Olympic	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Pacific Crest	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Pahto	Bittering	United States of America	0	0	0	0	3	2	3	2	0
-Palisade	Dual	United States of America	3	3	0	3	2	0	1	0	0
-Paradigm	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Pekko	Dual	United States of America	3	3	1	2	4	0	4	3	2
-Perle (US)	Dual	United States of America	1	3	3	3	2	0	2	3	1
-Petoskey	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Prussian	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Saaz (US)	Aroma	United States of America	3	0	0	0	2	0	0	4	4
-Sabro	Aroma	United States of America	3	0	1	0	2	0	3	1	0
-Samba	Aroma	United States of America	4	5	3	0	1	0	1	1	0
-Santiam	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Satus	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Saugatuck	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Sequoia Blend	Aroma	United States of America	3	5	0	2	2	2	0	1	2
-Shaddock	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Simcoe	Dual	United States of America	4	4	1	5	1	0	2	2	2
-Sitiva Blend	Aroma	United States of America	4	4	3	1	4	1	1	2	1
-Sonnet	Aroma	United States of America	1	0	1	0	3	0	0	0	0
-Sterling	Aroma	United States of America	2	0	0	0	2	1	3	2	0
-Sticky Fingers Blend	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Stirling	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Strata	Dual	United States of America	4	5	4	1	2	1	2	2	3
-Sultana (Denali)	Dual	United States of America	4	3	2	1	1	0	1	1	3
-Summit	Bittering	United States of America	2	0	0	0	0	0	4	4	0
-Sun	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Sunbeam	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Super Galena	Bittering	United States of America	1	1	1	1	0	0	2	4	1
-Tahoma	Aroma	United States of America	3	0	0	0	1	0	0	3	1
-Talisman	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Talus	Aroma	United States of America	3	3	1	1	3	1	2	0	1
-Teamaker	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Tettnang (US)	Aroma	United States of America	1	0	0	0	2	0	3	3	3
-Tillicum	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-TNT Blend	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Tomahawk	Dual	United States of America	1	0	0	0	0	0	3	4	0
-Trident	Dual	United States of America	4	4	4	2	2	0	1	1	1
-TriplePearl	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Triumph	Dual	United States of America	2	1	1	3	3	0	1	4	4
-Tropica	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Ultra	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-USDA 008	Dual	United States of America	1	2	2	1	1	1	2	0	0
-Vanguard	Aroma	United States of America	2	3	3	3	0	0	3	0	0
-Vista	Dual	United States of America	4	0	1	0	1	1	2	0	0
-Walhalla	Aroma	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Warrior	Dual	United States of America	2	0	0	0	2	0	1	3	3
-Wild Wolf	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Willamette	Dual	United States of America	2	0	0	0	2	0	3	4	1
-X13459	Aroma	United States of America	4	3	3	3	4	0	1	0	0
-Yakima Cluster	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Yakima Gold	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-YQH-1380	Dual	United States of America	3	2	4	1	1	1	1	3	0
-Zamba Blend	Aroma	United States of America	4	5	3	0	1	0	1	1	0
-Zappa	Aroma	United States of America	1	4	3	1	1	0	0	2	1
-Zenia	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Zenith	Bittering	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
-Zeus	Bittering	United States of America	1	0	0	0	0	0	3	4	0
-Zythos	Dual	United States of America	NA	NA	NA	NA	NA	NA	NA	NA	NA
+hop_name	hop_purpose	country	link	Citrus	TropicalFruit	StoneFruit	Berry	Floral	Grassy	Herbal	Spice	Pine	aroma_tags
+Astra	Dual	Australia	https://beermaverick.com/hop/astra/	3	3	3	2	0	1	0	2	1	#tropical_fruit, #sweet, #peach, #white_wine, #melon, #grassy, #grapefruit, #honey
+Eclipse	Dual	Australia	https://beermaverick.com/hop/eclipse/	3	3	2	2	2	1	1	0	2	#citrus, #pine, #mandarin
+Ella	Dual	Australia	https://beermaverick.com/hop/ella/	3	4	3	3	3	1	1	2	2	#floral, #spicy, #grapefruit, #tropical_fruit, #noble, #anise
+Enigma	Aroma	Australia	https://beermaverick.com/hop/enigma/	3	3	1	0	2	1	0	1	0	#tropical_fruit, #berry, #stone_fruit, #raspberry, #redcurrant, #white_wine
+Feux-Coeur Francais	Bittering	Australia	https://beermaverick.com/hop/feux-coeur-francais/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Galaxy	Dual	Australia	https://beermaverick.com/hop/galaxy/	4	3	1	0	2	1	0	0	1	#passion_fruit, #citrus, #peach, #pineapple, #tropical_fruit, #cannabis, #dank
+Helga	Aroma	Australia	https://beermaverick.com/hop/helga/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#noble
+HPA-016	Aroma	Australia	https://beermaverick.com/hop/hpa-016/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#mandarin, #citrus, #pine, #fruity
+Melba	Aroma	Australia	https://beermaverick.com/hop/melba/	3	4	4	2	0	0	0	1	0	#passion_fruit, #grapefruit, #citrus, #spicy
+Pride of Ringwood	Bittering	Australia	https://beermaverick.com/hop/pride-of-ringwood/	3	3	3	3	0	0	3	3	2	#cedar, #oak, #herbal
+Summer	Aroma	Australia	https://beermaverick.com/hop/summer/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#apricot, #melon, #grassy, #citrus, #stone_fruit, #passion_fruit, #peach
+Super Pride	Dual	Australia	https://beermaverick.com/hop/super-pride/	1	0	0	0	2	0	2	4	2	#resin, #fruity, #mild
+Sylva	Aroma	Australia	https://beermaverick.com/hop/sylva/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #bohemian, #hoppy, #woody
+Topaz	Dual	Australia	https://beermaverick.com/hop/topaz/	2	2	2	2	0	0	0	0	2	#lychee, #clove, #resin, #grassy, #tropical_fruit, #pine, #passion_fruit
+Vic Secret	Dual	Australia	https://beermaverick.com/hop/vic-secret/	3	2	0	0	0	0	0	0	0	#tropical_fruit, #pineapple, #pine, #passion_fruit, #herbal, #earthy
+Vienna Gold	Dual	Australia	https://beermaverick.com/hop/vienna-gold/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#noble, #fruity, #passion_fruit
+Canadian Redvine	Aroma	Canada	https://beermaverick.com/hop/canadian-redvine/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#cherry, #berry, #pine, #grapefruit
+Lumberjack	Dual	Canada	https://beermaverick.com/hop/lumberjack/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#melon, #citrus, #spices, #clove, #allspice, #bitter, #earthy
+Sasquatch	Dual	Canada	https://beermaverick.com/hop/sasquatch/	3	2	3	1	2	1	3	3	3	#tangerine, #lemon, #floral, #orange, #mint, #citrus
+Wild Loyalist	Aroma	Canada	https://beermaverick.com/hop/wild-loyalist/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #spicy, #earthy, #floral, #noble
+Marco Polo	Dual	China	https://beermaverick.com/hop/marco-polo/	2	1	2	2	1	1	3	2	1	#gooseberry, #oregano, #elderflower
+Tsingdao Flower	Dual	China	https://beermaverick.com/hop/tsingdao-flower/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#earthy, #lemon, #melon, #citrus
+Agnus	Bittering	Czech Republic	https://beermaverick.com/hop/agnus/	1	2	1	0	0	0	1	2	3	NA
+Amethyst	Aroma	Czech Republic	https://beermaverick.com/hop/amethyst/	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bohemie	Aroma	Czech Republic	https://beermaverick.com/hop/bohemie/	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Boomerang	Dual	Czech Republic	https://beermaverick.com/hop/boomerang/	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Bor	Dual	Czech Republic	https://beermaverick.com/hop/bor/	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Gaia	Bittering	Czech Republic	https://beermaverick.com/hop/gaia/	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Harmonie	Aroma	Czech Republic	https://beermaverick.com/hop/harmonie/	2	3	2	2	2	1	1	3	3	NA
+Kazbek	Aroma	Czech Republic	https://beermaverick.com/hop/kazbek/	3	2	0	0	1	0	1	0	0	NA
+Mimosa	Aroma	Czech Republic	https://beermaverick.com/hop/mimosa/	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Premiant	Bittering	Czech Republic	https://beermaverick.com/hop/premiant/	2	4	4	4	3	0	1	3	0	NA
+Saaz (CZ)	Aroma	Czech Republic	https://beermaverick.com/hop/saaz-cz/	3	0	0	0	2	0	0	4	4	NA
+Saaz Late	Aroma	Czech Republic	https://beermaverick.com/hop/saaz-late/	2	3	1	1	2	1	1	2	2	NA
+Sládek	Aroma	Czech Republic	https://beermaverick.com/hop/sladek/	2	3	2	2	3	0	2	1	0	NA
+Vital	Dual	Czech Republic	https://beermaverick.com/hop/vital/	2	3	1	1	1	1	1	3	3	NA
+Aramis	Aroma	France	https://beermaverick.com/hop/aramis/	1	0	0	0	0	0	3	3	0	#green, #herbal, #spicy, #citrus, #grassy, #black_pepper, #floral
+Barbe Rouge	Aroma	France	https://beermaverick.com/hop/barbe-rouge/	0	2	2	4	4	0	2	0	0	#citrus, #kumquat, #orange, #lime, #redcurrant, #strawberry, #raspberry, #floral, #berry, #herbal
+Bouclier	Aroma	France	https://beermaverick.com/hop/bouclier/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #grassy, #spicy, #citrus
+Elixir	Aroma	France	https://beermaverick.com/hop/elixir/	3	3	3	0	3	1	1	1	1	#rose, #cognac, #leather, #tobacco, #citrus, #tropical_fruit, #tangerine, #orange, #floral, #sandalwood, #spicy
+Mistral	Dual	France	https://beermaverick.com/hop/mistral/	4	3	1	2	3	1	1	1	0	#citrus, #floral, #melon, #grapes, #wine, #pear, #passion_fruit, #kumquat, #mango
+Petit Blanc	Aroma	France	https://beermaverick.com/hop/petit-blanc/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#cherry, #melon, #papaya, #green_tea, #lilac
+Strisselspalt	Aroma	France	https://beermaverick.com/hop/strisselspalt/	1	1	0	0	3	2	3	1	2	#spicy, #floral, #citrus, #herbal
+Tardif de Bourgogne	Aroma	France	https://beermaverick.com/hop/tardif-de-bourgogne/	0	0	0	1	4	0	2	2	1	#floral, #redberry, #green_tea, #noble, #incense, #pine, #rose, #lavender
+Triskel	Aroma	France	https://beermaverick.com/hop/triskel/	2	1	1	0	2	1	2	1	2	#floral, #sweet_fruit, #caramel, #fruity, #citrus
+Akoya	Aroma	Germany	https://beermaverick.com/hop/akoya/	3	1	1	1	2	0	2	3	0	#tea, #spicy, #green_fruit, #pepper
+Ariana	Aroma	Germany	https://beermaverick.com/hop/ariana/	3	4	2	2	1	1	2	2	1	#citrus, #tangerine, #passion_fruit, #pineapple, #jasmine, #herbal, #fruity, #gooseberry
+Aurum	Aroma	Germany	https://beermaverick.com/hop/aurum/	1	0	0	0	1	1	2	1	0	#spicy, #fruity, #floral, #mild, #herbal, #earthy, #citrus, #noble
+Brewer's Gold (GR)	Bittering	Germany	https://beermaverick.com/hop/brewers-gold/	2	3	3	0	1	0	1	2	2	#black_currant, #spicy
+Callista	Aroma	Germany	https://beermaverick.com/hop/callista/	3	3	2	2	2	1	1	1	1	#pear, #caramel, #passion_fruit, #orange, #apricot, #peach, #pine, #blackberry, #strawberry
+Diamant	Aroma	Germany	https://beermaverick.com/hop/diamant/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fennel, #lavender, #citrus
+Hallertau Blanc	Aroma	Germany	https://beermaverick.com/hop/hallertau-blanc/	2	0	0	3	0	0	2	3	2	#pineapple, #gooseberry, #white_wine, #grapes, #lemongrass, #passion_fruit, #clean, #sauvignon_blanc
+Hallertau Gold	Aroma	Germany	https://beermaverick.com/hop/hallertau-gold/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Hallertau Mittelfrüh	Aroma	Germany	https://beermaverick.com/hop/hallertau-mittelfruh/	2	1	0	0	0	0	3	4	2	#spicy, #floral, #citrus, #grassy, #tea
+Hallertau Tradition	Aroma	Germany	https://beermaverick.com/hop/hallertau-tradition/	2	0	0	0	3	0	0	2	2	#earthy, #grassy, #nectar, #fruity, #noble
+Herkules	Bittering	Germany	https://beermaverick.com/hop/herkules/	2	2	2	1	1	1	2	1	1	#citrus, #melon
+Hersbrucker	Aroma	Germany	https://beermaverick.com/hop/hersbrucker/	2	1	1	1	1	1	2	2	2	#noble, #hay, #orange, #tobacco
+Huell Melon	Aroma	Germany	https://beermaverick.com/hop/huell-melon/	2	4	0	0	2	0	0	2	1	#melon, #strawberry, #honeydew, #fruity, #sweet, #orange, #vanilla
+Hüller Bitterer	Bittering	Germany	https://beermaverick.com/hop/huller-bitterer/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#bitter
+Magnum (GR)	Bittering	Germany	https://beermaverick.com/hop/magnum-gr/	2	3	0	0	1	0	2	4	1	#apple, #black_pepper, #clean, #citrus, #clean, #floral, #fruity
+Mandarina Bavaria	Dual	Germany	https://beermaverick.com/hop/mandarina-bavaria/	4	3	3	3	1	0	1	2	2	#tangerine, #lemon, #citrus, #resin, #herbal, #tropical_fruit
+Merkur	Dual	Germany	https://beermaverick.com/hop/merkur/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#sugar, #pineapple, #mint, #citrus, #earthy
+Monroe	Aroma	Germany	https://beermaverick.com/hop/monroe/	3	3	1	3	2	1	1	1	2	#mild, #smooth, #strawberry, #cherry, #plum, #passion_fruit, #raspberry, #orange, #raspberry
+Northern Brewer (GR)	Bittering	Germany	https://beermaverick.com/hop/northern-brewer-gr/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#mint, #grassy, #pine
+Opal	Dual	Germany	https://beermaverick.com/hop/opal/	2	2	2	2	0	0	2	4	2	#black_pepper, #citrus, #spicy, #floral, #herbal, #anise
+Orion	Dual	Germany	https://beermaverick.com/hop/orion/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#spicy
+Perle (GR)	Aroma	Germany	https://beermaverick.com/hop/perle-gr/	1	1	1	0	2	0	2	3	1	#floral, #fruity, #mint, #stone_fruit, #herbal, #earthy, #slightly_spicy
+Polaris	Dual	Germany	https://beermaverick.com/hop/polaris/	3	4	4	4	1	0	2	3	1	#mint, #menthol, #pineapple
+Relax	Aroma	Germany	https://beermaverick.com/hop/relax/	2	2	1	1	2	1	1	1	2	#honeydew, #melon, #cognac, #lychee, #lavender, #leather, #hibiscus, #lemongrass
+Saphir	Aroma	Germany	https://beermaverick.com/hop/saphir/	1	1	1	0	2	1	2	2	2	#spicy, #fruity, #floral, #tangerine
+Smaragd	Bittering	Germany	https://beermaverick.com/hop/smaragd/	1	1	1	1	0	0	4	3	3	#floral, #fruity, #spicy, #tobacco, #anise, #clove, #noble
+Solero	Aroma	Germany	https://beermaverick.com/hop/solero/	3	5	5	2	0	0	2	3	0	#tropical_fruit, #mango, #passion_fruit
+Spalt	Aroma	Germany	https://beermaverick.com/hop/spalt/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#noble, #earthy, #herbal, #floral
+Spalter Select	Aroma	Germany	https://beermaverick.com/hop/spalter-select/	2	1	1	1	2	0	3	3	2	#spicy, #grassy
+Tango	Dual	Germany	https://beermaverick.com/hop/tango/	5	4	2	3	2	0	0	0	1	#passion_fruit, #pineapple, #spicy, #citrus
+Tettnanger	Dual	Germany	https://beermaverick.com/hop/tettnanger/	1	1	1	1	2	0	3	3	3	#spicy, #floral, #pepper, #black_tea
+Wurttemberg	Aroma	Germany	https://beermaverick.com/hop/wurttemberg/	1	0	0	0	3	0	3	3	2	#lime, #citrus, #floral, #pine, #oregano, #woody
+Yellow Sub	Aroma	Germany	https://beermaverick.com/hop/yellow-sub/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#sweet, #citrus, #red_berry, #apricot, #orange, #blackberry
+Golden Star	Aroma	Japan	https://beermaverick.com/hop/golden-star/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Sorachi Ace	Dual	Japan	https://beermaverick.com/hop/sorachi-ace/	3	4	0	0	1	0	2	0	0	#lemon, #dill, #woody, #tobacco, #citrus, #herbal
+Toyomidori	Bittering	Japan	https://beermaverick.com/hop/toyomidori/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#mild, #fruity, #tobacco, #green_tea
+Brooklyn	Dual	New Zealand	https://beermaverick.com/hop/brooklyn/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#grapefruit, #tropical_fruit, #passion_fruit, #spicy, #hay
+Dr. Rudi	Dual	New Zealand	https://beermaverick.com/hop/dr-rudi/	2	0	0	0	0	1	1	1	3	#resin, #pine, #lemongrass
+Green Bullet	Dual	New Zealand	https://beermaverick.com/hop/green-bullet/	0	0	0	2	2	0	0	1	1	#pine, #black_pepper, #plum, #resin, #dried_fruit, #floral
+HORT9909	Dual	New Zealand	https://beermaverick.com/hop/hort9909/	5	0	0	0	2	3	5	3	4	#lime, #hay, #sweet, #spicy, #citrus, #lemon, #noble, #black_pepper, #pine
+Kohatu	Dual	New Zealand	https://beermaverick.com/hop/kohatu/	1	3	2	0	0	0	0	0	0	#tropical_fruit
+Motueka	Dual	New Zealand	https://beermaverick.com/hop/motueka/	3	2	0	1	0	0	0	0	0	#citrus, #mojito, #lime, #lemon, #tropical_fruit, #floral
+Moutere	Dual	New Zealand	https://beermaverick.com/hop/moutere/	3	4	0	0	0	0	0	1	2	#tropical_fruit, #grapefruit, #passion_fruit, #hay, #earthy, #pine
+Nectaron	Aroma	New Zealand	https://beermaverick.com/hop/nectaron/	4	4	3	0	0	0	2	0	0	#tropical_fruit, #citrus, #pineapple, #passion_fruit, #peach, #grapefruit, #nectar
+Nelson Sauvin	Aroma	New Zealand	https://beermaverick.com/hop/nelson-sauvin/	0	2	0	4	0	0	1	0	0	#white_wine, #fruity, #gooseberry, #grapes, #sauvignon_blanc
+NZH-107	Dual	New Zealand	https://beermaverick.com/hop/nzh-107/	5	5	1	0	1	0	1	0	0	#passion_fruit, #citrus, #grapefruit
+Pacific Gem	Bittering	New Zealand	https://beermaverick.com/hop/pacific-gem/	2	0	0	4	1	0	0	1	1	#black_pepper, #berry, #blackberry, #floral, #oak, #pine
+Pacific Jade	Dual	New Zealand	https://beermaverick.com/hop/pacific-jade/	2	0	0	0	0	0	1	1	0	#citrus, #spicy, #herbal, #black_pepper
+Pacific Sunrise	Bittering	New Zealand	https://beermaverick.com/hop/pacific-sunrise/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#woody, #pine, #lemon, #orange, #mango, #melon, #floral
+Pacifica	Aroma	New Zealand	https://beermaverick.com/hop/pacifica/	3	0	0	0	3	0	0	2	0	#citrus, #orange, #floral, #marmalade, #hay, #honey, #tangy, #zest
+Rakau	Dual	New Zealand	https://beermaverick.com/hop/rakau/	1	3	4	1	2	0	0	0	0	#stone_fruit, #fig, #fruity, #apricot, #pine, #resin
+Riwaka	Aroma	New Zealand	https://beermaverick.com/hop/riwaka/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#tropical_fruit, #passion_fruit, #grapefruit, #citrus
+Smooth Cone	Dual	New Zealand	https://beermaverick.com/hop/smooth-cone/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Southern Cross	Dual	New Zealand	https://beermaverick.com/hop/southern-cross/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#lemon, #lime, #pine, #spicy, #citrus, #tropical_fruit, #zest
+Sticklebract	Dual	New Zealand	https://beermaverick.com/hop/sticklebract/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#pine, #citrus
+Taiheke	Dual	New Zealand	https://beermaverick.com/hop/taiheke/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #tropical_fruit, #grapefruit, #lemon, #lime, #floral, #spicy
+Wai-iti	Aroma	New Zealand	https://beermaverick.com/hop/wai-iti/	3	0	3	0	0	0	0	0	0	#stone_fruit, #peach, #apricot, #citrus, #lime, #mandarin, #spicy
+Waimea	Dual	New Zealand	https://beermaverick.com/hop/waimea/	4	1	0	0	1	0	0	0	3	#pine, #citrus, #mandarin, #herbal, #tangerine
+Wakatu	Dual	New Zealand	https://beermaverick.com/hop/wakatu/	2	1	0	0	0	0	3	4	2	#floral, #lime, #tropical_fruit, #zest
+Junga	Bittering	Poland	https://beermaverick.com/hop/junga/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#earthy, #spicy, #fruity, #grapefruit, #black_currant
+Limbus	Aroma	Poland	https://beermaverick.com/hop/limbus/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Lubelska	Aroma	Poland	https://beermaverick.com/hop/lublin/	1	0	1	0	1	1	2	1	2	#spicy, #floral, #magnolia, #lavender
+Magnat	Dual	Poland	https://beermaverick.com/hop/magnat/	3	1	1	1	0	1	2	1	3	#lilac, #floral, #chamomile, #woody, #citrus, #lemon
+Marynka	Dual	Poland	https://beermaverick.com/hop/marynka/	2	2	1	1	2	1	2	2	3	#hay, #licorice, #lemon, #grapefruit, #anise, #earthy, #herbal, #citrus
+Pulawski	Dual	Poland	https://beermaverick.com/hop/pulawski/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#white_grape, #spice, #clove, #papaya, #lemon, #herbal
+Sybilla	Aroma	Poland	https://beermaverick.com/hop/sybilla/	3	2	1	0	1	1	1	2	3	#floral, #lemon, #pine, #citrus, #orange, #ginger, #chocolate, #tobacco
+Zula	Dual	Poland	https://beermaverick.com/hop/zula/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#clean, #citrus, #tropical_fruit, #fruity
+Apolon	Dual	Slovenia	https://beermaverick.com/hop/apolon/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Atlas	Dual	Slovenia	https://beermaverick.com/hop/atlas/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #lime, #pine
+Aurora	Dual	Slovenia	https://beermaverick.com/hop/aurora/	2	0	0	0	3	0	3	4	3	#floral, #spicy, #lemongrass, #noble
+Bobek	Bittering	Slovenia	https://beermaverick.com/hop/bobek/	2	1	1	1	3	1	2	1	2	#pine, #floral
+Cekin	Aroma	Slovenia	https://beermaverick.com/hop/cekin/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#mild
+Celeia	Aroma	Slovenia	https://beermaverick.com/hop/celeia/	1	0	0	0	2	1	1	1	1	#noble, #floral, #lavender, #spicy, #earthy, #herbal
+Dana	Dual	Slovenia	https://beermaverick.com/hop/dana/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #citrus, #pine
+Styrian Cardinal	Aroma	Slovenia	https://beermaverick.com/hop/cardinal/	3	4	4	1	2	0	0	0	1	#citrus, #gooseberry, #pineapple, #orange, #lime, #jasmine, #guava
+Styrian Dragon	Aroma	Slovenia	https://beermaverick.com/hop/styrian-dragon/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #citrus, #grapefruit, #lemon, #berry, #rose, #tropical_fruit
+Styrian Eagle	Dual	Slovenia	https://beermaverick.com/hop/styrian-eagle/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#berry, #banana, #pine, #black_pepper, #peach
+Styrian Fox	Dual	Slovenia	https://beermaverick.com/hop/styrian-fox/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#black_currant, #lemongrass, #marjoram, #elderflower, #tropical_fruit, #pineapple, #pine, #citrus, #honey
+Styrian Golding	Aroma	Slovenia	https://beermaverick.com/hop/styrian-golding/	3	0	0	0	2	0	2	2	1	#earthy, #spicy, #resin, #sweet, #noble
+Styrian Kolibri	Aroma	Slovenia	https://beermaverick.com/hop/styrian-kolibri/	2	3	3	1	3	1	4	2	0	#elderflower, #black_currant, #green_tea, #grass, #cannabis, #pineapple
+Styrian Wolf	Dual	Slovenia	https://beermaverick.com/hop/styrian-wolf/	2	5	3	0	2	0	1	2	0	#mango, #passion_fruit, #lemongrass, #elderflower, #violet, #floral, #fruity, #coconut
+African Queen	Dual	South Africa	https://beermaverick.com/hop/african-queen/	3	2	3	4	1	0	1	1	0	#citrus, #dank, #blueberry, #stone_fruit, #black_currant, #gooseberry, #bubblegum, #cassis, #lemongrass, #chilies, #gazpacho
+Southern Aroma	Aroma	South Africa	https://beermaverick.com/hop/southern-aroma/	1	0	0	0	4	3	2	2	3	#floral, #hay, #herbal, #straw, #noble, #black_currant
+Southern Brewer	Bittering	South Africa	https://beermaverick.com/hop/southern-brewer/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#earthy, #woody
+Southern Dawn	Dual	South Africa	https://beermaverick.com/hop/southern-dawn/	2	1	1	1	1	0	1	1	0	#quince, #lemongrass, #ginger, #chamomile, #strawberry, #citrus, #fruity, #herbal, #spicy
+Southern Passion	Aroma	South Africa	https://beermaverick.com/hop/southern-passion/	2	4	4	3	3	0	0	0	0	#passion_fruit, #guava, #floral, #coconut, #redberry, #melon, #guava
+Southern Promise	Dual	South Africa	https://beermaverick.com/hop/southern-promise/	3	1	0	3	2	0	2	2	2	#herbal, #fruity, #woody, #berry, #citrus, #floral
+Southern Star	Dual	South Africa	https://beermaverick.com/hop/southern-star/	3	2	2	3	2	0	1	2	1	#quince, #berry, #floral, #citrus, #pineapple, #tangerine, #tropical_fruit, #passion_fruit, #pear, #cassis, #rose, #orange, #coffee
+Southern Sublime	Aroma	South Africa	https://beermaverick.com/hop/southern-sublime/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#orange, #plum, #mango, #dank, #pungent, #citrus
+Southern Tropic	Bittering	South Africa	https://beermaverick.com/hop/southern-tropic/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#melon, #troical_fruit, #guava, #butterscotch, #lemongrass, #coconut, #pungent, #pineapple, #bubblegum, #citrus
+XJA2/436	Bittering	South Africa	https://beermaverick.com/hop/xja2-436/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#lemon, #zest, #papaya, #cataloupe, #gooseberry, #resin, #citrus, #blueberry
+Zagrava	Dual	Ukraine	https://beermaverick.com/hop/zagrava/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #spicy, #fruity, #floral
+Admiral	Bittering	United Kingdom	https://beermaverick.com/hop/admiral/	1	3	2	3	0	2	3	0	1	#orange, #tea, #fresh, #pine, #citrus, #resin, #herbal
+Archer	Aroma	United Kingdom	https://beermaverick.com/hop/archer/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#apricot, #lime, #floral, #citrus, #peach
+Beata	Bittering	United Kingdom	https://beermaverick.com/hop/beata/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#almond, #apricot, #honey
+Boadicea	Dual	United Kingdom	https://beermaverick.com/hop/boadicea/	0	0	0	2	2	0	2	4	0	#floral, #blossom, #fruity
+Bramling Cross	Dual	United Kingdom	https://beermaverick.com/hop/bramling-cross/	3	1	0	0	0	0	4	2	3	#black_currant, #loganberry, #vanilla, #lemon, #spicy
+Challenger	Dual	United Kingdom	https://beermaverick.com/hop/challenger/	1	0	0	0	0	0	3	3	2	#cedar, #green_tea, #fruity
+Defender	Aroma	United Kingdom	https://beermaverick.com/hop/defender/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#pleasant
+East Kent Goldings	Bittering	United Kingdom	https://beermaverick.com/hop/east-kent-goldings/	2	0	0	0	1	0	2	3	2	#lavender, #honey, #lemon, #thyme, #orange, #grapefruit, #floral
+Endeavour	Dual	United Kingdom	https://beermaverick.com/hop/endeavour/	1	1	1	1	1	1	2	2	2	#black_currant, #loganberry, #spicy, #grapefruit, #lime
+Epic	Aroma	United Kingdom	https://beermaverick.com/hop/epic/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fruity, #berry, #herbal
+Ernest	Aroma	United Kingdom	https://beermaverick.com/hop/ernest/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#grassy, #herbal, #spicy, #stone_fruit
+First Gold	Dual	United Kingdom	https://beermaverick.com/hop/first-gold/	2	2	2	2	2	0	3	1	2	#tangerine, #apricot, #magnolia, #redberry, #herbal, #orange, #herbal, #spicy, #floral
+Flyer	Dual	United Kingdom	https://beermaverick.com/hop/flyer/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#spicy, #citrus, #licorice, #resin, #caramel
+Fuggle	Aroma	United Kingdom	https://beermaverick.com/hop/fuggle/	2	0	0	0	0	0	2	3	4	#woody, #grassy, #mint, #mild
+Godiva	Aroma	United Kingdom	https://beermaverick.com/hop/godiva/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#spicy, #tangerine, #gooseberry, #white_wine
+Hallertau Taurus	Dual	United Kingdom	https://beermaverick.com/hop/hallertau-taurus/	0	1	0	0	0	0	0	3	3	#chocolate, #banana, #spicy, #pepper, #curry, #earthy
+Harlequin	Dual	United Kingdom	https://beermaverick.com/hop/harlequin/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#passion_fruit, #peach, #pineapple
+Herald	Dual	United Kingdom	https://beermaverick.com/hop/herald/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#orange, #grapefruit, #citrus, #clean
+Jester	Dual	United Kingdom	https://beermaverick.com/hop/jester/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Minstrel	Dual	United Kingdom	https://beermaverick.com/hop/minstrel/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #spicy, #berry, #orange
+Mystic	Aroma	United Kingdom	https://beermaverick.com/hop/mystic/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#black_currant, #citrus, #passion_fruit, #woody
+Olicana	Dual	United Kingdom	https://beermaverick.com/hop/olicana/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#grapefruit, #mango, #passion_fruit, #floral
+Omega	Aroma	United Kingdom	https://beermaverick.com/hop/omega/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Phoenix	Dual	United Kingdom	https://beermaverick.com/hop/phoenix/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#molasses, #chocolate, #spicy, #floral, #pine
+Pilgrim	Dual	United Kingdom	https://beermaverick.com/hop/pilgrim/	1	2	2	1	2	2	3	3	2	#fruity, #spicy, #lemon, #grapefruit, #citrus, #pear, #berry
+Pilot	Bittering	United Kingdom	https://beermaverick.com/hop/pilot/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#lemon, #spicy, #marmalade
+Pioneer	Dual	United Kingdom	https://beermaverick.com/hop/pioneer/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#cedar, #grapefruit, #herbal, #lemon, #grapefruit, #crisp, #clean
+Progress	Aroma	United Kingdom	https://beermaverick.com/hop/progress/	0	2	2	2	0	0	3	4	4	#grassy, #mint, #sweet, #honey, #black_currant, #fruity, #floral
+Sovereign	Aroma	United Kingdom	https://beermaverick.com/hop/sovereign/	1	4	4	4	0	0	2	2	1	#mint, #fruity, #floral, #grassy, #herbal, #pear
+Sussex	Aroma	United Kingdom	https://beermaverick.com/hop/sussex/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#earthy, #grassy, #mint, #vanilla, #citrus
+Target	Bittering	United Kingdom	https://beermaverick.com/hop/target/	2	0	0	0	3	0	3	2	4	#citrus, #marmalade, #sage, #spicy, #pepper
+Whitbread Golding Variety (WGV)	Dual	United Kingdom	https://beermaverick.com/hop/whitbread-golding-variety-wgv/	0	0	0	0	3	0	1	2	2	#earthy, #floral, #sweet_fruit, #herbal
+Yeoman	Dual	United Kingdom	https://beermaverick.com/hop/yeoman/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#noble, #citrus
+Adeena	Aroma	United States of America	https://beermaverick.com/hop/adeena/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #spicy, #floral, #lemon, #pine
+Ahhhroma	Dual	United States of America	https://beermaverick.com/hop/ahhhroma/	2	5	5	3	2	0	1	3	0	#tangerine, #pineapple, #lime, #mango, #cinnamon, #pear
+Ahtanum	Aroma	United States of America	https://beermaverick.com/hop/ahtanum/	2	0	1	2	4	1	2	3	1	#citrus, #grapefruit, #geranium, #pine, #earthy, #floral, #cedar, #lemon
+Aloha Blend	Dual	United States of America	https://beermaverick.com/hop/aloha/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#berry, #black_currant, #sweet_fruit
+Altus	Aroma	United States of America	https://beermaverick.com/hop/altus/	2	0	0	0	0	0	1	4	3	#resin, #spicy, #tangerine
+Amarillo	Aroma	United States of America	https://beermaverick.com/hop/amarillo/	4	1	1	0	1	0	0	0	0	#floral, #spicy, #tropical_fruit, #citrus, #orange, #lemon, #melon, #apricot, #peach, #grapefruit, #dank
+Apollo	Bittering	United States of America	https://beermaverick.com/hop/apollo/	3	0	0	0	0	4	0	4	3	#citrus, #grapefruit, #orange, #pine, #resin, #cannabis, #lime, #lemon, #dank
+Aquila	Aroma	United States of America	https://beermaverick.com/hop/aquila/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Arcadian	Aroma	United States of America	https://beermaverick.com/hop/arcadian/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #orange, #tangerine
+Azacca	Dual	United States of America	https://beermaverick.com/hop/azacca/	3	3	2	0	0	0	0	0	2	#mango, #papaya, #orange, #grapefruit, #lemon, #spicy, #pineapple, #grassy, #tropical_fruit, #citrus
+Banner	Bittering	United States of America	https://beermaverick.com/hop/banner/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Belma	Dual	United States of America	https://beermaverick.com/hop/belma/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#orange, #melon, #strawberry, #pineapple, #grapefruit, #berry, #citrus, #tropical_fruit
+Bergamot	Dual	United States of America	https://beermaverick.com/hop/bergamot/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#orange, #mango, #dank, #cherry, #zest, #lemongrass, #lime, #juniper, #tropical_fruit, #pepper, #floral
+Bianca	Aroma	United States of America	https://beermaverick.com/hop/bianca/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Bitter Gold	Dual	United States of America	https://beermaverick.com/hop/bitter-gold/	2	4	4	1	2	2	1	1	0	#stone_fruit, #tropical_fruit, #pear, #watermelon, #grassy, #grapefruit, #floral
+Bravo	Bittering	United States of America	https://beermaverick.com/hop/bravo/	3	1	1	1	2	0	3	2	0	#orange, #vanilla, #floral, #lime, #fruity
+Brewer's Gold (US)	Bittering	United States of America	https://beermaverick.com/hop/brewers-gold-us/	2	3	3	0	1	0	1	2	2	#black_currant, #spicy
+BRU-1	Aroma	United States of America	https://beermaverick.com/hop/bru-1/	2	4	2	1	1	3	1	1	1	#pineapple, #green_fruit, #fruity
+Bullion	Dual	United States of America	https://beermaverick.com/hop/bullion/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#black_currant, #spicy
+Buzz Bullets	Dual	United States of America	https://beermaverick.com/hop/buzz-bullets/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #floral
+Caliente	Dual	United States of America	https://beermaverick.com/hop/caliente/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #peach, #pine, #stone_fruit, #mandarin, #lemon, #zest
+Calypso	Dual	United States of America	https://beermaverick.com/hop/calypso/	2	3	3	3	0	0	2	0	2	#fruity, #apple, #pear, #stone_fruit, #lime, #citrus, #peach
+Cascade	Dual	United States of America	https://beermaverick.com/hop/cascade/	3	1	0	0	2	0	2	2	0	#grapefruit, #floral, #spicy, #citrus, #pine
+Cashmere	Dual	United States of America	https://beermaverick.com/hop/cashmere/	1	3	3	3	0	0	0	2	0	#fruity, #lemon, #lime, #peach, #melon, #coconut, #lemongrass, #candy, #herbal
+Centennial	Dual	United States of America	https://beermaverick.com/hop/centennial/	4	0	0	0	2	0	0	0	2	#pine, #citrus, #floral, #grapefruit, #tangerine
+Chelan	Bittering	United States of America	https://beermaverick.com/hop/chelan/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #citrus, #fruity, #mild
+Chinook	Dual	United States of America	https://beermaverick.com/hop/chinook/	3	0	0	0	1	0	1	0	4	#pine, #resin, #grapefruit, #spicy, #dank, #cannabis
+Citra	Dual	United States of America	https://beermaverick.com/hop/citra/	5	4	1	0	1	0	0	2	2	#citrus, #grapefruit, #peach, #melon, #lime, #floral, #gooseberry, #passion_fruit, #lychee
+Cluster	Dual	United States of America	https://beermaverick.com/hop/cluster/	3	2	0	0	1	0	2	0	1	#floral, #earthy, #sweet_fruit
+Cluster Fugget Blend	Dual	United States of America	https://beermaverick.com/hop/cluster-fugget/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#earthy, #woody, #grassy, #spicy
+Columbia	Dual	United States of America	https://beermaverick.com/hop/columbia/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#pineapple, #lemon, #citrus, #noble, #pungent
+Columbus	Dual	United States of America	https://beermaverick.com/hop/columbus/	1	0	0	0	0	0	3	4	0	#earthy, #black_pepper, #licorice, #curry, #spicy, #citrus, #floral, #pungent, #dank, #cannabis
+Comet	Dual	United States of America	https://beermaverick.com/hop/comet/	3	3	3	3	1	0	2	1	1	#grassy, #grapefruit, #wild
+Contessa	Bittering	United States of America	https://beermaverick.com/hop/contessa/	1	1	1	1	3	0	4	0	1	#green_tea, #floral, #lemongrass, #pear
+Crystal	Aroma	United States of America	https://beermaverick.com/hop/crystal/	1	0	0	0	0	0	4	2	3	#woody, #floral, #green, #fruity, #spicy, #cinnamon, #nutmeg, #black_pepper
+CTZ	Dual	United States of America	https://beermaverick.com/hop/ctz/	1	0	0	0	0	0	3	4	0	#black_pepper, #licorice, #curry, #citrus, #cannabis, #dank
+Delta	Aroma	United States of America	https://beermaverick.com/hop/delta/	2	2	2	2	1	0	2	3	2	#citrus, #melon, #spicy
+Diamond Springs	Aroma	United States of America	https://beermaverick.com/hop/diamond-springs/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #lemon, #mint
+Ekuanot	Aroma	United States of America	https://beermaverick.com/hop/ekuanot/	3	0	0	2	1	0	3	1	0	#lemon, #lime, #orange, #tropical_fruit, #berry, #papaya, #apple, #sage, #eucalyptus, #herbal, #melon, #citrus, #guava
+El Dorado	Dual	United States of America	https://beermaverick.com/hop/el-dorado/	3	4	0	0	0	0	1	0	0	#fruity, #tropical_fruit, #pear, #watermelon, #candy, #stone_fruit
+Emerald Spire	Dual	United States of America	https://beermaverick.com/hop/emerald-spire/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#peach, #fruity, #white_wine, #grapes, #watermelon, #bubble_gum, #melon, #honeydew
+Equinox	Aroma	United States of America	https://beermaverick.com/hop/equinox/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Eroica	Bittering	United States of America	https://beermaverick.com/hop/eroica/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Eureka	Dual	United States of America	https://beermaverick.com/hop/eureka/	1	2	2	2	0	0	4	3	3	#herbal, #dark_fruit, #mint, #citrus, #peach, #pine, #stone_fruit, #black_currant, #mandarin, #dank
+Evergreen Blend	Aroma	United States of America	https://beermaverick.com/hop/evergreen/	3	1	4	1	2	1	2	0	1	#peach, #apricot, #lemon, #green_tea, #watermelon, #tangerine
+Falconer's Flight	Aroma	United States of America	https://beermaverick.com/hop/falconers-flight/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#tropical_fruit, #floral, #grapefruit, #lemon, #pine
+Falconer's Flight 7CS	Dual	United States of America	https://beermaverick.com/hop/falconers-flight-7cs/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fruity, #citrus, #spicy, #earthy
+Fantasia Blend	Dual	United States of America	https://beermaverick.com/hop/fantasia/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fruity, #caramel, #cream, #noble, #stone_fruit
+Galena	Aroma	United States of America	https://beermaverick.com/hop/galena/	2	0	0	0	0	0	1	2	3	#fruity, #pear, #pineapple, #black_currant, #grapefruit, #lime, #gooseberry, #spicy, #woody
+Gemini	Dual	United States of America	https://beermaverick.com/hop/gemini/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#honeydew, #strawberry, #eucalyptus, #rosemary, #fruit_punch, #candy, #mandarin, #hay, #black_tea
+Glacier	Dual	United States of America	https://beermaverick.com/hop/glacier/	2	2	2	2	1	0	3	0	1	#plum, #blackberry, #woody, #cedar
+Golding	Aroma	United States of America	https://beermaverick.com/hop/golding/	2	1	1	1	1	1	2	3	2	#floral, #delicate, #sweet
+Grungeist	Aroma	United States of America	https://beermaverick.com/hop/grungeist/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#kiwi, #peach, #passion_fruit, #lemon, #floral, #lavender, #zest
+Hallertau (US)	Aroma	United States of America	https://beermaverick.com/hop/hallertau/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#slightly_spicy, #floral, #herbal
+Hartwick	Aroma	United States of America	https://beermaverick.com/hop/hartwick/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#pine, #pineapple
+HBC 472	Aroma	United States of America	https://beermaverick.com/hop/hbc472/	2	3	3	2	3	2	2	1	3	#woody, #earthy, #floral, #coconut, #fruity, #citrus, #grapefruit, #whiskey
+HBC 586	Dual	United States of America	https://beermaverick.com/hop/hbc-586/	4	5	2	3	2	1	2	1	0	#mango, #lychee, #citrus, #herbal, #guava, #spicy
+HBC 630	Dual	United States of America	https://beermaverick.com/hop/hbc-630/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#cherry, #floral, #herbal, #citrus, #raspberry, #tropical_fruit, #candy, #fruity
+HBC 692	Aroma	United States of America	https://beermaverick.com/hop/hbc692/	3	3	1	2	4	2	3	1	3	#grapefruit, #floral, #stone_fruit, #potpourri, #woody, #cream, #pine
+Helios	Dual	United States of America	https://beermaverick.com/hop/helios/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Horizon	Dual	United States of America	https://beermaverick.com/hop/horizon/	2	1	1	1	3	0	1	2	1	#floral, #citrus, #spicy, #floral
+Hydra	Dual	United States of America	https://beermaverick.com/hop/hydra/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #tangerine, #mandarin, #zest, #resin, #lime, #berry, #peach, #watermelon, #rose, #apricot, #tropical_fruit
+Idaho 7	Aroma	United States of America	https://beermaverick.com/hop/idaho-7/	3	4	4	0	1	0	2	1	2	#black_currant, #tropical_fruit, #citrus, #apricot, #orange, #grapefruit, #papaya, #resin, #pine, #floral, #black_tea, #earthy
+Idaho Gem	Dual	United States of America	https://beermaverick.com/hop/idaho-gem/	2	0	0	4	1	0	0	1	1	#pineapple, #cherry, #candied_fruit, #herbal, #spicy, #mint, #citrus, #stone_fruit, #redberry, #mojito, #sweet
+Independence	Aroma	United States of America	https://beermaverick.com/hop/independence/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #citrus, #stone_fruit, #herbal, #tobacco, #earthy, #pine, #grassy
+Jarrylo	Dual	United States of America	https://beermaverick.com/hop/jarrylo/	1	2	1	0	0	0	2	1	0	#lemon, #lime, #orange, #pear, #spicy, #banana, #white_wine
+Lambic	Aroma	United States of America	https://beermaverick.com/hop/lambic/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#grassy, #spicy, #woody
+Lawton	Bittering	United States of America	https://beermaverick.com/hop/lawton/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#pungent, #woody, #earthy, #dank
+Lemondrop	Aroma	United States of America	https://beermaverick.com/hop/lemondrop/	3	2	2	2	1	0	3	1	1	#citrus, #lemon, #floral, #mint, #green_tea, #melon
+Liberty	Bittering	United States of America	https://beermaverick.com/hop/liberty/	1	0	0	0	2	0	3	2	2	#noble, #floral, #herbal, #spicy, #delicate, #citrus, #lemon
+Loral	Aroma	United States of America	https://beermaverick.com/hop/loral/	2	0	0	0	4	3	2	2	0	#floral, #black_pepper, #citrus, #dark_fruit, #fruity
+Lotus	Aroma	United States of America	https://beermaverick.com/hop/lotus/	2	4	3	4	1	0	2	2	1	#orange, #vanilla, #berry, #tropical_fruit, #cream
+Mackinac	Aroma	United States of America	https://beermaverick.com/hop/mackinac/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#tropical_fruit, #citrus, #melon, #papaya, #spicy, #floral, #black_pepper
+Magnum (US)	Bittering	United States of America	https://beermaverick.com/hop/magnum-us/	2	3	0	0	1	0	2	4	1	#floral, #citrus, #spicy, #nutmeg, #black_pepper
+McKenzie	Aroma	United States of America	https://beermaverick.com/hop/mckenzie/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#grapefruit, #lemon, #nectarine, #melon, #pine_resin, #thyme, #stone_fruit, #dank, #floral
+Medusa	Aroma	United States of America	https://beermaverick.com/hop/medusa/	4	3	3	1	0	1	0	0	0	#guava, #melon, #citrus, #apricot, #lemon, #lime, #alfalfa, #peach
+Meridian	Aroma	United States of America	https://beermaverick.com/hop/meridian/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #lemon, #berry, #tropical_fruit, #mint, #spearmint
+Michigan Copper	Aroma	United States of America	https://beermaverick.com/hop/michigan-copper/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#hibiscus, #floral, #tropical_fruit, #black_cherry, #candy, #resin, #fruity
+Millennium	Bittering	United States of America	https://beermaverick.com/hop/millennium/	2	1	2	3	1	0	1	2	3	#pear, #toffee, #floral, #resin, #herbal
+Mosaic	Dual	United States of America	https://beermaverick.com/hop/mosaic/	3	3	1	0	2	0	0	0	4	#blueberry, #tropical_fruit, #citrus, #grassy, #pine, #spicy, #tangerine, #papaya, #rose, #earthy, #blossom, #bubblegum, #grapefruit
+Mount Hood	Aroma	United States of America	https://beermaverick.com/hop/mount-hood/	0	0	0	0	3	1	4	3	1	#noble, #herbal, #pungent, #spicy
+Mount Rainier	Dual	United States of America	https://beermaverick.com/hop/mount-rainier/	1	0	0	0	0	0	3	0	0	#noble, #licorice, #floral, #citrus, #spicy
+Multihead	Aroma	United States of America	https://beermaverick.com/hop/multihead/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #tropical_fruit, #peach
+Newport	Bittering	United States of America	https://beermaverick.com/hop/newport/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#wine, #balsamic, #citrus, #earthy
+Nobility Blend	Dual	United States of America	https://beermaverick.com/hop/nobility/	4	1	1	0	3	2	4	2	2	#lemon, #orange, #lemongrass, #green_tea, #floral, #spicy
+Northdown	Dual	United States of America	https://beermaverick.com/hop/northdown/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #pine, #cedar, #berry, #spicy
+Northern Brewer (US)	Bittering	United States of America	https://beermaverick.com/hop/northern-brewer-us/	2	2	2	2	2	0	3	1	2	#pine, #woody, #mint, #black_pepper
+Nugget	Dual	United States of America	https://beermaverick.com/hop/nugget/	1	0	0	0	2	0	3	2	2	#herbal, #citrus, #ginger, #pineapple, #geranium, #lychee, #herbal, #earthy, #coconut
+Old Mission	Aroma	United States of America	https://beermaverick.com/hop/old-mission/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #pine, #spicy, #herbal, #black_pepper, #tart
+Olympic	Dual	United States of America	https://beermaverick.com/hop/olympic/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #spicy
+Pacific Crest	Aroma	United States of America	https://beermaverick.com/hop/pacific-crest/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#noble, #tobacco, #earthy, #grassy, #floral, #spicy, #herbal, #pine
+Pahto	Bittering	United States of America	https://beermaverick.com/hop/pahto/	0	0	0	0	3	2	3	2	0	#neutral, #herbal, #earthy, #clean, #smooth
+Palisade	Dual	United States of America	https://beermaverick.com/hop/palisade/	3	3	0	3	2	0	1	0	0	#orange, #yogurt, #honey, #passion_fruit, #apricot, #floral, #clean
+Paradigm	Aroma	United States of America	https://beermaverick.com/hop/paradigm/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #stone_fruit, #tropical_fruit, #spicy, #melon, #candy, #dank, #papaya, #mint, #pear, #chamomile
+Pekko	Dual	United States of America	https://beermaverick.com/hop/pekko/	3	3	1	2	4	0	4	3	2	#pleasant, #floral, #citrus, #mint, #herbal, #mellow, #pineapple, #thyme, #cucumber, #sage, #lemon
+Perle (US)	Dual	United States of America	https://beermaverick.com/hop/perle-us/	1	3	3	3	2	0	2	3	1	#slightly_spicy, #herbal, #floral
+Petoskey	Aroma	United States of America	https://beermaverick.com/hop/petoskey/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #pungent, #pineapple
+Prussian	Aroma	United States of America	https://beermaverick.com/hop/prussian/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#lemon, #pine
+Saaz (US)	Aroma	United States of America	https://beermaverick.com/hop/saaz-us/	3	0	0	0	2	0	0	4	4	#slightly_spicy, #earthy, #noble
+Sabro	Aroma	United States of America	https://beermaverick.com/hop/sabro/	3	0	1	0	2	0	3	1	0	#citrus, #tangerine, #coconut, #tropical_fruit, #stone_fruit, #cedar, #mint, #cream, #herbal
+Samba	Aroma	United States of America	https://beermaverick.com/hop/samba/	4	5	3	0	1	0	1	1	0	#tropical_fruit, #pineapple, #mango, #stone_fruit, #candy, #orange
+Santiam	Aroma	United States of America	https://beermaverick.com/hop/santiam/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #spicy, #black_pepper
+Satus	Bittering	United States of America	https://beermaverick.com/hop/satus/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #clean
+Saugatuck	Aroma	United States of America	https://beermaverick.com/hop/saugatuck/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Sequoia Blend	Aroma	United States of America	https://beermaverick.com/hop/sequoia/	3	5	0	2	2	2	0	1	2	#mango, #pineapple, #pine
+Shaddock	Aroma	United States of America	https://beermaverick.com/hop/shaddock/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#lime, #grapefruit, #onion, #garlic
+Simcoe	Dual	United States of America	https://beermaverick.com/hop/simcoe/	4	4	1	5	1	0	2	2	2	#fruity, #earthy, #grapefruit, #passion_fruit, #pine, #berry, #apricot, #bubblegum, #citrus
+Sitiva Blend	Aroma	United States of America	https://beermaverick.com/hop/sitiva/	4	4	3	1	4	1	1	2	1	#stone_fruit, #floral, #peach, #lime
+Sonnet	Aroma	United States of America	https://beermaverick.com/hop/sonnet/	1	0	1	0	3	0	0	0	0	#honeysuckle, #citrus, #sweet, #lemon, #floral, #earthy, #grass, #honey, #oak
+Sterling	Aroma	United States of America	https://beermaverick.com/hop/sterling/	2	0	0	0	2	1	3	2	0	#noble, #herbal, #spicy, #floral
+Sticky Fingers Blend	Dual	United States of America	https://beermaverick.com/hop/sticky-fingers/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fruity, #earthy, #spicy, #dank
+Stirling	Dual	United States of America	https://beermaverick.com/hop/stirling/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal, #citus, #spicy, #floral
+Strata	Dual	United States of America	https://beermaverick.com/hop/strata/	4	5	4	1	2	1	2	2	3	#cannabis, #grapefruit, #passion_fruit, #strawberry, #dank, #musty
+Sultana (Denali)	Dual	United States of America	https://beermaverick.com/hop/denali/	4	3	2	1	1	0	1	1	3	#pineapple, #citrus, #pine, #spicy, #lemon, #tropical_fruit
+Summit	Bittering	United States of America	https://beermaverick.com/hop/summit/	2	0	0	0	0	0	4	4	0	#black_pepper, #anise, #incense, #orange, #grapefruit, #tangerine, #earthy, #citrus, #onion, #garlic, #dank, #cannabis
+Sun	Bittering	United States of America	https://beermaverick.com/hop/sun/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#herbal
+Sunbeam	Aroma	United States of America	https://beermaverick.com/hop/sunbeam/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Super Galena	Bittering	United States of America	https://beermaverick.com/hop/super-galena/	1	1	1	1	0	0	2	4	1	#grassy, #spicy, #pear, #pineapple, #grapefruit, #gooseberry, #honey, #juniper
+Tahoma	Aroma	United States of America	https://beermaverick.com/hop/tahoma/	3	0	0	0	1	0	0	3	1	#citrus, #lemon, #grapefruit, #cedar, #pine, #spicy, #orange, #woody
+Talisman	Dual	United States of America	https://beermaverick.com/hop/talisman/	NA	NA	NA	NA	NA	NA	NA	NA	NA	
+Talus	Aroma	United States of America	https://beermaverick.com/hop/talus/	3	3	1	1	3	1	2	0	1	#grapefruit, #citrus, #rose, #pine, #resin, #tropical_fruit, #sage, #potpourri, #floral, #cream, #stone_fruit, #woody
+Teamaker	Aroma	United States of America	https://beermaverick.com/hop/teamaker/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#subtle, #floral
+Tettnang (US)	Aroma	United States of America	https://beermaverick.com/hop/tettnang-us/	1	0	0	0	2	0	3	3	3	#noble, #spicy, #grassy
+Tillicum	Bittering	United States of America	https://beermaverick.com/hop/tillicum/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#stone_fruit, #citrus
+TNT Blend	Aroma	United States of America	https://beermaverick.com/hop/tnt-blend/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fruity, #citrus, #green_fruit
+Tomahawk	Dual	United States of America	https://beermaverick.com/hop/tomahawk/	1	0	0	0	0	0	3	4	0	#citrus, #black_pepper, #licorice, #curry, #onion
+Trident	Dual	United States of America	https://beermaverick.com/hop/trident/	4	4	4	2	2	0	1	1	1	#fruity, #citrus, #tropical_fruit, #passion_fruit
+TriplePearl	Dual	United States of America	https://beermaverick.com/hop/triplepearl/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#orange, #citrus, #zest, #melon, #resin, #spicy, #black_pepper, #sandalwood, #cedar, #floral
+Triumph	Dual	United States of America	https://beermaverick.com/hop/triumph/	2	1	1	3	3	0	1	4	4	#spicy, #pine, #orange, #peach, #lime, #fruity, #citrus
+Tropica	Dual	United States of America	https://beermaverick.com/hop/tropica/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#pineapple, #mandarin, #orange, #tropical_fruit, #dank
+Ultra	Aroma	United States of America	https://beermaverick.com/hop/ultra/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#mild, #pleasant, #floral
+USDA 008	Dual	United States of America	https://beermaverick.com/hop/usda-008/	1	2	2	1	1	1	2	0	0	#floral, #citrus, #sweet_fruit, #peach, #mango, #stonefruit
+Vanguard	Aroma	United States of America	https://beermaverick.com/hop/vanguard/	2	3	3	3	0	0	3	0	0	#woody, #tobacco, #pleasant, #grassy, #cedar
+Vista	Dual	United States of America	https://beermaverick.com/hop/vista/	4	0	1	0	1	1	2	0	0	#tropical_fruit, #tangerine, #melon, #pear, #green_tea, #citrus, #sweet, #floral
+Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#citrus, #garlic, #grassy, #herbal
+Warrior	Dual	United States of America	https://beermaverick.com/hop/warrior/	2	0	0	0	2	0	1	3	3	#pine, #mild, #resin
+Wild Wolf	Dual	United States of America	https://beermaverick.com/hop/wild-wolf/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#fruity, #herbal, #earthy
+Willamette	Dual	United States of America	https://beermaverick.com/hop/willamette/	2	0	0	0	2	0	3	4	1	#citrus, #incense, #elderberry, #caramel, #curry, #floral
+X13459	Aroma	United States of America	https://beermaverick.com/hop/x13459/	4	3	3	3	4	0	1	0	0	#floral, #tropical_fruit, #peach, #citrus, #strawberry
+Yakima Cluster	Bittering	United States of America	https://beermaverick.com/hop/yakima-cluster/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#earthy, #floral, #sweet, #fruity
+Yakima Gold	Dual	United States of America	https://beermaverick.com/hop/yakima-gold/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#smooth, #grapefruit, #lemon
+YQH-1380	Dual	United States of America	https://beermaverick.com/hop/yqh-1320/	3	2	4	1	1	1	1	3	0	#pineapple, #guava, #lime, #peach, #orange
+Zamba Blend	Aroma	United States of America	https://beermaverick.com/hop/zamba/	4	5	3	0	1	0	1	1	0	#mango, #stone_fruit, #orange, #tangerine, #pineapple
+Zappa	Aroma	United States of America	https://beermaverick.com/hop/zappa/	1	4	3	1	1	0	0	2	1	#mint, #savory, #fruity, #mango, #passion_fruit, #tropical_fruit, #citrus, #pine, #spicy, #fresh
+Zenia	Dual	United States of America	https://beermaverick.com/hop/zenia/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#dank, #resin, #orange, #onion, #citrus, #fruity, #pine, #marmalade, #garlic
+Zenith	Bittering	United States of America	https://beermaverick.com/hop/zenith/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#floral, #citrus
+Zeus	Bittering	United States of America	https://beermaverick.com/hop/zeus/	1	0	0	0	0	0	3	4	0	#black_pepper, #licorice, #curry, #pungent
+Zythos	Dual	United States of America	https://beermaverick.com/hop/zythos/	NA	NA	NA	NA	NA	NA	NA	NA	NA	#tangerine, #citrus, #floral, #pine, #grapefruit, #tropical_fruit
