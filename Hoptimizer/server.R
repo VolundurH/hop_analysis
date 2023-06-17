@@ -27,6 +27,25 @@ function(input, output, session) {
              between(Herbal, input$sliderHerbal[1], input$sliderHerbal[2]),
              between(Spice, input$sliderSpice[1], input$sliderSpice[2]),
              between(Pine, input$sliderPine[1], input$sliderPine[2]))
+    # alternatively can use this: 
+    # data %>% 
+    #  filter(if_all(
+    #   .cols = c("Citrus", "Berry"),
+    #   ~ between(
+    #     ., 
+    #     paste0("input[[\"slider", ., "\"]][1]") %>%
+    #       parse(text = .) %>%
+    #       eval(), 
+    #     paste0("input[[\"slider", ., "\"]][2]") %>%
+    #       parse(text = .) %>%
+    #       eval())
+    # ))
+    data |> 
+      filter(
+       if_all(
+         c("Citrus","TropicalFruit","StoneFruit","Berry","Floral","Grassy","Herbal","Spice","Pine"), 
+         ~between(!!sym(_), )
+         ))
     data
     })
 
