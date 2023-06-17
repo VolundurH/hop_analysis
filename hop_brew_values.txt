@@ -2705,8 +2705,8 @@ Vista	Dual	United States of America	https://beermaverick.com/hop/vista/	Humulene
 Vista	Dual	United States of America	https://beermaverick.com/hop/vista/	Caryophyllene	10	14	12
 Vista	Dual	United States of America	https://beermaverick.com/hop/vista/	Farnesene	0	1	0.5
 Vista	Dual	United States of America	https://beermaverick.com/hop/vista/	All Others	23	42	42
-Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	Alpha Acid %	97	10	8
-Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	Beta Acid %	75	6	4.9
+Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	Alpha Acid %	5.97	10	8
+Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	Beta Acid %	3.75	6	4.9
 Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	Alpha-Beta Ratio	1	3	2
 Walhalla	Aroma	United States of America	https://beermaverick.com/hop/walhalla/	Co-Humulone as % of Alpha	NA	NA	NA
 Warrior	Dual	United States of America	https://beermaverick.com/hop/warrior/	Alpha Acid %	14.5	18	16.3
