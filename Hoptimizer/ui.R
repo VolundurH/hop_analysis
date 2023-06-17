@@ -1,7 +1,10 @@
 library(shiny)
+library(shinyWidgets)
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
+  theme = bslib::bs_theme(bootswatch = "united"),
+  chooseSliderSkin("Flat", color = "forestgreen"),
   
   # App title ----
   titlePanel("Hoptimizer - Aromas"),
@@ -14,7 +17,7 @@ ui <- fluidPage(
       
       # Input: Choose a country -----
       selectInput("inputCountry",
-                  label="Select a country:",
+                  label="Select a country to start:",
                   choices = c(unique(hop_aromas$country)),
                   multiple = TRUE),
       
@@ -25,40 +28,42 @@ ui <- fluidPage(
                   selected = 'Any'),
     
       # Input: Aroma profile sliders -----
-      sliderInput("sliderCitrus",
-                  label="Select a range for the Citrus profile:",
+      h6("Select a range for the following profiles:"),
+      sliderInput("sliderCitrus", width = '50%',
+                  label= "Citrus:",
                   min=0, max=5, value=c(0,5), step = 1),
       sliderInput("sliderTropicalfruit",
-                  label="Select a range for the Tropical Fruit profile:",
+                  label="Tropical Fruit:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderStonefruit",
-                  label="Select a range for the Stone Fruit profile:",
+                  label="Stone Fruit:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderBerry",
-                  label="Select a range for the Berry profile:",
+                  label="Berry:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderFloral",
-                  label="Select a range for the Floral profile:",
+                  label="Floral:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderGrassy",
-                  label="Select a range for the Grassy profile:",
+                  label="Grassy:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderHerbal",
-                  label="Select a range for the Herbal profile:",
+                  label="Herbal:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderSpice",
-                  label="Select a range for the Spice profile:",
+                  label="Spice:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
       sliderInput("sliderPine",
-                  label="Select a range for the Pine profile:",
+                  label="Pine:", width = '50%',
                   value=c(0,5), min=0, max=5, step = 1),
     ),
-    
+  
+
     # Main panel for displaying outputs ----
     mainPanel(
       gt_output('hop_table'),
       # Output: Histogram ----
-      plotOutput(outputId = "distPlot")
+      gt_output("profile_table")
       
     )
   )

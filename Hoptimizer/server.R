@@ -29,14 +29,12 @@ function(input, output, session) {
              between(Pine, input$sliderPine[1], input$sliderPine[2]))
     data
     })
-
-  # observeEvent(input$inputCountry, {
-  #   hop_aromas_filtered()
-  # })
   
   output$hop_table <- render_gt({
     hop_aromas_filtered() %>% 
       select(hop_name, hop_purpose, country_code, country, link) %>% 
+      mutate(link = map(link, ~ htmltools::a(href = .x, link)),
+             link = map(link, ~ gt::html(as.character(.x)))) %>% 
       gt() %>% 
       fmt_flag(columns = country_code) %>%
       cols_label(hop_name = md('**Hop name**'),
@@ -45,6 +43,17 @@ function(input, output, session) {
                  country = md('**Country**'),
                  link = md('**Original link**'))
   })
+  
+  output$profile_table <- render_gt({
+    hop_aromas_filtered() %>% 
+      select(hop_name, Citrus, TropicalFruit, StoneFruit, Berry, 
+             Floral, Grassy, Herbal, Spice, Pine) %>% 
+      gt() %>%
+      tab_spanner(label = md('**Profiles**'),
+                  columns = -c(hop_name)) %>% 
+      cols_label(hop_name = md('**Hop name**'))
+  })
+  
   
   # output$distPlot <- renderPlot({
   #       # generate bins based on input$bins from ui.R
