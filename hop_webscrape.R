@@ -21,13 +21,11 @@ hop_table <- hopmaverick %>%
   separate(value, into = c("hop_name", "hop_purpose"), sep = "\t") %>% 
   select(-c(country_id, drop_later)) 
 
-
 links <- hopmaverick %>%
   rvest::html_elements("table") %>% 
   rvest::html_children() %>% 
   rvest::html_elements("a") %>%
-  rvest::html_attrs() %>% 
-  as_vector() %>% 
+  rvest::html_attr("href") %>% 
   as_tibble()
 
 
@@ -42,18 +40,18 @@ test %>%
   mutate(labels = str_extract(value, "(?<=labels: \\[)[^\\]]+"), 
     datasets = str_extract(value, "(?<=data: \\[)[^\\]]+")) %>% 
   select(-value) %>% 
-  mutate(datasets = str_remove_all(datasets, "\n")) %>% 
-  mutate(labels = str_split(labels, ", "),
-    datasets = str_split(datasets, ",")) %>% 
+  mutate(datasets = str_remove_all(datasets, "\\s|\n") |> str_split(",")) %>% 
+  mutate(labels = str_remove_all(labels, "\\s|\n") |> str_split(",")) |> 
   unnest(c(labels, datasets)) %>%
   mutate(datasets = as.numeric(datasets)) %>% 
-  mutate(labels = str_remove_all(labels, "'") %>% str_remove("Resin / ") %>% str_replace(" ", "_")) %>% 
+  mutate(labels = str_remove_all(labels, "'") %>% str_remove("Resin/") %>% str_replace(" ", "_")) %>% 
   pivot_wider(names_from = labels, values_from = datasets)
   
 
 # make this into a function, make it return a tibble:
-extract_aroma_chart <- function(html_object){
-  aroma_table <- html_object %>% 
+extract_aroma_chart_from_link <- function(link){
+  
+  rvest::read_html(link) |> 
     rvest::html_elements("script") %>% 
     rvest::html_text() %>% 
     as_tibble() %>% 
@@ -62,23 +60,47 @@ extract_aroma_chart <- function(html_object){
     mutate(labels = str_extract(value, "(?<=labels: \\[)[^\\]]+"), 
       datasets = str_extract(value, "(?<=data: \\[)[^\\]]+")) %>% 
     select(-value) %>% 
-    mutate(datasets = str_remove_all(datasets, "\n")) %>% 
-    mutate(labels = str_split(labels, ", "),
-      datasets = str_split(datasets, ",")) %>% 
-    unnest(c(labels, datasets)) %>% 
+    mutate(datasets = str_remove_all(datasets, "\\s|\n") |> str_split(",")) %>% 
+    mutate(labels = str_remove_all(labels, "\\s|\n") |> str_split(",")) |> 
+    unnest(c(labels, datasets)) %>%
     mutate(datasets = as.numeric(datasets)) %>% 
-    mutate(labels = str_remove_all(labels, "'") %>% str_remove("Resin / ") %>%  str_replace(" ", "_")) %>% 
+    mutate(labels = str_remove_all(labels, "'") %>% str_remove("Resin/") %>% str_replace(" ", "_")) %>% 
     pivot_wider(names_from = labels, values_from = datasets)
+  
 }
 
-hop_table <- hop_table %>% 
+# How much faster is it to use furrr's future_map() vs purrr's map()?
+
+# map()
+tictoc::tic()
+hop_table %>% 
   bind_cols(links) %>% 
   mutate(html = map(value, ~rvest::read_html(paste0("https://beermaverick.com", .x)))) 
+tictoc::toc()
 
+# future_map()
+tictoc::tic()
+future::plan("multisession")
+hop_table %>% 
+  bind_cols(links) %>% 
+  mutate(html = furrr::future_map(value, ~rvest::read_html(paste0("https://beermaverick.com", .x)))) 
+future::plan("default")
+tictoc::toc()
+
+
+# Create hop aroma table using our function we just created and future_map()
+tictoc::tic()
+future::plan("multisession")
 hop_aromas <- hop_table %>% 
-  mutate(info = map(html,  ~extract_aroma_chart(.x))) %>% 
-  select(-c(value, html)) %>% 
-  unnest(info) 
+  bind_cols(links) %>%
+  mutate(value = paste0("https://beermaverick.com", value)) |> 
+  rename(link = value) |> 
+  mutate(html = furrr::future_map(link, ~extract_aroma_chart_from_link(.x)))
+future::plan("default")
+tictoc::toc()
+
+hop_aromas <- hop_aromas |> 
+  unnest_wider(html)
 
 # save
 setwd("Documents/hop_analysis/")
