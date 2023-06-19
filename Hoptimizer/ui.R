@@ -10,8 +10,6 @@ ui <- navbarPage(
   tabPanel(title = "Countries", 
            fluidPage(
 
-             chooseSliderSkin("Flat", color = "forestgreen"),
-
              # App title ----
              titlePanel("Hops by country"),
 
@@ -55,7 +53,8 @@ ui <- navbarPage(
                     selected = 'Any'),
         
         # Input: Aroma profile sliders -----
-              h6("Select a range for the following profiles:"),
+              h6("A total of 182 hops have aroma profile information.
+                 Select ranges below to filter them."),
               sliderInput("sliderCitrus", width = '50%',
                           label= "Citrus:",
                           min=0, max=5, value=c(0,5), step = 1),
