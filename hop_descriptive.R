@@ -50,7 +50,8 @@ hop_aromas %>%
   tab_spanner(label = md('**Purpose**'),
               columns = c(Aroma, Bittering, Dual))
 
-
-
+hop_aromas %>%
+  drop_na(Citrus) %>% 
+  tally()
 
 
