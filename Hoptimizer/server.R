@@ -3,14 +3,14 @@ library(tidyverse)
 library(countrycode)
 library(gt)
 
-# Input data
-hop_brew_values <- read_tsv("../hop_brew_values.txt")
-hop_aromas <- read_tsv("../hop_aromas.txt") %>%
-  mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
-
 
 function(input, output, session) {
+  # input data
+  hop_brew_values <- read_tsv("../hop_brew_values.txt")
+  hop_aromas <- read_tsv("../hop_aromas.txt") %>%
+    mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
   
+  # get summary table of all hops
   output$all_hops <- render_gt({
     hop_aromas %>% 
       count(country) %>%
@@ -24,30 +24,31 @@ function(input, output, session) {
                  n = md('**Hop strains**'))
   })
   
-  # filter data down to the options you want
+  # filter data down to the countries you want
   hop_aromas_country <- reactive({
     data <- hop_aromas %>%
           filter(country %in% input$inputCountry)
     return(data)
     })
   
+  # create the table
   output$hop_table_country <- render_gt({
     req(input$inputCountry)
     hop_aromas_country() %>% 
-      select(hop_name, hop_purpose, country_code, country, link) %>% 
-      # mutate(link = map(link, ~ htmltools::a(href = .x, link)),
-      #        link = map(link, ~ gt::html(as.character(.x)))) %>% 
+      mutate(hop_name = paste0("<a href = ", link, ">", hop_name, "</a>"),
+             hop_name = map(hop_name, gt::html)) %>%
+      select(hop_name, hop_purpose, country_code, country) %>% 
       gt() %>% 
       fmt_flag(columns = country_code) %>%
       cols_label(hop_name = md('**Hop name**'),
                  hop_purpose = md('**Purpose**'),
                  country_code = '',
-                 country = md('**Country**'),
-                 link = md('**Original link**'))
+                 country = md('**Country**'))
   })
   
   # filter data down to the options you want
   hop_aromas_profiles <- reactive({
+    data <- hop_aromas
     if (input$inputPurpose != 'Any') {
       data <- data %>% 
         filter(hop_purpose %in% input$inputPurpose)
