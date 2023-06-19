@@ -3,16 +3,51 @@ library(tidyverse)
 library(countrycode)
 library(gt)
 
+# Input data
 hop_brew_values <- read_tsv("../hop_brew_values.txt")
 hop_aromas <- read_tsv("../hop_aromas.txt") %>%
   mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
 
-function(input, output, session) {
 
-  hop_aromas_filtered <- reactive({
-    data <- hop_aromas
-    data <- data %>%
-      filter(country %in% input$inputCountry)
+function(input, output, session) {
+  
+  output$all_hops <- render_gt({
+    hop_aromas %>% 
+      count(country) %>%
+      arrange(desc(n)) %>%
+      mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c')) %>%
+      gt() %>%
+      cols_move_to_start(country_code) %>% 
+      fmt_flag(columns = country_code) %>% 
+      cols_label(country_code = '',
+                 country = md('**Country**'),
+                 n = md('**Hop strains**'))
+  })
+  
+  # filter data down to the options you want
+  hop_aromas_country <- reactive({
+    data <- hop_aromas %>%
+          filter(country %in% input$inputCountry)
+    return(data)
+    })
+  
+  output$hop_table_country <- render_gt({
+    req(input$inputCountry)
+    hop_aromas_country() %>% 
+      select(hop_name, hop_purpose, country_code, country, link) %>% 
+      # mutate(link = map(link, ~ htmltools::a(href = .x, link)),
+      #        link = map(link, ~ gt::html(as.character(.x)))) %>% 
+      gt() %>% 
+      fmt_flag(columns = country_code) %>%
+      cols_label(hop_name = md('**Hop name**'),
+                 hop_purpose = md('**Purpose**'),
+                 country_code = '',
+                 country = md('**Country**'),
+                 link = md('**Original link**'))
+  })
+  
+  # filter data down to the options you want
+  hop_aromas_profiles <- reactive({
     if (input$inputPurpose != 'Any') {
       data <- data %>% 
         filter(hop_purpose %in% input$inputPurpose)
@@ -40,36 +75,16 @@ function(input, output, session) {
     #       parse(text = .) %>%
     #       eval())
     # ))
-    data |> 
-      filter(
-       if_all(
-         c("Citrus","TropicalFruit","StoneFruit","Berry","Floral","Grassy","Herbal","Spice","Pine"), 
-         ~between(!!sym(_), )
-         ))
-    data
-    })
-  
-  output$hop_table <- render_gt({
-    hop_aromas_filtered() %>% 
-      select(hop_name, hop_purpose, country_code, country, link) %>% 
-      mutate(link = map(link, ~ htmltools::a(href = .x, link)),
-             link = map(link, ~ gt::html(as.character(.x)))) %>% 
-      gt() %>% 
-      fmt_flag(columns = country_code) %>%
-      cols_label(hop_name = md('**Hop name**'),
-                 hop_purpose = md('**Purpose**'),
-                 country_code = '',
-                 country = md('**Country**'),
-                 link = md('**Original link**'))
+    return(data)
   })
   
   output$profile_table <- render_gt({
-    hop_aromas_filtered() %>% 
-      select(hop_name, Citrus, TropicalFruit, StoneFruit, Berry, 
-             Floral, Grassy, Herbal, Spice, Pine) %>% 
+    hop_aromas_profiles() %>%
+      select(hop_name, Citrus, TropicalFruit, StoneFruit, Berry,
+             Floral, Grassy, Herbal, Spice, Pine) %>%
       gt() %>%
       tab_spanner(label = md('**Profiles**'),
-                  columns = -c(hop_name)) %>% 
+                  columns = -c(hop_name)) %>%
       cols_label(hop_name = md('**Hop name**'))
   })
   
