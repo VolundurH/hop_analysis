@@ -37,6 +37,7 @@ ui <- fluidPage(
   
   # Second tab
   tabPanel("Profiles",
+           chooseSliderSkin(color = "forestgreen"),
            # Sidebar layout with input and output definitions ----
            sidebarLayout(
              
