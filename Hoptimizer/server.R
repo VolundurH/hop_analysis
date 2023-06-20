@@ -3,16 +3,53 @@ library(tidyverse)
 library(countrycode)
 library(gt)
 
-hop_brew_values <- read_tsv("../hop_brew_values.txt")
-hop_aromas <- read_tsv("../hop_aromas.txt") %>%
-  mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
-
 function(input, output, session) {
 
-  hop_aromas_filtered <- reactive({
+  # input data
+  hop_brew_values <- read_tsv("../hop_brew_values.txt")
+  hop_aromas <- read_tsv("../hop_aromas.txt") %>%
+    mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
+  
+  # summary table
+  output$summaryCountry <- render_gt({
+    hop_aromas %>% 
+      count(country) %>% 
+      arrange(desc(n)) %>%
+      mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c')) %>% 
+      gt() %>%
+      cols_move_to_start(country_code) %>% 
+      fmt_flag(columns = country_code) %>% 
+      cols_label(country_code = '',
+                 country = md('**Country**'),
+                 n = md('**Hop strains**'))
+      })
+  
+  # filter based on country
+  hop_aromas_country <- reactive({
     data <- hop_aromas
     data <- data %>%
       filter(country %in% input$inputCountry)
+    return(data)
+    })
+  
+  # plot table
+  t1 <- hop_aromas_country() %>% 
+    select(hop_name, hop_purpose, country_code, country, link) %>% 
+    mutate(hop_name = paste0("<a href=", link, "></a>")) %>% 
+    gt() %>% 
+    fmt_flag(columns = country_code) %>%
+    cols_label(hop_name = md('**Hop name**'),
+               country_code = '',
+               country = md('**Country**'))
+  
+  output$hop_table_profiles <- render_gt({
+    req(input$inputCountry)
+    t1
+    })
+  
+  
+  hop_aromas_profiles <- reactive({
+    data <- hop_aromas
     if (input$inputPurpose != 'Any') {
       data <- data %>% 
         filter(hop_purpose %in% input$inputPurpose)
@@ -27,37 +64,23 @@ function(input, output, session) {
              between(Herbal, input$sliderHerbal[1], input$sliderHerbal[2]),
              between(Spice, input$sliderSpice[1], input$sliderSpice[2]),
              between(Pine, input$sliderPine[1], input$sliderPine[2]))
-    # alternatively can use this: 
-    # data %>% 
-    #  filter(if_all(
-    #   .cols = c("Citrus", "Berry"),
-    #   ~ between(
-    #     ., 
-    #     paste0("input[[\"slider", ., "\"]][1]") %>%
-    #       parse(text = .) %>%
-    #       eval(), 
-    #     paste0("input[[\"slider", ., "\"]][2]") %>%
-    #       parse(text = .) %>%
-    #       eval())
-    # ))
-    data
+    return(data) 
     })
-
-  # observeEvent(input$inputCountry, {
-  #   hop_aromas_filtered()
-  # })
   
-  output$hop_table <- render_gt({
-    hop_aromas_filtered() %>% 
-      select(hop_name, hop_purpose, country_code, country, link) %>% 
-      gt() %>% 
-      fmt_flag(columns = country_code) %>%
-      cols_label(hop_name = md('**Hop name**'),
-                 hop_purpose = md('**Purpose**'),
-                 country_code = '',
-                 country = md('**Country**'),
-                 link = md('**Original link**'))
-  })
+  t2 <- hop_aromas_profiles() %>% 
+    select(country_code, hop_name, hop_purpose, 
+           Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+           Grassy, Herbal, Spice, Pine) %>% 
+    gt() %>% 
+    fmt_flag(columns = country_code) %>%
+    cols_label(hop_name = md('**Hop name**'),
+               hop_purpose = md('**Purpose**'),
+               country_code = '') %>% 
+    tab_spanner(label = md("**Profile**"),
+                columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+                            Grassy, Herbal, Spice, Pine))
+  
+  output$hop_table_profiles <- render_gt({t2})
   
   # output$distPlot <- renderPlot({
   #       # generate bins based on input$bins from ui.R
