@@ -114,8 +114,6 @@ hop_oils_plot_df |>
   geom_point() +
   geom_path(alpha = 0.5, aes(col = total_oil)) +
   scale_y_continuous(labels = scales::percent) +
-  labs(x = "Total oil breakdown", y = NULL)  + 
-  theme_classic()
+  labs(x = "Total oil breakdown", y = NULL, col = "Total Oils\n(mL/100g)")  + 
+  theme_classic() 
 
-test
-  plotly::ggplotly()
