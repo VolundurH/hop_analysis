@@ -59,8 +59,27 @@ function(input, output, session) {
                  hop_purpose = md('**Purpose**'))
   })
   
-  #### Second tab code # Profiles
+
+  # plot
+  output$hop_plot_countries <- renderPlot({
+    req(input$inputCountry)
+    hop_aromas_country() %>% 
+      filter(country %in% input$inputCountry) %>% 
+      ggplot(aes(y = country %>% fct_rev(), fill = hop_purpose)) +
+      geom_bar(position = 'fill') +
+      labs(x = "Purpose proportion", y = NULL) +
+      theme_minimal() +
+      theme(axis.text.y = element_text(face = 'bold'),
+            legend.position = 'bottom') +
+      scale_fill_manual(name = NULL,
+                        values = c('Aroma' = 'yellow',
+                                   'Bittering' = 'brown',
+                                   'Dual' = 'orange')) +
+      scale_x_continuous(labels = scales::percent)
+  })
   
+  #### Second tab code # Profiles
+
   # filter based on profiles
   hop_aromas_profiles <- reactive({
     data <- hop_aromas

@@ -10,19 +10,15 @@ ui <- tagList(
                sidebarPanel(
                  selectInput("inputCountry", label="Select a country:",
                              choices = c(unique(hop_aromas$country)), multiple = TRUE),
-                 # fileInput("file", "File input:"),
-                 # textInput("txt", "Text input:", "general"),
-                 # sliderInput("slider", "Slider input:", 1, 100, 30),
-                 # tags$h5("Default actionButton:"),
-                 # actionButton("action", "Search"),
-                 # 
-                 # tags$h5("actionButton with CSS class:"),
-                 # actionButton("action2", "Action button", class = "btn-primary")
                  h5("This is a summary of the data:"),
                  gt_output('summaryCountry')
                ),
                mainPanel(
-                 gt_output('hop_table_countries')
+                 fluidPage(
+                   fluidRow(column(width = 5,
+                                   gt_output('hop_table_countries')),
+                            column(width = 6, offset = 1,
+                                   plotOutput("hop_plot_countries"))))
                )
       ),
       tabPanel("Profiles",
