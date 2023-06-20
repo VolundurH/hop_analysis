@@ -57,11 +57,16 @@ ui <- tagList(
               ),
       tabPanel("Brew Values",
         sidebarPanel(
+          selectInput("inputHop_panel3", label="Select a hop:",
+            choices = c("-Select hop-", 
+              hop_aromas |> select(hop_name, Citrus) |> drop_na() |> pull(hop_name) ), 
+          selected = '-Select hop-')
           
           
           # end of sidebar panel 3
         ),
         mainPanel(
+          plotOutput("radial_plots"),
           h4("Hop oil contents"),
           h5("Myrcene: Resin and citrus"),
           h5("Humulene: Wood and spices"),

@@ -124,9 +124,9 @@ hop_aromas |>
 
 
 # Oil breakdown plot
-
+hop_oils <- c("All Others", "Myrcene", "Humulene", "Farnesene", "Caryophyllene")
 hop_oils_plot_df <-hop_brew_values |> 
-  filter(brew_value %in% c("All Others", "Myrcene", "Humulene", "Farnesene", "Caryophyllene")) |> 
+  filter(brew_value %in% hop_oils) |> 
   left_join(
     hop_brew_values |> 
       filter(brew_value == "Total Oils (mL/100g)") |> 
@@ -143,5 +143,49 @@ hop_oils_plot_df |>
   geom_path(alpha = 0.5, aes(col = total_oil)) +
   scale_y_continuous(labels = scales::percent) +
   labs(x = "Total oil breakdown", y = NULL, col = "Total Oils\n(mL/100g)")  + 
-  theme_classic() 
+  theme_classic() +
+  scale_color_gradient(low = "white", high = "forestgreen")
 
+test_hop = "Astra"
+
+highlight_brew_value_rank <- function(brew_value, hop){
+  plot_data <- hop_brew_values |> 
+    filter(brew_value == brew_value) |> 
+    arrange(-range_mean) |> 
+    mutate(rank = row_number(),
+      hop_of_interest = hop_name%in%hop)
+  
+  plot_data |> 
+    ggplot(aes(x = rank, y = range_mean)) + 
+    geom_point() +
+    geom_point(data = . %>% filter(hop_of_interest), col = "red") +
+    theme_classic()
+  
+}
+
+highlight_brew_value_rank("Alpha Acid %", "Astra")
+
+hop_brew_values |> 
+  filter(brew_value == "Alpha Acid %") |> 
+  arrange(-range_mean) |> 
+  mutate(rank = row_number(),
+    hop_of_interest = hop_name%in%test_hop) |> 
+  ggplot(aes(x = rank, y = range_mean)) + 
+  geom_point() +
+  geom_point(data = . %>% hop_of_interest, col = "red") +
+  theme_classic()
+
+brew_value_ranges <- hop_brew_values |> 
+  group_by(brew_value) |> 
+  summarise(min = min(range_min, na.rm = T), max = max(range_max, na.rm = T))
+
+hop_brew_values |> 
+  filter(hop_name == "Astra") |> 
+  drop_na() |> 
+  filter(!brew_value %in% hop_oils) |> 
+  ggplot(aes(y = fct_rev(brew_value), x = range_mean)) +
+  geom_point() +
+  geom_segment(aes(x = range_min, xend = range_max, yend = brew_value)) + 
+  labs(x = NULL, y = NULL) +
+  theme_classic() +
+  facet_wrap(~brew_value, scales = "free", ncol = 1)

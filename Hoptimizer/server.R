@@ -19,7 +19,7 @@ function(input, output, session) {
     rename(total_oil = `Total Oils (mL/100g)`) |> 
     mutate(brew_value = fct_relevel(brew_value, "Farnesene", "Caryophyllene","Myrcene", "Humulene", "All Others"))
   
-  #### First tab code
+  #### First tab code # Countries
   
   # summary table
   output$summaryCountry <- render_gt({
@@ -59,30 +59,110 @@ function(input, output, session) {
                  hop_purpose = md('**Purpose**'))
   })
   
-  #### Second tab code
+  #### Second tab code # Profiles
   
+  # filter based on profiles
+  hop_aromas_profiles <- reactive({
+    data <- hop_aromas
+    if (input$inputPurpose != 'Any') {
+      data <- data %>%
+        filter(hop_purpose %in% input$inputPurpose)
+    }
+    data <- data %>%
+      filter(between(Citrus, input$sliderCitrus[1], input$sliderCitrus[2]),
+             between(TropicalFruit, input$sliderTropicalfruit[1], input$sliderTropicalfruit[2]),
+             between(StoneFruit, input$sliderStonefruit[1], input$sliderStonefruit[2]),
+             between(Berry, input$sliderBerry[1], input$sliderBerry[2]),
+             between(Floral, input$sliderFloral[1], input$sliderFloral[2]),
+             between(Grassy, input$sliderGrassy[1], input$sliderGrassy[2]),
+             between(Herbal, input$sliderHerbal[1], input$sliderHerbal[2]),
+             between(Spice, input$sliderSpice[1], input$sliderSpice[2]),
+             between(Pine, input$sliderPine[1], input$sliderPine[2]))
+    return(data)
+  })
+
+  output$hop_table_profiles <- render_gt({
+    hop_aromas_profiles() %>%
+      select(country_code, hop_name, hop_purpose,
+             Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+             Grassy, Herbal, Spice, Pine) %>%
+      gt() %>%
+      fmt_flag(columns = country_code) %>%
+      cols_label(hop_name = md('**Hop name**'),
+                 hop_purpose = md('**Purpose**'),
+                 country_code = '') %>%
+      tab_spanner(label = md("**Profile**"),
+                  columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+                              Grassy, Herbal, Spice, Pine))
+  })
   
   #### Third tab code
+  
+  
+  
+  # Hop aroma radial plot function
+  radial_barplot <- function(hop){
+    
+    hop_aromas |> 
+      filter(hop_name == hop) |> 
+      pivot_longer(
+        cols = -c(hop_name, hop_purpose, country, link, aroma_tags, country_code),
+        names_to = "aroma", 
+        values_to = "aroma_value"
+      ) |> 
+      mutate(aroma = str_replace(aroma, "(?<=[:lower:])(?=[:upper:])", "\n"))|>
+      ggplot(aes(x = fct_inorder(aroma), y = aroma_value, group = hop_name)) +
+      geom_col(aes(fill = aroma), show.legend = F) +
+      geom_segment(aes(xend = fct_inorder(aroma), y = 5, yend  = 0), linetype = 2, alpha = 0.5) +
+      coord_polar() +
+      theme_minimal() + 
+      theme(legend.position = "none",
+        axis.text.y = element_blank(),
+        # panel.border = element_rect(fill = NA),
+        plot.margin = margin(0,0,0,0,"mm"),
+        plot.background = element_rect(fill = NA, colour = NA), 
+        panel.background =  element_rect(fill = NA, colour = NA), 
+        panel.border =  element_rect(fill = NA, colour = NA),
+        axis.line.x = element_blank()) +
+      labs(x = NULL, y = NULL) +
+      scale_y_continuous(limits = c(0,5)) +
+      annotate("text", x = 0, y = c(0:5), label= c(0:5)) + 
+      scale_fill_viridis_d()
+  }
+  
+  # Reactive for hop aroma radial plot 
+  get_radial_barplot_hop <- reactive({
+    hop <- input$inputHop_panel3
+    return(hop)
+  })
+  
+  # Render hop aroma radial plot
+  output$radial_plots <- renderPlot({
+    radial_barplot(get_radial_barplot_hop())
+  })
+  
   
   # Reactive for hop oils 
   hop_brew_values_overview_plot <- reactive({
     data <- hop_oil_overview |> 
       mutate(range_mean = range_mean/100) |> 
       ggplot(aes(x = fct_inorder(brew_value), y = range_mean, group = hop_name)) +
-      geom_point() +
       geom_path(alpha = 0.5, aes(col = total_oil)) +
+      geom_point() +
       scale_y_continuous(labels = scales::percent) +
       labs(x = "Total oil breakdown", y = NULL, col = "Total Oils\n(mL/100g)")  + 
-      theme_classic() 
+      theme_classic()  +
+      scale_color_gradient(low = "white", high = "forestgreen", )
     
     return(data)
   })
   
-  # Plot hop oil
-  
+  # Render hop oil overview
   output$total_oil_overview <- renderPlot({
     hop_brew_values_overview_plot()
   })
+  
+
   
   # output$txtout <- renderText({
   #   paste(input$txt, input$slider, format(input$date), sep = ", ")
