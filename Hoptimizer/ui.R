@@ -1,92 +1,146 @@
 library(shiny)
 library(shinyWidgets)
 
-# Define UI for app that draws a histogram ----
-ui <- fluidPage(
-  navbarPage(
-  theme = bslib::bs_theme(bootswatch = "united"),
-  
-  # App title ----
-  titlePanel("Hoptimizer"),
-  
-  # First tab
-  tabPanel("Countries",
-           # Sidebar layout with input and output definitions ----
-           sidebarLayout(
-             
-             # Sidebar panel for inputs ----
-             sidebarPanel(
-               
-               # Input: Choose a country -----
-               selectInput("inputCountry",
-                           label="Select a country:",
-                           choices = c(unique(hop_aromas$country)),
-                           multiple = TRUE),
-               
-               # Show table with all
-               gt_output('summaryCountry'),
-             ),
-             
-             # Main panel for displaying outputs ----
-             mainPanel(
-               gt_output('hop_table_profiles')
-             )
-           )
-  ),
 
+ui <- tagList(
+    navbarPage(
+      theme = shinythemes::shinytheme("cosmo"),
+      title = "Hoptimizer",
+      tabPanel("Countries",
+               sidebarPanel(
+                 selectInput("inputCountry", label="Select a country:",
+                             choices = c(unique(hop_aromas$country)), multiple = TRUE),
+                 # fileInput("file", "File input:"),
+                 # textInput("txt", "Text input:", "general"),
+                 # sliderInput("slider", "Slider input:", 1, 100, 30),
+                 # tags$h5("Default actionButton:"),
+                 # actionButton("action", "Search"),
+                 # 
+                 # tags$h5("actionButton with CSS class:"),
+                 # actionButton("action2", "Action button", class = "btn-primary")
+                 h5("This is a summary of the data:"),
+                 gt_output('summaryCountry')
+               ),
+               mainPanel(
+                 gt_output('hop_table_countries')
+                 # tabsetPanel(
+                 #   tabPanel("Tab 1",
+                 #            h4("Table"),
+                 #            tableOutput("table"),
+                 #            h4("Verbatim text output"),
+                 #            verbatimTextOutput("txtout"),
+                 #            h1("Header 1"),
+                 #            h2("Header 2"),
+                 #            h3("Header 3"),
+                 #            h4("Header 4"),
+                 #            h5("Header 5")
+                 #   ),
+                 #   tabPanel("Tab 2", "This panel is intentionally left blank"),
+                 #   tabPanel("Tab 3", "This panel is intentionally left blank")
+                 # )
+               )
+      ),
+      tabPanel("Navbar 2", "This panel is intentionally left blank"),
+      tabPanel("Navbar 3", "This panel is intentionally left blank")
+    )
+  )
   
-  # Second tab
-  tabPanel("Profiles",
-           chooseSliderSkin(color = "forestgreen"),
-           # Sidebar layout with input and output definitions ----
-           sidebarLayout(
-             
-             # Sidebar panel for inputs ----
-             sidebarPanel(
-               
-               # Input: Choose purpose ----
-               selectInput("inputPurpose",
-                           label="Select a purpose:",
-                           choices = c("Any", unique(hop_aromas$hop_purpose)),
-                           selected = 'Any'),
-               
-               # Input: Aroma profile sliders -----
-               h5("Select a range for the following profiles:"),
-               
-               sliderInput("sliderCitrus", width = "50%",
-                           label="Citrus:",
-                           min=0, max=5, value=c(0,5), step = 1),
-               sliderInput("sliderTropicalfruit", width = "50%",
-                           label="Tropical Fruit:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderStonefruit", width = "50%",
-                           label="Stone Fruit:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderBerry", width = "50%",
-                           label="Berry:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderFloral", width = "50%",
-                           label="Floral:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderGrassy", width = "50%",
-                           label="Grassy:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderHerbal", width = "50%",
-                           label="Herbal:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderSpice", width = "50%",
-                           label="Select a range for the Spice:",
-                           value=c(0,5), min=0, max=5, step = 1),
-               sliderInput("sliderPine", width = "50%",
-                           label="Pine:",
-                           value=c(0,5), min=0, max=5, step = 1),
-             ),
-             
-             # Main panel for displaying outputs ----
-             mainPanel(
-               gt_output('hop_table_profiles')
-             )
-           )
-  )
-  )
-)
+
+
+
+
+
+
+
+
+
+
+
+
+# # Define UI for app that draws a histogram ----
+# ui <- navbarPage(
+#   theme = bslib::bs_theme(bootswatch = "united"),
+#   
+#   # App title ----
+#   titlePanel("Hoptimizer"),
+#   
+#   # First tab
+#   tabPanel("Countries",
+#            # Sidebar layout with input and output definitions ----
+#              sidebarLayout(
+#              
+#              # Sidebar panel for inputs ----
+#              sidebarPanel(
+#                
+#                # Input: Choose a country -----
+#                selectInput("inputCountry",
+#                            label="Select a country:",
+#                            choices = c(unique(hop_aromas$country)),
+#                            multiple = TRUE),
+#                
+#                # Show table with all
+#                tableOutput('summaryCountry'),
+#              ),
+#              
+#              # Main panel for displaying outputs ----
+#              mainPanel(
+#                gt_output('hop_table_profiles')
+#              )
+#            )
+#   ),
+# 
+#   
+#   # Second tab
+#   tabPanel("Profiles",
+#            chooseSliderSkin(color = "forestgreen"),
+#            # Sidebar layout with input and output definitions ----
+#            sidebarLayout(
+#              
+#              # Sidebar panel for inputs ----
+#              sidebarPanel(
+#                
+#                # Input: Choose purpose ----
+#                selectInput("inputPurpose",
+#                            label="Select a purpose:",
+#                            choices = c("Any", unique(hop_aromas$hop_purpose)),
+#                            selected = 'Any'),
+#                
+#                # Input: Aroma profile sliders -----
+#                h5("Select a range for the following profiles:"),
+#                
+#                sliderInput("sliderCitrus", width = "50%",
+#                            label="Citrus:",
+#                            min=0, max=5, value=c(0,5), step = 1),
+#                sliderInput("sliderTropicalfruit", width = "50%",
+#                            label="Tropical Fruit:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderStonefruit", width = "50%",
+#                            label="Stone Fruit:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderBerry", width = "50%",
+#                            label="Berry:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderFloral", width = "50%",
+#                            label="Floral:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderGrassy", width = "50%",
+#                            label="Grassy:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderHerbal", width = "50%",
+#                            label="Herbal:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderSpice", width = "50%",
+#                            label="Select a range for the Spice:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#                sliderInput("sliderPine", width = "50%",
+#                            label="Pine:",
+#                            value=c(0,5), min=0, max=5, step = 1),
+#              ),
+#              
+#              # Main panel for displaying outputs ----
+#              mainPanel(
+#                gt_output('hop_table_profiles')
+#              )
+#            )
+#   )
+# )
