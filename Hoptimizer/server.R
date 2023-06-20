@@ -40,12 +40,6 @@ function(input, output, session) {
     #       parse(text = .) %>%
     #       eval())
     # ))
-    data |> 
-      filter(
-       if_all(
-         c("Citrus","TropicalFruit","StoneFruit","Berry","Floral","Grassy","Herbal","Spice","Pine"), 
-         ~between(!!sym(_), )
-         ))
     data
     })
 
