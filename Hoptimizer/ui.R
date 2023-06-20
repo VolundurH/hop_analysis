@@ -5,7 +5,7 @@ library(shinyWidgets)
 ui <- tagList(
     navbarPage(
       theme = shinythemes::shinytheme("cosmo"),
-      title = "Hoptimizer",
+      title = md("Hoptimizer"),
       tabPanel("Countries",
                sidebarPanel(
                  selectInput("inputCountry", label="Select a country:",

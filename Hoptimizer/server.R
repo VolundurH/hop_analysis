@@ -8,6 +8,8 @@ function(input, output, session) {
   hop_aromas <- read_tsv("../hop_aromas.txt") %>%
     mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
   
+  #### First tab code
+  
   # summary table
   output$summaryCountry <- render_gt({
     hop_aromas %>% 
@@ -34,15 +36,22 @@ function(input, output, session) {
   output$hop_table_countries <- render_gt({
     req(input$inputCountry)
     hop_aromas_country() %>% 
-      select(hop_name, hop_purpose, country_code, country, link) %>% 
-      mutate(hop_name = paste0("<a href=", link, "></a>")) %>% 
+      mutate(hop_name = paste0("<a href=", link, ">", hop_name,"</a>")) %>% 
+      select(hop_name, hop_purpose, country_code, country) %>% 
       gt() %>% 
+      cols_move_to_end(columns = "hop_purpose") %>% 
       fmt_flag(columns = country_code) %>%
+      fmt_url(columns = "hop_name") %>% 
       cols_label(hop_name = md('**Hop name**'),
                  country_code = '',
-                 country = md('**Country**'))
+                 country = md('**Country**'),
+                 hop_purpose = md('**Purpose**'))
   })
   
+  #### Second tab code
+  
+  
+  #### Third tab code
   
   # output$txtout <- renderText({
   #   paste(input$txt, input$slider, format(input$date), sep = ", ")
