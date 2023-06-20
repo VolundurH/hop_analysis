@@ -19,7 +19,7 @@ function(input, output, session) {
     rename(total_oil = `Total Oils (mL/100g)`) |> 
     mutate(brew_value = fct_relevel(brew_value, "Farnesene", "Caryophyllene","Myrcene", "Humulene", "All Others"))
   
-  #### First tab code
+  #### First tab code # Countries
   
   # summary table
   output$summaryCountry <- render_gt({
@@ -59,8 +59,60 @@ function(input, output, session) {
                  hop_purpose = md('**Purpose**'))
   })
   
-  #### Second tab code
+  # plot table
+  output$hop_plot_countries <- renderPlot({
+    req(input$inputCountry)
+    hop_aromas_country() %>% 
+      filter(country %in% input$inputCountry) %>% 
+      ggplot(aes(y = country %>% fct_rev(), fill = hop_purpose)) +
+      geom_bar(position = 'fill') +
+      labs(x = "Purpose proportion", y = NULL) +
+      theme_minimal() +
+      theme(axis.text.y = element_text(face = 'bold'),
+            legend.position = 'bottom') +
+      scale_fill_manual(name = NULL,
+                        values = c('Aroma' = 'yellow',
+                                   'Bittering' = 'brown',
+                                   'Dual' = 'orange')) +
+      scale_x_continuous(labels = scales::percent)
+  })
   
+  #### Second tab code # Profiles
+  
+  # filter based on profiles
+  hop_aromas_profiles <- reactive({
+    data <- hop_aromas
+    if (input$inputPurpose != 'Any') {
+      data <- data %>%
+        filter(hop_purpose %in% input$inputPurpose)
+    }
+    data <- data %>%
+      filter(between(Citrus, input$sliderCitrus[1], input$sliderCitrus[2]),
+             between(TropicalFruit, input$sliderTropicalfruit[1], input$sliderTropicalfruit[2]),
+             between(StoneFruit, input$sliderStonefruit[1], input$sliderStonefruit[2]),
+             between(Berry, input$sliderBerry[1], input$sliderBerry[2]),
+             between(Floral, input$sliderFloral[1], input$sliderFloral[2]),
+             between(Grassy, input$sliderGrassy[1], input$sliderGrassy[2]),
+             between(Herbal, input$sliderHerbal[1], input$sliderHerbal[2]),
+             between(Spice, input$sliderSpice[1], input$sliderSpice[2]),
+             between(Pine, input$sliderPine[1], input$sliderPine[2]))
+    return(data)
+  })
+  
+  output$hop_table_profiles <- render_gt({
+    hop_aromas_profiles() %>%
+      select(country_code, hop_name, hop_purpose,
+             Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+             Grassy, Herbal, Spice, Pine) %>%
+      gt() %>%
+      fmt_flag(columns = country_code) %>%
+      cols_label(hop_name = md('**Hop name**'),
+                 hop_purpose = md('**Purpose**'),
+                 country_code = '') %>%
+      tab_spanner(label = md("**Profile**"),
+                  columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+                              Grassy, Herbal, Spice, Pine))
+  })
   
   #### Third tab code
   
