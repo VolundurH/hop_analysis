@@ -51,6 +51,21 @@ hop_aromas %>%
               columns = c(Aroma, Bittering, Dual))
 
 
+# when filtered by country
+hop_aromas %>% 
+  mutate(hop_name = paste0("<a href=", link, ">", hop_name,"</a>")) %>% 
+  select(hop_name, hop_purpose, country_code, country) %>% 
+  gt() %>% 
+  cols_move_to_end(columns = "hop_purpose") %>% 
+  fmt_flag(columns = country_code) %>%
+  fmt_url(columns = "hop_name") %>% 
+  cols_label(hop_name = md('**Hop name**'),
+             country_code = '',
+             country = md('**Country**'),
+             hop_purpose = md('**Purpose**'))
+
+
+
 
 
 
