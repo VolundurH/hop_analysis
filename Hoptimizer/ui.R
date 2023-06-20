@@ -23,24 +23,38 @@ ui <- tagList(
                ),
                mainPanel(
                  gt_output('hop_table_countries')
-                 # tabsetPanel(
-                 #   tabPanel("Tab 1",
-                 #            h4("Table"),
-                 #            tableOutput("table"),
-                 #            h4("Verbatim text output"),
-                 #            verbatimTextOutput("txtout"),
-                 #            h1("Header 1"),
-                 #            h2("Header 2"),
-                 #            h3("Header 3"),
-                 #            h4("Header 4"),
-                 #            h5("Header 5")
-                 #   ),
-                 #   tabPanel("Tab 2", "This panel is intentionally left blank"),
-                 #   tabPanel("Tab 3", "This panel is intentionally left blank")
-                 # )
                )
       ),
-      tabPanel("Navbar 2", "This panel is intentionally left blank"),
+      tabPanel("Profiles",
+               chooseSliderSkin(color = 'forestgreen'),
+               sidebarPanel(
+                 selectInput("inputPurpose", label="Select a purpose:",
+                             choices = c("Any", unique(hop_aromas$hop_purpose)), selected = 'Any'),
+                 # Input: Aroma profile sliders -----
+                 h5("There are 182 hops with aroma information. Select a range for the following profiles to filter them:"),
+                 sliderInput("sliderCitrus", width = "50%", label="Citrus:",
+                             min=0, max=5, value=c(0,5), step = 1),
+                 sliderInput("sliderTropicalfruit", width = "50%", label="Tropical Fruit:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderStonefruit", width = "50%", label="Stone Fruit:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderBerry", width = "50%", label="Berry:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderFloral", width = "50%", label="Floral:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderGrassy", width = "50%", label="Grassy:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderHerbal", width = "50%", label="Herbal:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderSpice", width = "50%", label="Select a range for the Spice:",
+                             value=c(0,5), min=0, max=5, step = 1),
+                 sliderInput("sliderPine", width = "50%", label="Pine:",
+                             value=c(0,5), min=0, max=5, step = 1)
+               ),
+               mainPanel(
+                 gt_output('hop_table_profiles')
+               )
+              ),
       tabPanel("Brew Values",
         sidebarPanel(
           
@@ -60,8 +74,7 @@ ui <- tagList(
         # end of tabPanel 3
       )
     )
-  )
-  
+)
 
 
 
