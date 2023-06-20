@@ -41,7 +41,24 @@ ui <- tagList(
                )
       ),
       tabPanel("Navbar 2", "This panel is intentionally left blank"),
-      tabPanel("Navbar 3", "This panel is intentionally left blank")
+      tabPanel("Brew Values",
+        sidebarPanel(
+          
+          
+          # end of sidebar panel 3
+        ),
+        mainPanel(
+          h4("Hop oil contents"),
+          h5("Myrcene: Resin and citrus"),
+          h5("Humulene: Wood and spices"),
+          h5("Caryophyllene: Wood, pepper, herbal"),
+          h5("Farnesene: Floral, green apple"),
+          plotOutput("total_oil_overview")
+          # end of main panel 3
+        )
+        
+        # end of tabPanel 3
+      )
     )
   )
   
