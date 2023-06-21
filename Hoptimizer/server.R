@@ -4,7 +4,10 @@ library(countrycode)
 library(gt)
 
 function(input, output, session) {
-  # input data
+
+# Input data --------------------------------------------------------------
+
+
   hop_aromas <- read_tsv("../hop_aromas.txt") %>%
     mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
   hop_brew_values <- read_tsv("../hop_brew_values.txt")
@@ -19,7 +22,10 @@ function(input, output, session) {
     rename(total_oil = `Total Oils (mL/100g)`) |> 
     mutate(brew_value = fct_relevel(brew_value, "Farnesene", "Caryophyllene","Myrcene", "Humulene", "All Others"))
   
-  #### First tab code # Countries
+
+# Panel 1 -----------------------------------------------------------------
+
+
   
   # summary table
   output$summaryCountry <- render_gt({
@@ -79,7 +85,9 @@ function(input, output, session) {
       scale_x_continuous(labels = scales::percent)
   })
   
-  #### Second tab code # Profiles
+
+# Panel 2, tab 1: hop table -----------------------------------------------------------------
+
 
   # filter based on profiles
   hop_aromas_profiles <- reactive({
@@ -208,7 +216,9 @@ function(input, output, session) {
     )
   
   
-  #### Third tab code
+
+# Panel 3 -----------------------------------------------------------------
+
 
  
   
