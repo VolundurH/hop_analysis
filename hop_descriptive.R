@@ -195,11 +195,19 @@ highlight_brew_value_rank <- function(brew_value_of_interest, hop){
     geom_point(data = plot_data |>  filter(hop_of_interest), col = "red") +
     theme_classic() + 
     labs(title = paste0(brew_value_of_interest), y = NULL,
-      subtitle = paste0(hop, " range: ",hop_of_interest$range_min," to ", hop_of_interest$range_max, ", mean ", hop_of_interest$range_mean),
+      subtitle = paste0(hop, " range: ",hop_of_interest$range_min," to ", hop_of_interest$range_max, ", mean ", hop_of_interest$range_mean, "\nRank: ", hop_of_interest$rank, "/", max(plot_data$rank)),
       x = "Rank among all hops")
 }
 
+hop_brew_values <- hop_brew_values |> 
+  mutate(range_min= ifelse(range_min <= range_mean, range_min, NA)) |> 
+  mutate(range_max= ifelse(range_mean <= range_max, range_max, NA))
+
+
 highlight_brew_value_rank("Alpha Acid %", "Astra")
 highlight_brew_value_rank("Total Oils (mL/100g)", "Styrian Wolf")
+highlight_brew_value_rank("Myrcene", "Styrian Wolf")
 
 
+hop_brew_values |> 
+  distinct(brew_value)
