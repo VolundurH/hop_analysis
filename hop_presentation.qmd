@@ -60,7 +60,7 @@ execute:
 
 ## Tidyverse comes with a web scraping package!
 
-![](hop_presentation_files/rvest_logo.png){.absolute top="-50" right="350" width="200" height="200"}
+![](hop_presentation_files/rvest_logo.png){.absolute bottom="50" right="100" width="400" height="400"}
 
 Not loaded by default, but installed if you have tidyverse
 
@@ -153,6 +153,9 @@ extract_aroma_chart_from_link <- function(link){
 
 ## Timing: map() vs furrr::future_map()
 
+
+::: {.fragment .fade-in}
+
 ```{r}
 
 tictoc::tic()
@@ -165,8 +168,10 @@ tictoc::toc()
 
 ```
 
+:::
 
-## Timing: map() vs furrr::future_map()
+
+::: {.fragment .fade-in}
 
 ```{r}
 
@@ -181,6 +186,11 @@ future::plan("default")
 tictoc::toc()
 
 ```
+
+:::
+
+## The end result
+
 
 ::: {.fragment .fade-in}
 ```{r}
