@@ -136,6 +136,9 @@ function(input, output, session) {
                                 Grassy, Herbal, Spice, Pine))
     }
   })
+
+# Panel 2 , tab 2: Overview plots -----------------------------------------
+
   
   output$profile_overview <- renderPlot({
     hop_aromas_profiles() %>%
@@ -150,6 +153,9 @@ function(input, output, session) {
       scale_fill_viridis_d(direction = -1) +
       labs(x = 'Number of hops')
   })
+
+# Panel 3, tab 3: per hop plots -------------------------------------------
+
   
   table_check_max <- reactive({
     if (nrow(hop_aromas_profiles()) > 20) {

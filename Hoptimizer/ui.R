@@ -73,8 +73,13 @@ ui <- tagList(
                                       gt_output('hop_table_profiles'))
                    ),
                    tabPanel("Overview plots",
-                            fluidPage(gt_output('hop_table_check2'),
-                                      plotOutput("profile_overview"))
+                            fluidPage(
+                              h4("Aroma value distribution of selected hops"),
+                              gt_output('hop_table_check2'),
+                              plotOutput("profile_overview"),
+                              h4("Breakdown of oil percentages"),
+                              plotOutput("hop_oil_overview_plot")
+                              )
                    ),
                    tabPanel("Per hop plots",
                             fluidPage(gt_output('hop_table_check3'),
