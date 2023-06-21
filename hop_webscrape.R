@@ -99,6 +99,8 @@ tictoc::tic()
 future::plan("multisession")
 hop_table %>% 
   bind_cols(links) %>% 
+  mutate(value = paste0("https://beermaverick.com", value)) |> 
+  rename(link = value) |> 
   mutate(html = furrr::future_map(value, ~rvest::read_html(paste0("https://beermaverick.com", .x)))) 
 future::plan("default")
 tictoc::toc()

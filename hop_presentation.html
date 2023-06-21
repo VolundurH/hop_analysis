@@ -9,7 +9,7 @@
 <link href="hop_presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.335">
 
-  <meta name="author" content="Deborah Oliveira &amp; Völundur Hafstad">
+  <meta name="author" content="Völundur Hafstad &amp; Deborah Oliveira">
   <title>Hop profile web scraping and analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="hop_presentation_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="hop_presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -329,34 +393,262 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Deborah Oliveira &amp; Völundur Hafstad 
+Völundur Hafstad &amp; Deborah Oliveira 
 </div>
 </div>
 </div>
 
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+<section id="introduction" class="slide level2">
+<h2>Introduction 🍺</h2>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/water.jpeg" class="absolute" style="left: 0px; bottom: 50px; width: 750px; height: 750px; "></p>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/malt.jpeg" class="absolute" style="left: 250px; bottom: 50px; width: 750px; height: 750px; "></p>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/yeast.jpeg" class="absolute" style="left: 500px; bottom: 50px; width: 750px; height: 750px; "></p>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/hops.jpeg" class="absolute" style="left: 750px; bottom: 50px; width: 750px; height: 750px; "></p>
+</div>
 </section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="introduction-1" class="slide level2">
+<h2>Introduction 🍺</h2>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>Lots of hop varieties out there</li>
+</ul>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/beermaverick_hop_database_frontpage.png" class="absolute" style="left: 0px; bottom: 25px; width: 800px; height: 800px; "></p>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/beermaverick_hop_list.png" class="absolute" style="left: 400px; bottom: 25px; width: 550px; height: 800px; "></p>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="hop_presentation_files/beermaverick_galaxy_hop.png" class="absolute" style="left: 600px; bottom: 25px; width: 800px; height: 800px; "></p>
+</div>
+</section>
+<section id="project-outline" class="slide level2">
+<h2>Project outline</h2>
+<ul>
+<li><p>Scrape hop profiles from beermaverick.com</p></li>
+<li><p>Clean the data</p></li>
+<li><p>Create a shiny app to present the data</p></li>
 </ul>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
+<section id="tidyverse-comes-with-a-web-scraping-package" class="slide level2">
+<h2>Tidyverse comes with a web scraping package!</h2>
+<p><img data-src="hop_presentation_files/rvest_logo.png" class="absolute" style="top: -50px; right: 350px; width: 200px; height: 200px; "></p>
+<p>Not loaded by default, but installed if you have tidyverse</p>
+<div class="fragment fade-in">
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-1_03a54ef1a464e2d35f3dceea39eebee3">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(rvest) </span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Read in the main hop page</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>hopmaverick <span class="ot">&lt;-</span> rvest<span class="sc">::</span><span class="fu">read_html</span>(<span class="st">"https://beermaverick.com/hops/"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>hopmaverick</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>{html_document}
+&lt;html lang="en-US" class="no-js" itemtype="https://schema.org/WebPage" itemscope=""&gt;
+[1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
+[2] &lt;body class="page-template-default page page-id-2772 page-parent wp-custo ...</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="scraping" class="slide level2">
+<h2>Scraping</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-2_279598b0393172b8523db006867e7e39">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>hop_table <span class="ot">&lt;-</span> hopmaverick <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>  rvest<span class="sc">::</span><span class="fu">html_elements</span>(<span class="st">"table"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3"></a>  rvest<span class="sc">::</span><span class="fu">html_children</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4"></a>  rvest<span class="sc">::</span><span class="fu">html_text2</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">as_tibble</span>() </span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a>hop_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 332 × 1
+   value                           
+   &lt;chr&gt;                           
+ 1 "Australia"                     
+ 2 "Astra\tDual"                   
+ 3 "Eclipse\tDual"                 
+ 4 "Ella\tDual"                    
+ 5 "Enigma\tAroma"                 
+ 6 "Feux-Coeur Francais\tBittering"
+ 7 "Galaxy\tDual"                  
+ 8 "Helga\tAroma"                  
+ 9 "HPA-016\tAroma"                
+10 "Melba\tAroma"                  
+# ℹ 322 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="tidyverse-magic" class="slide level2">
+<h2>Tidyverse magic</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-3_a69562dc711eb030ab3013e26acd1167">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>hop_table <span class="ot">&lt;-</span> hop_table <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">mutate</span>(<span class="at">country_id =</span> <span class="sc">!</span><span class="fu">str_detect</span>(value, <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>),</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="at">drop_later =</span> country_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">mutate</span>(<span class="at">country_id =</span> <span class="fu">cumsum</span>(country_id)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">group_by</span>(country_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">first</span>(value, country_id)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">filter</span>(<span class="sc">!</span>drop_later) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="fu">separate</span>(value, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"hop_name"</span>, <span class="st">"hop_purpose"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(country_id, drop_later)) </span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a>hop_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 318 × 3
+   hop_name            hop_purpose country  
+   &lt;chr&gt;               &lt;chr&gt;       &lt;chr&gt;    
+ 1 Astra               Dual        Australia
+ 2 Eclipse             Dual        Australia
+ 3 Ella                Dual        Australia
+ 4 Enigma              Aroma       Australia
+ 5 Feux-Coeur Francais Bittering   Australia
+ 6 Galaxy              Dual        Australia
+ 7 Helga               Aroma       Australia
+ 8 HPA-016             Aroma       Australia
+ 9 Melba               Aroma       Australia
+10 Pride of Ringwood   Bittering   Australia
+# ℹ 308 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="each-hop-has-its-own-overview-page" class="slide level2">
+<h2>Each hop has its own overview page</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-4_5cf7d0b6aa74cf59ce651a3aebe23dee">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>links <span class="ot">&lt;-</span> hopmaverick <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  rvest<span class="sc">::</span><span class="fu">html_elements</span>(<span class="st">"table"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  rvest<span class="sc">::</span><span class="fu">html_children</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a>  rvest<span class="sc">::</span><span class="fu">html_elements</span>(<span class="st">"a"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>  rvest<span class="sc">::</span><span class="fu">html_attr</span>(<span class="st">"href"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">as_tibble</span>()</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>links</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 318 × 1
+   value                    
+   &lt;chr&gt;                    
+ 1 /hop/astra/              
+ 2 /hop/eclipse/            
+ 3 /hop/ella/               
+ 4 /hop/enigma/             
+ 5 /hop/feux-coeur-francais/
+ 6 /hop/galaxy/             
+ 7 /hop/helga/              
+ 8 /hop/hpa-016/            
+ 9 /hop/melba/              
+10 /hop/pride-of-ringwood/  
+# ℹ 308 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="a-lot-of-trial-and-error-later" class="slide level2">
+<h2>A lot of trial and error later…</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-5_938acfab36830dbb7b690dcffebe2fa9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>extract_aroma_chart_from_link <span class="ot">&lt;-</span> <span class="cf">function</span>(link){</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>(link) <span class="sc">|&gt;</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a>    rvest<span class="sc">::</span><span class="fu">html_elements</span>(<span class="st">"script"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-5"><a href="#cb9-5"></a>    rvest<span class="sc">::</span><span class="fu">html_text</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="fu">filter</span>(<span class="fu">str_detect</span>(value, <span class="st">"aromaChart"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="fu">slice_head</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-9"><a href="#cb9-9"></a>    <span class="fu">mutate</span>(<span class="at">labels =</span> <span class="fu">str_extract</span>(value, <span class="st">"(?&lt;=labels: </span><span class="sc">\\</span><span class="st">[)[^</span><span class="sc">\\</span><span class="st">]]+"</span>), </span>
+<span id="cb9-10"><a href="#cb9-10"></a>      <span class="at">datasets =</span> <span class="fu">str_extract</span>(value, <span class="st">"(?&lt;=data: </span><span class="sc">\\</span><span class="st">[)[^</span><span class="sc">\\</span><span class="st">]]+"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="fu">select</span>(<span class="sc">-</span>value) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="fu">mutate</span>(<span class="at">datasets =</span> <span class="fu">str_remove_all</span>(datasets, <span class="st">"</span><span class="sc">\\</span><span class="st">s|</span><span class="sc">\n</span><span class="st">"</span>) <span class="sc">|&gt;</span> <span class="fu">str_split</span>(<span class="st">","</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="fu">mutate</span>(<span class="at">labels =</span> <span class="fu">str_remove_all</span>(labels, <span class="st">"</span><span class="sc">\\</span><span class="st">s|</span><span class="sc">\n</span><span class="st">"</span>) <span class="sc">|&gt;</span> <span class="fu">str_split</span>(<span class="st">","</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-14"><a href="#cb9-14"></a>    <span class="fu">unnest</span>(<span class="fu">c</span>(labels, datasets)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a>    <span class="fu">mutate</span>(<span class="at">datasets =</span> <span class="fu">as.numeric</span>(datasets)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-16"><a href="#cb9-16"></a>    <span class="fu">mutate</span>(<span class="at">labels =</span> <span class="fu">str_remove_all</span>(labels, <span class="st">"'"</span>) <span class="sc">%&gt;%</span> <span class="fu">str_remove</span>(<span class="st">"Resin/"</span>) <span class="sc">%&gt;%</span> <span class="fu">str_replace</span>(<span class="st">" "</span>, <span class="st">"_"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-17"><a href="#cb9-17"></a>    <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> labels, <span class="at">values_from =</span> datasets)</span>
+<span id="cb9-18"><a href="#cb9-18"></a>  </span>
+<span id="cb9-19"><a href="#cb9-19"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="timing-map-vs-furrrfuture_map" class="slide level2">
+<h2>Timing: map() vs furrr::future_map()</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-6_9210267ca14a51ad4c9339d4ce589010">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>tictoc<span class="sc">::</span><span class="fu">tic</span>()</span>
+<span id="cb10-2"><a href="#cb10-2"></a>hop_aromas <span class="ot">&lt;-</span> hop_table <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">bind_cols</span>(links) <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">paste0</span>(<span class="st">"https://beermaverick.com"</span>, value)) <span class="sc">|&gt;</span> </span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">rename</span>(<span class="at">link =</span> value) <span class="sc">|&gt;</span> </span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">mutate</span>(<span class="at">html =</span> <span class="fu">map</span>(link, <span class="sc">~</span><span class="fu">extract_aroma_chart_from_link</span>(.x)))</span>
+<span id="cb10-7"><a href="#cb10-7"></a>tictoc<span class="sc">::</span><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>116.047 sec elapsed</code></pre>
+</div>
+</div>
+</section>
+<section id="timing-map-vs-furrrfuture_map-1" class="slide level2">
+<h2>Timing: map() vs furrr::future_map()</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-7_6893d9a121ff16256d04f6ef81963a9c">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>tictoc<span class="sc">::</span><span class="fu">tic</span>()</span>
+<span id="cb12-2"><a href="#cb12-2"></a>future<span class="sc">::</span><span class="fu">plan</span>(<span class="st">"multisession"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3"></a>hop_aromas <span class="ot">&lt;-</span> hop_table <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">bind_cols</span>(links) <span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">paste0</span>(<span class="st">"https://beermaverick.com"</span>, value)) <span class="sc">|&gt;</span> </span>
+<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">rename</span>(<span class="at">link =</span> value) <span class="sc">|&gt;</span> </span>
+<span id="cb12-7"><a href="#cb12-7"></a>  <span class="fu">mutate</span>(<span class="at">html =</span> furrr<span class="sc">::</span><span class="fu">future_map</span>(link, <span class="sc">~</span><span class="fu">extract_aroma_chart_from_link</span>(.x)))</span>
+<span id="cb12-8"><a href="#cb12-8"></a>future<span class="sc">::</span><span class="fu">plan</span>(<span class="st">"default"</span>)</span>
+<span id="cb12-9"><a href="#cb12-9"></a>tictoc<span class="sc">::</span><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>12.498 sec elapsed</code></pre>
+</div>
+</div>
+<div class="fragment fade-in">
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-8_c54dddd9b68f3bd67e5394767591374a">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 318 × 13
+   hop_name      hop_purpose country link  Citrus TropicalFruit StoneFruit Berry
+   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;
+ 1 Astra         Dual        Austra… http…      3             3          3     2
+ 2 Eclipse       Dual        Austra… http…      3             3          2     2
+ 3 Ella          Dual        Austra… http…      3             4          3     3
+ 4 Enigma        Aroma       Austra… http…      3             3          1     0
+ 5 Feux-Coeur F… Bittering   Austra… http…     NA            NA         NA    NA
+ 6 Galaxy        Dual        Austra… http…      4             3          1     0
+ 7 Helga         Aroma       Austra… http…     NA            NA         NA    NA
+ 8 HPA-016       Aroma       Austra… http…     NA            NA         NA    NA
+ 9 Melba         Aroma       Austra… http…      3             4          4     2
+10 Pride of Rin… Bittering   Austra… http…      3             3          3     3
+# ℹ 308 more rows
+# ℹ 5 more variables: Floral &lt;dbl&gt;, Grassy &lt;dbl&gt;, Herbal &lt;dbl&gt;, Spice &lt;dbl&gt;,
+#   Pine &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="similar-code-to-extract-brew-values" class="slide level2">
+<h2>Similar code to extract brew values</h2>
+<div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-9_40a673c5fcc903d6a82a16552f5afd6b">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,821 × 8
+   hop_name hop_purpose country  link  brew_value range_min range_max range_mean
+   &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+ 1 Astra    Dual        Austral… http… Alpha Aci…         7        10        8.5
+ 2 Astra    Dual        Austral… http… Beta Acid…         4         6        5  
+ 3 Astra    Dual        Austral… http… Alpha-Bet…         1         3        2  
+ 4 Astra    Dual        Austral… http… Co-Humulo…        26        28       27  
+ 5 Astra    Dual        Austral… http… Total Oil…         1         3        2  
+ 6 Astra    Dual        Austral… http… Myrcene           NA        NA       NA  
+ 7 Astra    Dual        Austral… http… Humulene           6         8        7  
+ 8 Astra    Dual        Austral… http… Caryophyl…         2         3        2.5
+ 9 Astra    Dual        Austral… http… Farnesene         NA        NA       NA  
+10 Astra    Dual        Austral… http… All Others        89        92       92  
+# ℹ 2,811 more rows</code></pre>
 </div>
 </div>
 <div class="footer footer-default">
-
+<p>See the GitHub repo at github.com/VolundurH/hop_analysis</p>
 </div>
 </section>
     </div>
@@ -411,7 +703,7 @@ Deborah Oliveira &amp; Völundur Hafstad
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -536,9 +828,9 @@ Deborah Oliveira &amp; Völundur Hafstad
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1920,
 
-        height: 700,
+        height: 1080,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
