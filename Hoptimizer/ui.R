@@ -78,7 +78,9 @@ ui <- tagList(
                    ),
                    tabPanel("Per hop plots",
                             fluidPage(gt_output('hop_table_check3'),
-                                      plotOutput("radial_plots"))),
+                                      gt_output('hop_table_check_max'),
+                                      plotOutput("radial_plots"))
+                            ),
                  )
                )
               ),

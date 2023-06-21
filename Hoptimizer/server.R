@@ -101,7 +101,7 @@ function(input, output, session) {
     return(data)
   })
 
-  table_check <- reactive({
+  table_check_min <- reactive({
     if (nrow(hop_aromas_profiles()) == 0) {
       as_tibble(paste(emo::ji('prohibited'), 'No hops found, relax filters.', emo::ji('prohibited'))) %>% 
         gt() %>% 
@@ -109,15 +109,15 @@ function(input, output, session) {
   })  
   
   output$hop_table_check <- render_gt({
-    table_check()
+    table_check_min()
     })
     
   output$hop_table_check2 <- render_gt({
-    table_check()
+    table_check_min()
     })
   
   output$hop_table_check3 <- render_gt({
-    table_check()
+    table_check_min()
   })
   
   output$hop_table_profiles <- render_gt({
@@ -151,9 +151,23 @@ function(input, output, session) {
       labs(x = 'Number of hops')
   })
   
+  table_check_max <- reactive({
+    if (nrow(hop_aromas_profiles()) > 20) {
+      tibble(a = emo::ji('exploding_head'), 
+             b = 'Too many hops selected!', 
+             c = emo::ji('exploding_head')) %>% 
+        gt() %>% 
+        tab_options(column_labels.hidden = TRUE)
+    }
+  }) 
+  
+  output$hop_table_check_max <- render_gt({
+    table_check_max()
+  })
+  
   # Render hop aroma radial plot
   output$radial_plots <- renderPlot({
-    if (nrow(hop_aromas_profiles()) > 0) {
+    if (between(nrow(hop_aromas_profiles()), 1, 20)) {
       hop_aromas_profiles() |> 
         pivot_longer(
           cols = -c(hop_name, hop_purpose, country, link, aroma_tags, country_code),
