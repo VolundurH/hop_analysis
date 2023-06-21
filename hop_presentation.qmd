@@ -3,28 +3,198 @@ title: "Hop profile web scraping and analysis"
 author: "Völundur Hafstad & Deborah Oliveira"
 format:
   revealjs:
-    theme: moon
+    theme: ["hop_presentation_files/q-theme.scss"]
+    slide-number: true
+    width: 1920
+    height: 1080
+    footer: See the GitHub repo at github.com/VolundurH/hop_analysis
 editor: visual
+execute: 
+  freeze: true
+  echo: true
+  eval: true
+  cache: true
 ---
+
+## Introduction 🍺
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/water.jpeg){.absolute bottom="50" left="0" width="750" height="750"}
+:::
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/malt.jpeg){.absolute bottom="50" left="250" width="750" height="750"}
+:::
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/yeast.jpeg){.absolute bottom="50" left="500" width="750" height="750"}
+:::
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/hops.jpeg){.absolute bottom="50" left="750" width="750" height="750"}
+:::
+
+## Introduction 🍺
+
+-   Lots of hop varieties out there
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/beermaverick_hop_database_frontpage.png){.absolute bottom="25" left="0" width="800" height="800"}
+:::
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/beermaverick_hop_list.png){.absolute bottom="25" left="400" width="550" height="800"}
+:::
+
+::: {.fragment .fade-in}
+![](hop_presentation_files/beermaverick_galaxy_hop.png){.absolute bottom="25" left="600" width="800" height="800"}
+:::
 
 ## Project outline
 
--   Scrape a website
+-   Scrape hop profiles from beermaverick.com
 
 -   Clean the data
 
--   Play around with the data
+-   Create a shiny app to present the data
 
-## The website
+## Tidyverse comes with a web scraping package!
 
-Contains hops information such as ...
+![](hop_presentation_files/rvest_logo.png){.absolute top="-50" right="350" width="200" height="200"}
 
-Insert an image or the link to it.
+Not loaded by default, but installed if you have tidyverse
 
-## Packages used
+::: {.fragment .fade-in}
 
 ```{r}
+
 library(tidyverse)
-library(rvest)
-library(gt)
+library(rvest) 
+
+# Read in the main hop page
+hopmaverick <- rvest::read_html("https://beermaverick.com/hops/")
+
+hopmaverick
+
 ```
+:::
+
+## Scraping
+
+
+```{r}
+
+hop_table <- hopmaverick %>%
+  rvest::html_elements("table") %>% 
+  rvest::html_children() %>% 
+  rvest::html_text2() %>% 
+  as_tibble() 
+
+hop_table
+```
+
+## Tidyverse magic
+
+```{r}
+
+hop_table <- hop_table %>% 
+  mutate(country_id = !str_detect(value, "\t"),
+    drop_later = country_id) %>% 
+  mutate(country_id = cumsum(country_id)) %>% 
+  group_by(country_id) %>% 
+  mutate(country = first(value, country_id)) %>% 
+  filter(!drop_later) %>% 
+  ungroup() %>% 
+  separate(value, into = c("hop_name", "hop_purpose"), sep = "\t") %>% 
+  select(-c(country_id, drop_later)) 
+
+hop_table
+```
+
+## Each hop has its own overview page
+
+```{r}
+
+links <- hopmaverick %>%
+  rvest::html_elements("table") %>% 
+  rvest::html_children() %>% 
+  rvest::html_elements("a") %>%
+  rvest::html_attr("href") %>% 
+  as_tibble()
+
+links
+```
+
+
+## A lot of trial and error later...
+
+```{r}
+
+extract_aroma_chart_from_link <- function(link){
+  
+  rvest::read_html(link) |> 
+    rvest::html_elements("script") %>% 
+    rvest::html_text() %>% 
+    as_tibble() %>% 
+    filter(str_detect(value, "aromaChart")) %>% 
+    slice_head() %>% 
+    mutate(labels = str_extract(value, "(?<=labels: \\[)[^\\]]+"), 
+      datasets = str_extract(value, "(?<=data: \\[)[^\\]]+")) %>% 
+    select(-value) %>% 
+    mutate(datasets = str_remove_all(datasets, "\\s|\n") |> str_split(",")) %>% 
+    mutate(labels = str_remove_all(labels, "\\s|\n") |> str_split(",")) |> 
+    unnest(c(labels, datasets)) %>%
+    mutate(datasets = as.numeric(datasets)) %>% 
+    mutate(labels = str_remove_all(labels, "'") %>% str_remove("Resin/") %>% str_replace(" ", "_")) %>% 
+    pivot_wider(names_from = labels, values_from = datasets)
+  
+}
+```
+
+## Timing: map() vs furrr::future_map()
+
+```{r}
+
+tictoc::tic()
+hop_aromas <- hop_table %>% 
+  bind_cols(links) %>%
+  mutate(value = paste0("https://beermaverick.com", value)) |> 
+  rename(link = value) |> 
+  mutate(html = map(link, ~extract_aroma_chart_from_link(.x)))
+tictoc::toc()
+
+```
+
+
+## Timing: map() vs furrr::future_map()
+
+```{r}
+
+tictoc::tic()
+future::plan("multisession")
+hop_aromas <- hop_table %>% 
+  bind_cols(links) %>%
+  mutate(value = paste0("https://beermaverick.com", value)) |> 
+  rename(link = value) |> 
+  mutate(html = furrr::future_map(link, ~extract_aroma_chart_from_link(.x)))
+future::plan("default")
+tictoc::toc()
+
+```
+
+::: {.fragment .fade-in}
+```{r}
+#| echo: false
+hop_aromas |> 
+  unnest(html)
+```
+
+:::
+
+## Similar code to extract brew values
+
+```{r}
+#| echo: false
+read_tsv("hop_brew_values.txt")
+```
+
