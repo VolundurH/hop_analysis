@@ -439,7 +439,7 @@ Völundur Hafstad &amp; Deborah Oliveira
 </section>
 <section id="tidyverse-comes-with-a-web-scraping-package" class="slide level2">
 <h2>Tidyverse comes with a web scraping package!</h2>
-<p><img data-src="hop_presentation_files/rvest_logo.png" class="absolute" style="top: -50px; right: 350px; width: 200px; height: 200px; "></p>
+<p><img data-src="hop_presentation_files/rvest_logo.png" class="absolute" style="bottom: 50px; right: 100px; width: 400px; height: 400px; "></p>
 <p>Not loaded by default, but installed if you have tidyverse</p>
 <div class="fragment fade-in">
 <div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-1_03a54ef1a464e2d35f3dceea39eebee3">
@@ -575,6 +575,7 @@ Völundur Hafstad &amp; Deborah Oliveira
 </section>
 <section id="timing-map-vs-furrrfuture_map" class="slide level2">
 <h2>Timing: map() vs furrr::future_map()</h2>
+<div class="fragment fade-in">
 <div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-6_9210267ca14a51ad4c9339d4ce589010">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>tictoc<span class="sc">::</span><span class="fu">tic</span>()</span>
 <span id="cb10-2"><a href="#cb10-2"></a>hop_aromas <span class="ot">&lt;-</span> hop_table <span class="sc">%&gt;%</span> </span>
@@ -587,9 +588,8 @@ Völundur Hafstad &amp; Deborah Oliveira
 <pre><code>116.047 sec elapsed</code></pre>
 </div>
 </div>
-</section>
-<section id="timing-map-vs-furrrfuture_map-1" class="slide level2">
-<h2>Timing: map() vs furrr::future_map()</h2>
+</div>
+<div class="fragment fade-in">
 <div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-7_6893d9a121ff16256d04f6ef81963a9c">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>tictoc<span class="sc">::</span><span class="fu">tic</span>()</span>
 <span id="cb12-2"><a href="#cb12-2"></a>future<span class="sc">::</span><span class="fu">plan</span>(<span class="st">"multisession"</span>)</span>
@@ -604,6 +604,10 @@ Völundur Hafstad &amp; Deborah Oliveira
 <pre><code>12.498 sec elapsed</code></pre>
 </div>
 </div>
+</div>
+</section>
+<section id="the-end-result" class="slide level2">
+<h2>The end result</h2>
 <div class="fragment fade-in">
 <div class="cell" data-hash="hop_presentation_cache/revealjs/unnamed-chunk-8_c54dddd9b68f3bd67e5394767591374a">
 <div class="cell-output cell-output-stdout">
