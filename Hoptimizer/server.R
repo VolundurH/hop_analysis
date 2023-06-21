@@ -105,7 +105,8 @@ function(input, output, session) {
     if (nrow(hop_aromas_profiles()) == 0) {
       as_tibble(paste(emo::ji('prohibited'), 'No hops found, relax filters.', emo::ji('prohibited'))) %>% 
         gt() %>% 
-        cols_label(value = '') }
+        cols_label(value = '') %>% 
+        tab_options(column_labels.hidden = TRUE) }
   })  
   
   output$hop_table_check <- render_gt({
