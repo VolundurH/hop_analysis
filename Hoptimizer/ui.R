@@ -22,7 +22,7 @@ ui <- tagList(
                )
       ),
       tabPanel("Profiles",
-               chooseSliderSkin(skin = 'Simple', color = 'forestgreen'),
+               chooseSliderSkin(skin = 'Flat', color = 'forestgreen'),
                sidebarPanel(
                  selectInput("inputPurpose", label="Select a purpose:",
                              choices = c("Any", unique(hop_aromas$hop_purpose)), selected = 'Any'),
@@ -57,7 +57,7 @@ ui <- tagList(
                                           value=c(0,5), min=0, max=5, step = 1),
                               sliderInput("sliderHerbal", width = "50%", label="Herbal:",
                                           value=c(0,5), min=0, max=5, step = 1),
-                              sliderInput("sliderSpice", width = "50%", label="Select a range for the Spice:",
+                              sliderInput("sliderSpice", width = "50%", label="Spice:",
                                           value=c(0,5), min=0, max=5, step = 1),
                               sliderInput("sliderPine", width = "50%", label="Pine:",
                                           value=c(0,5), min=0, max=5, step = 1)
@@ -69,9 +69,16 @@ ui <- tagList(
                mainPanel(
                  tabsetPanel(
                    tabPanel("Table", 
-                            gt_output('hop_table_profiles')
+                            fluidPage(gt_output('hop_table_check'),
+                                      gt_output('hop_table_profiles'))
                    ),
-                   tabPanel("Plots")
+                   tabPanel("Overview plots",
+                            fluidPage(gt_output('hop_table_check2'),
+                                      plotOutput("profile_overview"))
+                   ),
+                   tabPanel("Per hop plots",
+                            fluidPage(gt_output('hop_table_check3'),
+                                      plotOutput("radial_plots"))),
                  )
                )
               ),
@@ -86,7 +93,6 @@ ui <- tagList(
           # end of sidebar panel 3
         ),
         mainPanel(
-          plotOutput("radial_plots"),
           h4("Hop oil contents"),
           h5("Myrcene: Resin and citrus"),
           h5("Humulene: Wood and spices"),
