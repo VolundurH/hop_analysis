@@ -62,6 +62,7 @@ function(input, output, session) {
 
   # plot
   output$hop_plot_countries <- renderPlot({
+    validate(need(input$inputCountry, 'Choose countries on the left to start.'))
     req(input$inputCountry)
     hop_aromas_country() %>% 
       filter(country %in% input$inputCountry) %>% 
@@ -100,66 +101,91 @@ function(input, output, session) {
     return(data)
   })
 
-  output$hop_table_profiles <- render_gt({
-    hop_aromas_profiles() %>%
-      select(country_code, hop_name, hop_purpose,
-             Citrus, TropicalFruit, StoneFruit, Berry, Floral,
-             Grassy, Herbal, Spice, Pine) %>%
-      gt() %>%
-      fmt_flag(columns = country_code) %>%
-      cols_label(hop_name = md('**Hop name**'),
-                 hop_purpose = md('**Purpose**'),
-                 country_code = '') %>%
-      tab_spanner(label = md("**Profile**"),
-                  columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
-                              Grassy, Herbal, Spice, Pine))
+  table_check <- reactive({
+    if (nrow(hop_aromas_profiles()) == 0) {
+      as_tibble(paste(emo::ji('prohibited'), 'No hops found, relax filters.', emo::ji('prohibited'))) %>% 
+        gt() %>% 
+        cols_label(value = '') }
+  })  
+  
+  output$hop_table_check <- render_gt({
+    table_check()
+    })
+    
+  output$hop_table_check2 <- render_gt({
+    table_check()
+    })
+  
+  output$hop_table_check3 <- render_gt({
+    table_check()
   })
   
-  #### Third tab code
+  output$hop_table_profiles <- render_gt({
+    if (nrow(hop_aromas_profiles()) > 0) {
+      hop_aromas_profiles() %>%
+        select(country_code, hop_name, hop_purpose,
+               Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+               Grassy, Herbal, Spice, Pine) %>%
+        gt() %>%
+        fmt_flag(columns = country_code) %>%
+        cols_label(hop_name = md('**Hop name**'),
+                   hop_purpose = md('**Purpose**'),
+                   country_code = '') %>%
+        tab_spanner(label = md("**Profile**"),
+                    columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+                                Grassy, Herbal, Spice, Pine))
+    }
+  })
   
-  
-  
-  # Hop aroma radial plot function
-  radial_barplot <- function(hop){
-    
-    hop_aromas |> 
-      filter(hop_name == hop) |> 
-      pivot_longer(
-        cols = -c(hop_name, hop_purpose, country, link, aroma_tags, country_code),
-        names_to = "aroma", 
-        values_to = "aroma_value"
-      ) |> 
-      mutate(aroma = str_replace(aroma, "(?<=[:lower:])(?=[:upper:])", "\n"))|>
-      ggplot(aes(x = fct_inorder(aroma), y = aroma_value, group = hop_name)) +
-      geom_col(aes(fill = aroma), show.legend = F) +
-      geom_segment(aes(xend = fct_inorder(aroma), y = 5, yend  = 0), linetype = 2, alpha = 0.5) +
-      coord_polar() +
-      theme_minimal() + 
-      theme(legend.position = "none",
-        axis.text.y = element_blank(),
-        # panel.border = element_rect(fill = NA),
-        plot.margin = margin(0,0,0,0,"mm"),
-        plot.background = element_rect(fill = NA, colour = NA), 
-        panel.background =  element_rect(fill = NA, colour = NA), 
-        panel.border =  element_rect(fill = NA, colour = NA),
-        axis.line.x = element_blank()) +
-      labs(x = NULL, y = NULL) +
-      scale_y_continuous(limits = c(0,5)) +
-      annotate("text", x = 0, y = c(0:5), label= c(0:5)) + 
-      scale_fill_viridis_d()
-  }
-  
-  # Reactive for hop aroma radial plot 
-  get_radial_barplot_hop <- reactive({
-    hop <- input$inputHop_panel3
-    return(hop)
+  output$profile_overview <- renderPlot({
+    hop_aromas_profiles() %>%
+      select(hop_name, Citrus, TropicalFruit, StoneFruit, Berry, Floral,
+             Grassy, Herbal, Spice, Pine) %>% 
+      pivot_longer(cols = -hop_name, names_to = 'Aroma', values_to = 'Score') %>% 
+      mutate(Score = as.factor(Score)) %>% 
+      ggplot(aes(y = Aroma, fill=Score)) +
+      geom_bar() +
+      theme_minimal() +
+      theme(axis.text.y = element_text(face = 'bold')) +
+      scale_fill_viridis_d(direction = -1) +
+      labs(x = 'Number of hops')
   })
   
   # Render hop aroma radial plot
   output$radial_plots <- renderPlot({
-    radial_barplot(get_radial_barplot_hop())
+    if (nrow(hop_aromas_profiles()) > 0) {
+      hop_aromas_profiles() |> 
+        pivot_longer(
+          cols = -c(hop_name, hop_purpose, country, link, aroma_tags, country_code),
+          names_to = "aroma", 
+          values_to = "aroma_value"
+        ) |> 
+        mutate(aroma = str_replace(aroma, "(?<=[:lower:])(?=[:upper:])", "\n"))|>
+        ggplot(aes(x = fct_inorder(aroma), y = aroma_value, group = hop_name)) +
+        geom_col(aes(fill = aroma), show.legend = F) +
+        geom_segment(aes(xend = fct_inorder(aroma), y = 5, yend  = 0), linetype = 2, alpha = 0.5) +
+        coord_polar() +
+        theme_minimal() + 
+        theme(legend.position = "none",
+              axis.text.y = element_blank(),
+              # panel.border = element_rect(fill = NA),
+              plot.margin = margin(0,0,0,0,"mm"),
+              plot.background = element_rect(fill = NA, colour = NA), 
+              panel.background =  element_rect(fill = NA, colour = NA), 
+              panel.border =  element_rect(fill = NA, colour = NA),
+              axis.line.x = element_blank(),
+              strip.text = element_text(face = 'bold')) +
+        labs(x = NULL, y = NULL) +
+        scale_y_continuous(limits = c(0,5)) +
+        scale_fill_viridis_d() +
+        facet_wrap(~hop_name, ncol = 4)
+    }
   })
   
+  
+  #### Third tab code
+
+ 
   
   # Reactive for hop oils 
   hop_brew_values_overview_plot <- reactive({
