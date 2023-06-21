@@ -146,24 +146,6 @@ hop_oils_plot_df |>
   theme_classic() +
   scale_color_gradient(low = "white", high = "forestgreen")
 
-test_hop = "Astra"
-
-highlight_brew_value_rank <- function(brew_value, hop){
-  plot_data <- hop_brew_values |> 
-    filter(brew_value == brew_value) |> 
-    arrange(-range_mean) |> 
-    mutate(rank = row_number(),
-      hop_of_interest = hop_name%in%hop)
-  
-  plot_data |> 
-    ggplot(aes(x = rank, y = range_mean)) + 
-    geom_point() +
-    geom_point(data = . %>% filter(hop_of_interest), col = "red") +
-    theme_classic()
-  
-}
-
-highlight_brew_value_rank("Alpha Acid %", "Astra")
 
 hop_brew_values |> 
   filter(brew_value == "Alpha Acid %") |> 
@@ -189,3 +171,35 @@ hop_brew_values |>
   labs(x = NULL, y = NULL) +
   theme_classic() +
   facet_wrap(~brew_value, scales = "free", ncol = 1)
+
+
+
+
+hop_brew_values <- hop_brew_values |> 
+  mutate(range_min = ifelse(range_min > range_mean, NA, range_min))
+
+highlight_brew_value_rank <- function(brew_value_of_interest, hop){
+  plot_data <- hop_brew_values |> 
+    filter(brew_value == brew_value_of_interest) |> 
+    arrange(-range_mean) |> 
+    mutate(rank = row_number(),
+      hop_of_interest = hop_name%in%hop)
+  
+  hop_of_interest <- plot_data |> filter(hop_of_interest)
+  
+  plot_data |> 
+    ggplot(aes(x = rank, y = range_mean)) + 
+    geom_segment(aes(xend = rank, yend = range_max, y = range_min), col = "grey80") +
+    geom_point(col = "grey50") +
+    geom_segment(data = plot_data |>  filter(hop_of_interest), aes(xend = rank, yend = range_max, y = range_min), col = "red") +
+    geom_point(data = plot_data |>  filter(hop_of_interest), col = "red") +
+    theme_classic() + 
+    labs(title = paste0(brew_value_of_interest), y = NULL,
+      subtitle = paste0(hop, " range: ",hop_of_interest$range_min," to ", hop_of_interest$range_max, ", mean ", hop_of_interest$range_mean),
+      x = "Rank among all hops")
+}
+
+highlight_brew_value_rank("Alpha Acid %", "Astra")
+highlight_brew_value_rank("Total Oils (mL/100g)", "Styrian Wolf")
+
+
