@@ -10,7 +10,9 @@ function(input, output, session) {
 
   hop_aromas <- read_tsv("../hop_aromas.txt") %>%
     mutate(country_code = countrycode::countrycode(country, 'country.name', 'genc2c'))
-  hop_brew_values <- read_tsv("../hop_brew_values.txt")
+  hop_brew_values <- read_tsv("../hop_brew_values.txt") %>% 
+    mutate(range_min= ifelse(range_min <= range_mean, range_min, NA)) |> 
+    mutate(range_max= ifelse(range_mean <= range_max, range_max, NA))
   hop_oil_overview  <- hop_brew_values |> 
     filter(brew_value %in% c("All Others", "Myrcene", "Humulene", "Farnesene", "Caryophyllene")) |> 
     left_join(
@@ -251,8 +253,29 @@ function(input, output, session) {
   #                     choices = c(hop_aromas_profiles()$hop_name))
   # })  
 
-  output$brew_property_ranks <- renderPlot({
+  highlight_brew_value_rank <- function(brew_value_of_interest, hop){
+    plot_data <- hop_brew_values |> 
+      filter(brew_value == brew_value_of_interest) |> 
+      arrange(-range_mean) |> 
+      mutate(rank = row_number(),
+             hop_of_interest = hop_name%in%hop)
     
+    hop_of_interest <- plot_data |> filter(hop_of_interest)
+    
+    plot_data |> 
+      ggplot(aes(x = rank, y = range_mean)) + 
+      geom_segment(aes(xend = rank, yend = range_max, y = range_min), col = "grey80") +
+      geom_point(col = "grey50") +
+      geom_segment(data = plot_data |>  filter(hop_of_interest), aes(xend = rank, yend = range_max, y = range_min), col = "darkorange", linewidth = 2) +
+      geom_point(data = plot_data |>  filter(hop_of_interest), col = "darkorange2", size = 4) +
+      theme_classic() + 
+      labs(title = paste0(brew_value_of_interest), y = NULL,
+           subtitle = paste0(hop, " range: ",hop_of_interest$range_min," to ", hop_of_interest$range_max, ", mean ", hop_of_interest$range_mean, "\nRank: ", hop_of_interest$rank, "/", max(plot_data$rank)),
+           x = "Rank among all hops")
+  }
+  
+  output$brew_property_ranks <- renderPlot({
+    highlight_brew_value_rank(input$inputBrewOption, input$inputHop_panel3)
   })
   
 # Panel 3 -----------------------------------------------------------------
