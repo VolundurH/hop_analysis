@@ -132,17 +132,22 @@ function(input, output, session) {
   output$hop_table_profiles <- render_gt({
     if (nrow(hop_aromas_profiles()) > 0) {
       hop_aromas_profiles() %>%
-        select(country_code, hop_name, hop_purpose,
-               Citrus, TropicalFruit, StoneFruit, Berry, Floral,
-               Grassy, Herbal, Spice, Pine) %>%
+        left_join(hop_brew_values %>% 
+                    select(hop_name, brew_value, range_mean) %>% 
+                    pivot_wider(names_from = brew_value, values_from = range_mean),
+                  by = 'hop_name') %>% 
+        select(-c(link, aroma_tags, country)) %>% 
         gt() %>%
         fmt_flag(columns = country_code) %>%
+        cols_move_to_start(country_code) %>% 
         cols_label(hop_name = md('**Hop name**'),
                    hop_purpose = md('**Purpose**'),
                    country_code = '') %>%
         tab_spanner(label = md("**Profile**"),
                     columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
-                                Grassy, Herbal, Spice, Pine))
+                                Grassy, Herbal, Spice, Pine)) %>% 
+        tab_spanner(label = md("**Brew values**"),
+                    columns = c(13:22))
     }
   })
 
@@ -186,7 +191,7 @@ function(input, output, session) {
     hop_brew_values_overview_plot()
   })
   
-# Panel 3, tab 3: per hop plots -------------------------------------------
+# Panel 2, tab 3: per hop plots -------------------------------------------
 
   
   table_check_max <- reactive({
@@ -238,32 +243,42 @@ function(input, output, session) {
     height = reactive({(as.integer(nrow(hop_aromas_profiles()) / 4.01) + 1 ) * 200})
     )
   
+  # Panel 2, tab 4: per hop brew value plots -------------------------------------------
   
+  # if we wanted only the filtered options
+  # observeEvent(hop_aromas_profiles(), {
+  #   updateSelectInput(inputId = "inputHop_panel3",
+  #                     choices = c(hop_aromas_profiles()$hop_name))
+  # })  
 
+  output$brew_property_ranks <- renderPlot({
+    
+  })
+  
 # Panel 3 -----------------------------------------------------------------
 
 
- 
-  
-  # Reactive for hop oils 
-  hop_brew_values_overview_plot <- reactive({
-    data <- hop_oil_overview |> 
-      mutate(range_mean = range_mean/100) |> 
-      ggplot(aes(x = fct_inorder(brew_value), y = range_mean, group = hop_name)) +
-      geom_path(alpha = 0.5, aes(col = total_oil)) +
-      geom_point() +
-      scale_y_continuous(labels = scales::percent) +
-      labs(x = "Total oil breakdown", y = NULL, col = "Total Oils\n(mL/100g)")  + 
-      theme_classic()  +
-      scale_color_gradient(low = "white", high = "forestgreen", )
-    
-    return(data)
-  })
-  
-  # Render hop oil overview
-  output$total_oil_overview <- renderPlot({
-    hop_brew_values_overview_plot()
-  })
+  # 
+  # 
+  # # Reactive for hop oils 
+  # hop_brew_values_overview_plot <- reactive({
+  #   data <- hop_oil_overview |> 
+  #     mutate(range_mean = range_mean/100) |> 
+  #     ggplot(aes(x = fct_inorder(brew_value), y = range_mean, group = hop_name)) +
+  #     geom_path(alpha = 0.5, aes(col = total_oil)) +
+  #     geom_point() +
+  #     scale_y_continuous(labels = scales::percent) +
+  #     labs(x = "Total oil breakdown", y = NULL, col = "Total Oils\n(mL/100g)")  + 
+  #     theme_classic()  +
+  #     scale_color_gradient(low = "white", high = "forestgreen", )
+  #   
+  #   return(data)
+  # })
+  # 
+  # # Render hop oil overview
+  # output$total_oil_overview <- renderPlot({
+  #   hop_brew_values_overview_plot()
+  # })
   
 
   
