@@ -132,17 +132,22 @@ function(input, output, session) {
   output$hop_table_profiles <- render_gt({
     if (nrow(hop_aromas_profiles()) > 0) {
       hop_aromas_profiles() %>%
-        select(country_code, hop_name, hop_purpose,
-               Citrus, TropicalFruit, StoneFruit, Berry, Floral,
-               Grassy, Herbal, Spice, Pine) %>%
+        left_join(hop_brew_values %>% 
+                    select(hop_name, brew_value, range_mean) %>% 
+                    pivot_wider(names_from = brew_value, values_from = range_mean),
+                  by = 'hop_name') %>% 
+        select(-c(link, aroma_tags, country)) %>% 
         gt() %>%
         fmt_flag(columns = country_code) %>%
+        cols_move_to_start(country_code) %>% 
         cols_label(hop_name = md('**Hop name**'),
                    hop_purpose = md('**Purpose**'),
                    country_code = '') %>%
         tab_spanner(label = md("**Profile**"),
                     columns = c(Citrus, TropicalFruit, StoneFruit, Berry, Floral,
-                                Grassy, Herbal, Spice, Pine))
+                                Grassy, Herbal, Spice, Pine)) %>% 
+        tab_spanner(label = md("**Brew values**"),
+                    columns = c(13:22))
     }
   })
 
