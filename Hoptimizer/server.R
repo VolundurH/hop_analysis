@@ -166,6 +166,7 @@ function(input, output, session) {
   })
   
   # Render hop aroma radial plot
+  
   output$radial_plots <- renderPlot({
     if (between(nrow(hop_aromas_profiles()), 1, 20)) {
       hop_aromas_profiles() |> 
@@ -194,7 +195,10 @@ function(input, output, session) {
         scale_fill_viridis_d() +
         facet_wrap(~hop_name, ncol = 4)
     }
-  })
+  }, # Need a good height/width ratio for the radial plots. Try with each row = 200px to start, and width always 700px. 
+    width = 700,
+    height = reactive({(as.integer(nrow(hop_aromas_profiles()) / 4.01) + 1 ) * 200})
+    )
   
   
   #### Third tab code
