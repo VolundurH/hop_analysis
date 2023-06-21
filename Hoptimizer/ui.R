@@ -32,7 +32,7 @@ ui <- tagList(
                    class = "panel panel-default",
                    tags$div(
                      class = "panel-heading",
-                     tags$h4(class = "panel-title", "Profiles",
+                     tags$h4(class = "panel-title", "Aromas",
                              tags$a(href = "#collapseGroup1", "[show/hide]",
                                     class = "accordion-toggle",
                                     `data-toggle` = "collapse"))
@@ -74,10 +74,15 @@ ui <- tagList(
                    ),
                    tabPanel("Overview plots",
                             fluidPage(
-                              h4("Aroma value distribution of selected hops"),
+                              h3("Aroma value distribution of selected hops"),
                               gt_output('hop_table_check2'),
                               plotOutput("profile_overview"),
-                              h4("Breakdown of oil percentages"),
+                              h3("Breakdown of oil percentages"),
+                              h4("Hop oil contents"),
+                              h5("Myrcene: Resin and citrus"),
+                              h5("Humulene: Wood and spices"),
+                              h5("Caryophyllene: Wood, pepper, herbal"),
+                              h5("Farnesene: Floral, green apple"),
                               plotOutput("hop_oil_overview_plot")
                               )
                    ),
@@ -100,11 +105,6 @@ ui <- tagList(
           # end of sidebar panel 3
         ),
         mainPanel(
-          h4("Hop oil contents"),
-          h5("Myrcene: Resin and citrus"),
-          h5("Humulene: Wood and spices"),
-          h5("Caryophyllene: Wood, pepper, herbal"),
-          h5("Farnesene: Floral, green apple"),
           plotOutput("total_oil_overview")
           # end of main panel 3
         )

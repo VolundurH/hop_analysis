@@ -155,6 +155,29 @@ function(input, output, session) {
       labs(x = 'Number of hops')
   })
 
+  hop_oil_filtered <- reactive({
+    data <- hop_oil_overview %>% 
+      filter(hop_name %in% hop_aromas_profiles()$hop_name)
+    return(data)
+  })
+  
+  output$hop_oil_overview_plot <- renderPlot({
+    hop_oil_filtered() |> 
+      mutate(range_mean = range_mean/100) |> 
+      ggplot(aes(x = fct_inorder(brew_value), y = range_mean, group = hop_name)) +
+      geom_path(alpha = 0.5, aes(col = total_oil)) +
+      geom_point() +
+      scale_y_continuous(labels = scales::percent) +
+      labs(x = "Total oil breakdown", y = NULL, col = "Total Oils\n(mL/100g)")  + 
+      theme_minimal()  +
+      scale_color_gradient(low = "white", high = "forestgreen")
+  })
+  
+  # Render hop oil overview
+  output$total_oil_overview <- renderPlot({
+    hop_brew_values_overview_plot()
+  })
+  
 # Panel 3, tab 3: per hop plots -------------------------------------------
 
   
