@@ -86,31 +86,32 @@ ui <- tagList(
                               plotOutput("hop_oil_overview_plot")
                               )
                    ),
-                   tabPanel("Per hop plots",
+                   tabPanel("Per hop aroma plots",
                             fluidPage(gt_output('hop_table_check3'),
                                       gt_output('hop_table_check_max'),
                                       plotOutput("radial_plots"))
                             ),
+                   tabPanel("Per hop brew values plots",
+                            fluidPage(sidebarPanel(
+                              h5("This list is not affected by previous filtering."),
+                                selectInput("inputHop_panel3", label="Select a hop:",
+                                  choices = c("-Select hop-",
+                                    hop_aromas |> pull(hop_name) ),
+                                selected = '-Select hop-'),
+                              selectInput("inputBrewOption", label="Select a brew property:",
+                                          choices = c("-Select property-",
+                                                      hop_brew_values |> pull(brew_value) |> unique()),
+                                          selected = '-Select hop-')
+                                # end of sidebar panel 3
+                              ),
+                            mainPanel(
+                                  plotOutput("brew_property_ranks")
+                                  # end of main panel 3
+                                ))
+                   ),
                  )
                )
               ),
-      tabPanel("Brew Values",
-        sidebarPanel(
-          selectInput("inputHop_panel3", label="Select a hop:",
-            choices = c("-Select hop-", 
-              hop_aromas |> select(hop_name, Citrus) |> drop_na() |> pull(hop_name) ), 
-          selected = '-Select hop-')
-          
-          
-          # end of sidebar panel 3
-        ),
-        mainPanel(
-          plotOutput("total_oil_overview")
-          # end of main panel 3
-        )
-        
-        # end of tabPanel 3
-      )
     )
 )
 
